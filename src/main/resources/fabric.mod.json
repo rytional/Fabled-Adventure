@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "id": "rytionalsadventure",
+  "version": "${version}",
+
+  "name": "Rytionals Adventure",
+  "description": "Adventuring Add-ons for us",
+  "authors": [
+    "Rytional and Family"
+  ],
+  "contact": {
+    "homepage": "https://fabricmc.net/",
+    "sources": "https://github.com/FabricMC/fabric-example-mod"
+  },
+
+  "license": "MIT",
+  "icon": "assets/modid/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "net.rytional.rytionalsadventure.RytionalsAdventure"
+    ]
+  },
+  "mixins": [
+    "rytionalsadventure.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.13.3",
+    "fabric": "*",
+    "minecraft": "1.18.x",
+    "java": ">=17"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}
