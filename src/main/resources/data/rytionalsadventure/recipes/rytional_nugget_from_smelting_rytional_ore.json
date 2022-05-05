@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smelting",
+  "group": "rytional_ingot",
+  "ingredient": {
+    "item": "rytionalsadventure:rytional_ore"
+  },
+  "result": "rytionalsadventure:rytional_nugget",
+  "experience": 0.7,
+  "cookingtime": 200
+}

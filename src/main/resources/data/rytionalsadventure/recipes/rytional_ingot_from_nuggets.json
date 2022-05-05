@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "rytional_ingot",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "rytionalsadventure:rytional_nugget"
+    }
+  },
+  "result": {
+    "item": "rytionalsadventure:rytional_ingot"
+  }
+}

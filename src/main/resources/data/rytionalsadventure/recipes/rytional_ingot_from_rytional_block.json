@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "iron_ingot",
+  "ingredients": [
+    {
+      "item": "rytionalsadventure:rytional_block"
+    }
+  ],
+  "result": {
+    "item": "rytionalsadventure:rytional_ingot",
+    "count": 9
+  }
+}

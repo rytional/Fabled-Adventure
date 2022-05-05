@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "rytionalsadventure:rytional_block",
+    "rytionalsadventure:rytional_ore",
+    "rytionalsadventure:travishnium_ore_block",
+    "rytionalsadventure:travishnium_deepslate_ore_block",
+    "rytionalsadventure:travishnium_block"
+  ]
+}

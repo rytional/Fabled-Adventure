@@ -2,6 +2,7 @@ package net.rytional.rytionalsadventure;
 
 import net.fabricmc.api.ModInitializer;
 import net.rytional.rytionalsadventure.block.ModBlocks;
+import net.rytional.rytionalsadventure.enchantment.ModEnchantments;
 import net.rytional.rytionalsadventure.item.ModItems;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -15,6 +16,7 @@ public class RytionalsAdventure implements ModInitializer {
 
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
-
+		ModEnchantments.registerModEnchantments();
 	}
+
 }
