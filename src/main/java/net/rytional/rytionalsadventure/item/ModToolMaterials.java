@@ -1,5 +1,6 @@
 package net.rytional.rytionalsadventure.item;
 
+
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.util.Lazy;
@@ -10,7 +11,9 @@ public enum ModToolMaterials implements ToolMaterial {
 
     RYTIONAL(3, 1800, 10.0F, 4.5F, 24, () -> Ingredient.ofItems(ModItems.RYTIONAL_INGOT)),
 
-    TRAVISHNIUM(3, 1800, 10.0F, 4.5F, 24, () -> Ingredient.ofItems(ModItems.TRAVISHNIUM_INGOT))
+    RYANITE(3, 1600, 8.0F, 3.5F, 24, () -> Ingredient.ofItems(ModItems.RYANITE_INGOT)),
+
+    TRAVISHNIUM(3, 1600, 8.0F, 3.5F, 24, () -> Ingredient.ofItems(ModItems.TRAVISHNIUM_INGOT))
 
     ;
 

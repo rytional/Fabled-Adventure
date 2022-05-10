@@ -20,8 +20,11 @@
   "entrypoints": {
     "main": [
       "net.rytional.rytionalsadventure.RytionalsAdventure"
+    ],
+    "client": [
+      "net.rytional.rytionalsadventure.RytionalsAdventureClient"
     ]
-  },
+},
   "mixins": [
     "rytionalsadventure.mixins.json"
   ],

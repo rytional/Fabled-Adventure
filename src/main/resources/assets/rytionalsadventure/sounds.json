@@ -1,0 +1,16 @@
+{
+  "rytional_break": {
+    "subtitle": "rytionalsadventure.rytional_break",
+    "sounds": [
+      "rytionalsadventure:rytional_break"
+    ]
+  },
+  "raining_tacos": {
+    "sounds": [
+      {
+        "name": "rytionalsadventure:raining_tacos",
+        "stream": true
+      }
+    ]
+  }
+}

@@ -13,7 +13,11 @@ public enum ModArmorMaterials implements ArmorMaterial {
 
     RYTIONAL("rytional", 40, new int[]{3, 6, 8, 4}, 25,
             SoundEvents.ITEM_ARMOR_EQUIP_TURTLE, 3.2f, 0.4f,
-            () -> Ingredient.ofItems(ModItems.RYTIONAL_INGOT));
+            () -> Ingredient.ofItems(ModItems.RYTIONAL_INGOT)),
+
+    RYANITE("ryanite", 40, new int[]{3, 6, 8, 4}, 25,
+    SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 3.2f, 0.4f,
+            () -> Ingredient.ofItems(ModItems.RYANITE_INGOT));
 
     private static final int[] BASE_DURABILITY;
     private final String name;

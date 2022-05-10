@@ -21,6 +21,23 @@
   "enchantment.rytionalsadventure.lightning_striker": "Lightning Striker",
   "enchantment.rytionalsadventure.tnt_bomber": "TNT Bomber",
 
+  "item.minecraft.potion.effect.freeze_potion": "Freeze Potion",
+  "item.minecraft.splash_potion.effect.freeze_potion": "Splash Potion of Freeze",
+  "item.minecraft.lingering_potion.effect.freeze_potion": "Lingering Potion of Freeze",
+
+  "item.rytionalsadventure.raccoon_spawn_egg": "Raccoon Spawn Egg",
+
+  "item.rytionalsadventure.raining_tacos_music_disc": "Raining Tacos Music Disc",
+  "item.rytionalsadventure.raining_tacos_music_disc.desc": "Raining Tacos - Perry Gripp & BooneBum",
+
+  "effect.rytionalsadventure.freeze": "Freeze",
+
+  "item.rytionalsadventure.ryanite_staff": "Ryanite Staff",
+  "item.rytionalsadventure.ryanite_ingot": "Ryanite Ingot",
+  "item.rytionalsadventure.ryanite_blue_boots": "Ryanite Slippers",
+  "item.rytionalsadventure.ryanite_blue_leggings": "Ryanite Robe Bottom",
+  "item.rytionalsadventure.ryanite_blue_chestplate": "Ryanite Robe Top",
+  "item.rytionalsadventure.ryanite_blue_helmet": "Ryanite Hat",
 
   "item.rytionalsadventure.raw_travishnium": "Raw Travishnium",
   "item.rytionalsadventure.travishnium_cream": "Travishnium Cream",
