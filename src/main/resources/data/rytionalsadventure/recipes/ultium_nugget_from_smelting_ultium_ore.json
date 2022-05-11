@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smelting",
+  "group": "ultium_ingot",
+  "ingredient": {
+    "item": "fabledadventure:ultium_ore"
+  },
+  "result": "fabledadventure:ultium_nugget",
+  "experience": 0.7,
+  "cookingtime": 200
+}

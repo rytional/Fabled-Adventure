@@ -1,0 +1,16 @@
+{
+  "ultium_break": {
+    "subtitle": "fabledadventure.ultium_break",
+    "sounds": [
+      "fabledadventure:ultium_break"
+    ]
+  },
+  "raining_tacos": {
+    "sounds": [
+      {
+        "name": "fabledadventure:raining_tacos",
+        "stream": true
+      }
+    ]
+  }
+}

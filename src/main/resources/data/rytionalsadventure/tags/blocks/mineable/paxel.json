@@ -5,10 +5,10 @@
     "#minecraft:mineable/axe",
     "#minecraft:mineable/shovel",
     "#minecraft:mineable/hoe",
-    "rytionalsadventure:rytional_block",
-    "rytionalsadventure:rytional_ore",
-    "rytionalsadventure:travishnium_ore_block",
-    "rytionalsadventure:travishnium_deepslate_ore_block",
-    "rytionalsadventure:travishnium_block"
+    "fabledadventure:ultium_block",
+    "fabledadventure:ultium_ore",
+    "fabledadventure:orcanite_ore_block",
+    "fabledadventure:orcanite_deepslate_ore_block",
+    "fabledadventure:orcanite_block"
   ]
 }

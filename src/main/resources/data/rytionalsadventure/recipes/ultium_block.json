@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "fabledadventure:ultium_ingot"
+    }
+  },
+  "result": {
+    "item": "fabledadventure:ultium_block"
+  }
+}

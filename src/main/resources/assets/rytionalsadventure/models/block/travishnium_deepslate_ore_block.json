@@ -1,6 +1,0 @@
-{
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "rytionalsadventure:block/travishnium_deepslate_ore_block"
-  }
-}

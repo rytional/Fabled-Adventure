@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "fabledadventure:item/raining_tacos_music_disc"
+  }
+}

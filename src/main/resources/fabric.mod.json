@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "id": "rytionalsadventure",
+  "id": "fabledadventure",
   "version": "${version}",
 
-  "name": "Rytionals Adventure",
-  "description": "Adventuring Add-ons for us",
+  "name": "Fabled Adventure",
+  "description": "Mytical Armor, Weapons, Metals, and Abilities",
   "authors": [
     "Rytional and Family"
   ],
@@ -19,14 +19,14 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.rytional.rytionalsadventure.RytionalsAdventure"
+      "net.rytional.fabledadventure.FabledAdventure"
     ],
     "client": [
-      "net.rytional.rytionalsadventure.RytionalsAdventureClient"
+      "net.rytional.fabledadventure.FabledAdventureClient"
     ]
 },
   "mixins": [
-    "rytionalsadventure.mixins.json"
+    "fabledadventure.mixins.json"
   ],
 
   "depends": {

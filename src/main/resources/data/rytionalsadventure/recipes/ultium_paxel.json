@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ABC",
+    " S ",
+    " S "
+  ],
+  "key": {
+    "A": {
+      "item": "fabledadventure:ultium_ingot"
+    },
+    "B": {
+      "item": "fabledadventure:ultium_block"
+    },
+    "C": {
+      "item": "fabledadventure:ultium_ingot"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "fabledadventure:ultium_paxel"
+  }
+}

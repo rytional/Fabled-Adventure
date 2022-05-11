@@ -1,0 +1,63 @@
+{
+  "item.fabledadventure.ultium_ingot": "Ultium Ingot",
+  "item.fabledadventure.ultium_nugget": "Ultium Nugget",
+
+  "item.fabledadventure.ultium_axe": "Ultium Axe",
+  "item.fabledadventure.ultium_pickaxe": "Ultium Pickaxe",
+  "item.fabledadventure.ultium_paxel": "Ultium Paxel",
+  "item.fabledadventure.ultium_mace": "Ultium Mace",
+  "item.fabledadventure.ultium_helmet": "Ultium Helmet",
+  "item.fabledadventure.ultium_chestplate": "Ultium Chestplate",
+  "item.fabledadventure.ultium_leggings": "Ultium Pants",
+  "item.fabledadventure.ultium_boots": "Ultium Shoes",
+  "item.fabledadventure.spiked_club": "Spiked Club",
+
+  "block.fabledadventure.ultium_block": "Ultium Block",
+  "block.fabledadventure.ultium_ore": "Ultium Ore",
+  "block.fabledadventure.speedy_block": "Speedy Block",
+
+  "itemGroup.fabledadventure.rytional": "Ultium's Adventure",
+
+  "enchantment.fabledadventure.lightning_striker": "Lightning Striker",
+  "enchantment.fabledadventure.tnt_bomber": "TNT Bomber",
+
+  "item.minecraft.potion.effect.freeze_potion": "Freeze Potion",
+  "item.minecraft.splash_potion.effect.freeze_potion": "Splash Potion of Freeze",
+  "item.minecraft.lingering_potion.effect.freeze_potion": "Lingering Potion of Freeze",
+
+  "item.fabledadventure.raccoon_spawn_egg": "Raccoon Spawn Egg",
+
+  "item.fabledadventure.raining_tacos_music_disc": "Raining Tacos Music Disc",
+  "item.fabledadventure.raining_tacos_music_disc.desc": "Raining Tacos - Perry Gripp & BooneBum",
+
+  "effect.fabledadventure.freeze": "Freeze",
+
+  "item.fabledadventure.sorcium_staff": "Sorcium Staff",
+  "item.fabledadventure.sorcium_ingot": "Sorcium Ingot",
+  "item.fabledadventure.sorcium_blue_boots": "Sorcium Slippers",
+  "item.fabledadventure.sorcium_blue_leggings": "Sorcium Robe Bottom",
+  "item.fabledadventure.sorcium_blue_chestplate": "Sorcium Robe Top",
+  "item.fabledadventure.sorcium_blue_helmet": "Sorcium Hat",
+
+  "item.fabledadventure.raw_orcanite": "Raw Orcanite",
+  "item.fabledadventure.orcanite_cream": "Orcanite Cream",
+  "item.fabledadventure.orcanite_dust": "Orcanite Dust",
+  "item.fabledadventure.orcanite_gem": "Orcanite Gem",
+  "item.fabledadventure.orcanite_ingot": "Orcanite Ingot",
+  "item.fabledadventure.orcanite_nugget": "Orcanite Nugget",
+  "item.fabledadventure.orcanite_shard": "Orcanite Shard",
+  "item.fabledadventure.orcanite_sheet": "Orcanite Cream",
+
+  "item.fabledadventure.orcanite_axe": "Orcanite Axe",
+  "item.fabledadventure.orcanite_hoe": "Orcanite Hoe",
+  "item.fabledadventure.orcanite_paxel": "Orcanite Paxel",
+  "item.fabledadventure.orcanite_pickaxe": "Orcanite Pickaxe",
+  "item.fabledadventure.orcanite_shovel": "Orcanite Shovel",
+  "item.fabledadventure.orcanite_sword": "Orcanite Sword",
+
+  "item.fabledadventure.orcanite_horse_armor": "Orcanite Horse Armor",
+
+  "block.fabledadventure.orcanite_ore_block": "Orcanite Ore",
+  "block.fabledadventure.orcanite_deepslate_ore_block": "Orcanite Deepslate Ore",
+  "block.fabledadventure.orcanite_block": "Orcanite Block"
+}
