@@ -21,7 +21,7 @@ import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
 
-public class SorciumBlueRobeItem extends ArmorItem implements IAnimatable {
+public class SorciumBlueRobeItem extends ModArmorItem implements IAnimatable {
     private final AnimationFactory factory = new AnimationFactory(this);
 
    public SorciumBlueRobeItem(ArmorMaterial materialIn, EquipmentSlot slot, Item.Settings builder)  {

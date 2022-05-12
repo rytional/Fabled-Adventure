@@ -30,7 +30,7 @@ import net.minecraft.world.LocalDifficulty;
 import net.minecraft.world.ServerWorldAccess;
 import net.minecraft.world.World;
 import net.rytional.fabledadventure.entity.ModEntities;
-import net.rytional.fabledadventure.entity.variants.RaccoonVariant;
+import net.rytional.fabledadventure.entity.variants.SkyVariant;
 import org.jetbrains.annotations.Nullable;
 import software.bernie.geckolib3.core.IAnimatable;
 import software.bernie.geckolib3.core.PlayState;
@@ -40,13 +40,13 @@ import software.bernie.geckolib3.core.event.predicate.AnimationEvent;
 import software.bernie.geckolib3.core.manager.AnimationData;
 import software.bernie.geckolib3.core.manager.AnimationFactory;
 
-public class RaccoonEntity extends TameableEntity implements IAnimatable {
+public class SkyEntity extends TameableEntity implements IAnimatable {
     private AnimationFactory factory = new AnimationFactory(this);
 
     private static final TrackedData<Integer> DATA_ID_TYPE_VARIANT =
-            DataTracker.registerData(RaccoonEntity.class, TrackedDataHandlerRegistry.INTEGER);
+            DataTracker.registerData(SkyEntity.class, TrackedDataHandlerRegistry.INTEGER);
 
-    public RaccoonEntity(EntityType<? extends TameableEntity> entityType, World world) {
+    public SkyEntity(EntityType<? extends TameableEntity> entityType, World world) {
         super(entityType, world);
         this.ignoreCameraFrustum = true;
     }
@@ -76,28 +76,28 @@ public class RaccoonEntity extends TameableEntity implements IAnimatable {
 
     @Override
     protected SoundEvent getAmbientSound() {
-        return SoundEvents.ENTITY_DOLPHIN_AMBIENT;
+        return SoundEvents.ENTITY_WOLF_AMBIENT;
     }
 
     @Override
     protected SoundEvent getHurtSound(DamageSource source) {
-        return SoundEvents.ENTITY_DOLPHIN_HURT;
+        return SoundEvents.ENTITY_WOLF_HURT;
     }
 
     @Override
     protected SoundEvent getDeathSound() {
-        return SoundEvents.ENTITY_PIG_DEATH;
+        return SoundEvents.ENTITY_WOLF_DEATH;
     }
 
     @Override
     protected void playStepSound(BlockPos pos, BlockState state) {
-        this.playSound(SoundEvents.ENTITY_PIG_STEP, 0.15f, 1.0f);
+        this.playSound(SoundEvents.ENTITY_WOLF_STEP, 0.15f, 1.0f);
     }
 
     @Nullable
     @Override
     public PassiveEntity createChild(ServerWorld world, PassiveEntity entity) {
-        return ModEntities.RACCOON.create(world);
+        return ModEntities.SKY.create(world);
     }
 
     @Override
@@ -114,16 +114,16 @@ public class RaccoonEntity extends TameableEntity implements IAnimatable {
     // ANIMATIONS
     private <E extends IAnimatable> PlayState predicate(AnimationEvent<E> event) {
         if (event.isMoving()) {
-            event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.raccoon.walk", true));
+            event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.sky.leg_default", true));
             return PlayState.CONTINUE;
         }
 
         if (this.isSitting()) {
-            event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.raccoon.sitting", true));
+            event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.sky.sitting", true));
             return PlayState.CONTINUE;
         }
 
-        event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.raccoon.idle", true));
+        event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.sky.tail_default", true));
         return PlayState.CONTINUE;
     }
 
@@ -131,7 +131,7 @@ public class RaccoonEntity extends TameableEntity implements IAnimatable {
 
     /* TAMEABLE */
     private static final TrackedData<Boolean> SITTING =
-            DataTracker.registerData(RaccoonEntity.class, TrackedDataHandlerRegistry.BOOLEAN);
+            DataTracker.registerData(SkyEntity.class, TrackedDataHandlerRegistry.BOOLEAN);
 
     @Override
     public ActionResult interactMob(PlayerEntity player, Hand hand) {
@@ -210,7 +210,7 @@ public class RaccoonEntity extends TameableEntity implements IAnimatable {
     public EntityData initialize(ServerWorldAccess world, LocalDifficulty difficulty,
                                  SpawnReason spawnReason, @Nullable EntityData entityData,
                                  @Nullable NbtCompound entityNbt) {
-        RaccoonVariant variant = Util.getRandom(RaccoonVariant.values(), this.random);
+        SkyVariant variant = Util.getRandom(SkyVariant.values(), this.random);
         setVariant(variant);
         return super.initialize(world, difficulty, spawnReason, entityData, entityNbt);
     }
@@ -221,8 +221,8 @@ public class RaccoonEntity extends TameableEntity implements IAnimatable {
         tag.putInt("Variant", this.getTypeVariant());
     }
 
-    public RaccoonVariant getVariant() {
-        return RaccoonVariant.byId(this.getTypeVariant() & 255);
+    public SkyVariant getVariant() {
+        return SkyVariant.byId(this.getTypeVariant() & 255);
     }
 
     private int getTypeVariant() {
@@ -235,7 +235,7 @@ public class RaccoonEntity extends TameableEntity implements IAnimatable {
         this.dataTracker.set(DATA_ID_TYPE_VARIANT, p_21815_.getInt("Variant"));
     }
 
-    private void setVariant(RaccoonVariant variant) {
+    private void setVariant(SkyVariant variant) {
         this.dataTracker.set(DATA_ID_TYPE_VARIANT, variant.getId() & 255);
     }
 

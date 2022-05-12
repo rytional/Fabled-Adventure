@@ -38,9 +38,9 @@ public class ModLanceItem extends SwordItem {
             if (entity.isLiving()) {
                 LivingEntity livingEntity = (LivingEntity) entity;
                 livingEntity.addStatusEffect(new StatusEffectInstance(StatusEffects.SLOWNESS, 10, 1), null);
-                livingEntity.addStatusEffect(new StatusEffectInstance(StatusEffects.RESISTANCE, 10, 1), null);
-                livingEntity.addStatusEffect(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE, 10, 1), null);
-                livingEntity.addStatusEffect(new StatusEffectInstance(StatusEffects.UNLUCK, 10, 4), null);
+                livingEntity.addStatusEffect(new StatusEffectInstance(StatusEffects.HASTE, 10, 1), null);
+                livingEntity.addStatusEffect(new StatusEffectInstance(StatusEffects.MINING_FATIGUE, 10, 1), null);
+                livingEntity.addStatusEffect(new StatusEffectInstance(StatusEffects.GLOWING, 10, 4), null);
             }
             super.inventoryTick(stack, world, entity, slot , true);
         }

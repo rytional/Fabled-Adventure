@@ -50,6 +50,8 @@ public class ModItems {
     //ENTITIES
     public static final Item RACCOON_SPAWN_EGG = registerItem("raccoon_spawn_egg", new SpawnEggItem(ModEntities.RACCOON, 0x948e8d, 0x3b3635,
             new FabricItemSettings().group(ModItemGroups.FABLED)));
+    public static final Item SKY_SPAWN_EGG = registerItem("sky_spawn_egg", new SpawnEggItem(ModEntities.SKY, 0x948e8d, 0x3b3635,
+            new FabricItemSettings().group(ModItemGroups.FABLED)));
 
     //MUSIC DISCS
     public static final Item RAINING_TACOS_MUSIC_DISC = registerItem("raining_tacos_music_disc",
@@ -58,7 +60,7 @@ public class ModItems {
 
     //RYONITE
     public static final Item SORCIUM_INGOT = registerItem("sorcium_ingot", new Item(new FabricItemSettings().group(ModItemGroups.FABLED)));
-    public static final Item SORCIUM_STAFF = registerItem("sorcium_staff", new ModSwordItem(ModToolMaterials.SORCIUM, 4, 2f,
+    public static final Item SORCIUM_BLUE_STAFF = registerItem("sorcium_blue_staff", new ModWitherSwordItem(ModToolMaterials.SORCIUM, 4, 2f,
             new FabricItemSettings().group(ModItemGroups.FABLED)));
     public static final Item SORCIUM_BLUE_HELMET = registerItem("sorcium_blue_helmet", new SorciumBlueRobeItem(ModArmorMaterials.SORCIUM, EquipmentSlot.HEAD,
             new FabricItemSettings().group(ModItemGroups.FABLED)));
@@ -88,7 +90,7 @@ public class ModItems {
             new FabricItemSettings().group(ModItemGroups.FABLED)));
     public static final Item ORCANITE_PAXEL = registerItem("orcanite_paxel", new ModPaxelItem(ModToolMaterials.ORCANITE, 2, 1f,
             new FabricItemSettings().group(ModItemGroups.FABLED)));
-    public static final Item ORCANITE_LANCE = registerItem("orcanite_lance", new ModLanceItem(ModToolMaterials.ORCANITE, 2, 1f,3,3,
+    public static final Item ORCANITE_LANCE = registerItem("orcanite_lance", new ModLanceItem(ModToolMaterials.ORCANITE, 2, 1f,4,4,
             new FabricItemSettings().group(ModItemGroups.FABLED)));
     public static final Item ORCANITE_HOE = registerItem("orcanite_hoe", new ModShoveltem(ModToolMaterials.ORCANITE, 2, 1f,
             new FabricItemSettings().group(ModItemGroups.FABLED)));
