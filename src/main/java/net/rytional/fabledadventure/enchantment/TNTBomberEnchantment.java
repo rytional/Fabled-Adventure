@@ -24,9 +24,7 @@ public class TNTBomberEnchantment extends Enchantment {
             }
 
             if(level == 2) {
-                EntityType.TNT.spawn(world,
-                        null,
-                        null, null, position,
+                EntityType.TNT.spawn(world, null, null, null, position,
                         SpawnReason.TRIGGERED, true, true);
                 EntityType.TNT.spawn(world, null, null, null, position,
                         SpawnReason.TRIGGERED, true, true);

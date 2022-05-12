@@ -23,9 +23,9 @@ public class LightningStrikerEnchantment extends Enchantment {
             }
 
             if(level == 2) {
-                EntityType.WITHER_SKULL.spawn(world, null, null, null, position,
+                EntityType.LIGHTNING_BOLT.spawn(world, null, null, null, position,
                         SpawnReason.TRIGGERED, true, true);
-                EntityType.WITHER_SKULL.spawn(world, null, null, null, position,
+                EntityType.LIGHTNING_BOLT.spawn(world, null, null, null, position,
                         SpawnReason.TRIGGERED, true, true);
             }
         }

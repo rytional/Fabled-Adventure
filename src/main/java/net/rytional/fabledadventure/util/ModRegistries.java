@@ -6,6 +6,7 @@ import net.rytional.fabledadventure.entity.custom.RaccoonEntity;
 
 public class ModRegistries {
     public static void registerModStuffs() {
+
         registerAttributes();
     }
 
