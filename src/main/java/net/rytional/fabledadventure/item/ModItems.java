@@ -2,6 +2,7 @@ package net.rytional.fabledadventure.item;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.entity.EquipmentSlot;
+import net.minecraft.item.BowItem;
 import net.minecraft.item.HorseArmorItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.SpawnEggItem;
@@ -58,7 +59,7 @@ public class ModItems {
             new ModMusicDiscItem(9, ModSounds.RAINING_TACOS,
     new FabricItemSettings().group(ModItemGroups.FABLED).maxCount(1)));
 
-    //RYONITE
+    //SORCIUM
     public static final Item SORCIUM_INGOT = registerItem("sorcium_ingot", new Item(new FabricItemSettings().group(ModItemGroups.FABLED)));
     public static final Item SORCIUM_BLUE_STAFF = registerItem("sorcium_blue_staff", new ModWitherSwordItem(ModToolMaterials.SORCIUM, 4, 2f,
             new FabricItemSettings().group(ModItemGroups.FABLED)));
@@ -70,6 +71,10 @@ public class ModItems {
             new FabricItemSettings().group(ModItemGroups.FABLED)));
     public static final Item SORCIUM_BLUE_BOOTS = registerItem("sorcium_blue_boots", new SorciumBlueRobeItem(ModArmorMaterials.SORCIUM, EquipmentSlot.FEET,
             new FabricItemSettings().group(ModItemGroups.FABLED)));
+
+    //ELFIUM
+    public static final Item ELFIUM_BOW = registerItem("elfium_bow",
+            new ModBowItem(new FabricItemSettings().group(ModItemGroups.FABLED).maxCount(1)));
 
     //ORCANITE
     public static final Item ORCANITE_INGOT = registerItem("orcanite_ingot", new ModGlowItem(new FabricItemSettings().group(ModItemGroups.FABLED)));

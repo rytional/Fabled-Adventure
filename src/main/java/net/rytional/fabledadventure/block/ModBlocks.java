@@ -10,6 +10,7 @@ import net.minecraft.item.ItemGroup;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import net.rytional.fabledadventure.FabledAdventure;
+import net.rytional.fabledadventure.block.custom.FabledBlasterBlock;
 import net.rytional.fabledadventure.block.custom.SpeedyBlock;
 import net.rytional.fabledadventure.block.custom.OrcaniteOre;
 
@@ -28,6 +29,8 @@ public class ModBlocks {
             new Block(FabricBlockSettings.of(Material.STONE).strength(1.5f).requiresTool()), net.rytional.fabledadventure.item.ModItemGroups.FABLED);
     public static final Block ORCANITE_BLOCK = registerBlock("orcanite_block",
             new Block(FabricBlockSettings.of(Material.METAL).strength(4.0f).requiresTool().luminance(14)), net.rytional.fabledadventure.item.ModItemGroups.FABLED);
+    public static final Block FABLED_BLASTER = registerBlock("fabled_blaster",
+            new FabledBlasterBlock(FabricBlockSettings.of(Material.METAL).nonOpaque().strength(1f).requiresTool().luminance(5)), net.rytional.fabledadventure.item.ModItemGroups.FABLED);
 
     private static Block registerBlock(String name, Block block, ItemGroup group) {
         registerBlockItem(name, block, group);

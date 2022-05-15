@@ -15,8 +15,9 @@
   "block.fabledadventure.ultium_block": "Ultium Block",
   "block.fabledadventure.ultium_ore": "Ultium Ore",
   "block.fabledadventure.speedy_block": "Speedy Block",
+  "block.fabledadventure.fabled_blaster": "Fabled Blaster",
 
-  "itemGroup.fabledadventure.rytional": "Ultium's Adventure",
+  "itemGroup.fabledadventure.fabled": "Fabled Adventure",
 
   "enchantment.fabledadventure.lightning_striker": "Lightning Striker",
   "enchantment.fabledadventure.tnt_bomber": "TNT Bomber",
@@ -47,13 +48,13 @@
   "item.fabledadventure.orcanite_nugget": "Orcanite Nugget",
   "item.fabledadventure.orcanite_shard": "Orcanite Shard",
   "item.fabledadventure.orcanite_sheet": "Orcanite Cream",
-
   "item.fabledadventure.orcanite_axe": "Orcanite Axe",
   "item.fabledadventure.orcanite_hoe": "Orcanite Hoe",
   "item.fabledadventure.orcanite_paxel": "Orcanite Paxel",
   "item.fabledadventure.orcanite_pickaxe": "Orcanite Pickaxe",
   "item.fabledadventure.orcanite_shovel": "Orcanite Shovel",
   "item.fabledadventure.orcanite_sword": "Orcanite Sword",
+  "item.fabledadventure.elfium_bow": "Elfium Bow",
 
   "item.fabledadventure.orcanite_horse_armor": "Orcanite Horse Armor",
 

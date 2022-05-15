@@ -2,10 +2,12 @@ package net.rytional.fabledadventure;
 
 import net.fabricmc.api.ModInitializer;
 import net.rytional.fabledadventure.block.ModBlocks;
+import net.rytional.fabledadventure.block.entity.ModBlockEntities;
 import net.rytional.fabledadventure.effect.ModEffects;
 import net.rytional.fabledadventure.enchantment.ModEnchantments;
 import net.rytional.fabledadventure.item.ModItems;
 import net.rytional.fabledadventure.potion.ModPotions;
+import net.rytional.fabledadventure.recipe.ModRecipes;
 import net.rytional.fabledadventure.util.ModRegistries;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -24,6 +26,9 @@ public class FabledAdventure implements ModInitializer {
 		ModEffects.registerEffects();
 		ModPotions.registerPotions();
 		ModRegistries.registerModStuffs();
+		ModBlockEntities.registerAllEntities();
+
+		ModRecipes.register();
 
 		GeckoLib.initialize();
 	}

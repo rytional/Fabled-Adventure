@@ -3,6 +3,7 @@ package net.rytional.fabledadventure.entity.custom;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.EntityData;
 import net.minecraft.entity.EntityType;
+import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.SpawnReason;
 import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
@@ -114,7 +115,7 @@ public class SkyEntity extends TameableEntity implements IAnimatable {
     // ANIMATIONS
     private <E extends IAnimatable> PlayState predicate(AnimationEvent<E> event) {
         if (event.isMoving()) {
-            event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.sky.leg_default", true));
+            event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.sky.walking", true));
             return PlayState.CONTINUE;
         }
 
@@ -122,11 +123,18 @@ public class SkyEntity extends TameableEntity implements IAnimatable {
             event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.sky.sitting", true));
             return PlayState.CONTINUE;
         }
+        if (this.isSprinting()) {
+            event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.sky.running", true));
+            return PlayState.CONTINUE;
+        }
+        if (this.isWet()) {
+            event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.sky.shaking", true));
+            return PlayState.CONTINUE;
+        }
 
-        event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.sky.tail_default", true));
-        return PlayState.CONTINUE;
-    }
-
+            event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.sky.tail_default", true));
+            return PlayState.CONTINUE;
+        }
 
 
     /* TAMEABLE */

@@ -1,0 +1,14 @@
+{
+  "type": "fabledadventure:fabled_blaster",
+  "ingredients": [
+    {
+      "item": "minecraft:golden_pickaxe"
+    },
+    {
+      "item": "fabledadventure:ultium_ingot"
+    }
+  ],
+  "output": {
+    "item": "fabledadventure:ultium_pickaxe"
+  }
+}
