@@ -6,7 +6,7 @@ When the metals from each race combine the can be used to produce ultium which i
 
 All races have at least one special armor and a special weapon if not more.
 
-Biggium - Ore used to craft armor fit for giants as well as tools that give special abilities.
+Gynormium - Ore used to craft armor fit for giants as well as tools that give special abilities.
 
 Dragonite - Ore used to craft armor fit for the Dragon Born as well as tools that give special abilities.
 
@@ -14,7 +14,7 @@ Dwarfium - Ore used to craft armor fit for a Dwarf as well as tools that give sp
 
 Elfium - Ore used to craft armor fit for an Elf as well as special Bows with abilities.
 
-Faenite - Ore used to craft armor fit for a halfling of fairy as well as tools that give special abilities.
+Faenite - Ore used to craft armor fit for a halfling or fairy as well as tools that give special abilities.
 
 Humanite - Ore used to craft armor fit for a regular human as well as tools that give special abilities.
 
