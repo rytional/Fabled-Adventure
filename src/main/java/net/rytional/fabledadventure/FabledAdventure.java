@@ -5,6 +5,8 @@ import net.rytional.fabledadventure.block.ModBlocks;
 import net.rytional.fabledadventure.block.entity.ModBlockEntities;
 import net.rytional.fabledadventure.effect.ModEffects;
 import net.rytional.fabledadventure.enchantment.ModEnchantments;
+import net.rytional.fabledadventure.world.ModConfiguredFeatures;
+import net.rytional.fabledadventure.world.ModWorldGen;
 import net.rytional.fabledadventure.item.ModItems;
 import net.rytional.fabledadventure.potion.ModPotions;
 import net.rytional.fabledadventure.recipe.ModRecipes;
@@ -27,6 +29,8 @@ public class FabledAdventure implements ModInitializer {
 		ModPotions.registerPotions();
 		ModRegistries.registerModStuffs();
 		ModBlockEntities.registerAllEntities();
+		ModWorldGen.generateModWorldGen();
+		ModConfiguredFeatures.registerConfiguredFeatures();
 
 		ModRecipes.register();
 

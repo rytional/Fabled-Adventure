@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/leaves",
+  "textures": {
+    "all": "fabledadventure:block/naturite_leaves"
+  }
+}
