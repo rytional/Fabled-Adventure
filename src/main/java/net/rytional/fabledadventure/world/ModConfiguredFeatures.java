@@ -5,8 +5,10 @@ import net.minecraft.util.registry.RegistryEntry;
 import net.minecraft.world.gen.feature.*;
 import net.minecraft.world.gen.feature.size.TwoLayersFeatureSize;
 import net.minecraft.world.gen.foliage.BlobFoliagePlacer;
+import net.minecraft.world.gen.foliage.JungleFoliagePlacer;
+import net.minecraft.world.gen.foliage.LargeOakFoliagePlacer;
 import net.minecraft.world.gen.stateprovider.BlockStateProvider;
-import net.minecraft.world.gen.trunk.StraightTrunkPlacer;
+import net.minecraft.world.gen.trunk.*;
 import net.rytional.fabledadventure.FabledAdventure;
 import net.rytional.fabledadventure.block.ModBlocks;
 
@@ -16,10 +18,10 @@ public class ModConfiguredFeatures {
     public static final RegistryEntry<ConfiguredFeature<TreeFeatureConfig, ?>> NATURITE_TREE =
             ConfiguredFeatures.register("naturite", Feature.TREE, new TreeFeatureConfig.Builder(
                     BlockStateProvider.of(ModBlocks.NATURITE_LOG),
-                    new StraightTrunkPlacer(5, 6, 3),
+                    new LargeOakTrunkPlacer(8, 8, 3),
                     BlockStateProvider.of(ModBlocks.NATURITE_LEAVES),
-                    new BlobFoliagePlacer(ConstantIntProvider.create(2), ConstantIntProvider.create(0), 4),
-                    new TwoLayersFeatureSize(1, 0, 2)).build());
+                    new LargeOakFoliagePlacer(ConstantIntProvider.create(2), ConstantIntProvider.create(1), 2),
+                    new TwoLayersFeatureSize(1, 0, 3)).build());
 
     public static final RegistryEntry<PlacedFeature> NATURITE_CHECKED = PlacedFeatures.register("naturite_checked",
             NATURITE_TREE, PlacedFeatures.wouldSurvive(ModBlocks.NATURITE_SAPLING));

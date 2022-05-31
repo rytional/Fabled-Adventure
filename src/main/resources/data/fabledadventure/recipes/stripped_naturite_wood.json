@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "bark",
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "fabledadventure:stripped_naturite_log"
+    }
+  },
+  "result": {
+    "item": "fabledadventure:stripped_naturite_wood",
+    "count": 3
+  }
+}

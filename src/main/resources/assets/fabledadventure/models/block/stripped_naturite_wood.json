@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "fabledadventure:block/stripped_naturite_log",
+    "side": "fabledadventure:block/stripped_naturite_log"
+  }
+}

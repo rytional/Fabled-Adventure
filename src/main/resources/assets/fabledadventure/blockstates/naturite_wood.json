@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "fabledadventure:block/naturite_wood",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "fabledadventure:block/naturite_wood"
+    },
+    "axis=z": {
+      "model": "fabledadventure:block/naturite_wood",
+      "x": 90
+    }
+  }
+}

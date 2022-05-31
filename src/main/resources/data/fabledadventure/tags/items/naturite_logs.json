@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "fabledadventure:naturite_log",
+    "fabledadventure:stripped_naturite_log",
+    "fabledadventure:naturite_wood",
+    "fabledadventure:stripped_naturite_wood"
+  ]
+}

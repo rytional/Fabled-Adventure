@@ -14,6 +14,8 @@ import net.rytional.fabledadventure.item.custom.*;
 import net.rytional.fabledadventure.sound.ModSounds;
 
 public class ModItems {
+
+    //ULTIUM
     public static final Item ULTIUM_INGOT = registerItem("ultium_ingot", new Item(new FabricItemSettings().group(ModItemGroups.FABLED)));
 
     public static final Item ULTIUM_NUGGET = registerItem("ultium_nugget", new Item(new FabricItemSettings().group(ModItemGroups.FABLED)));
@@ -101,6 +103,17 @@ public class ModItems {
             new FabricItemSettings().group(ModItemGroups.FABLED)));
     public static final Item ORCANITE_HORSE_ARMOR = registerItem("orcanite_horse_armor", new HorseArmorItem(15, "orcanite",
             new FabricItemSettings().group(ModItemGroups.FABLED)));
+
+    //DWARFIUM
+
+    //FAENITE
+    public static final Item FAENITE_DUST = registerItem("faenite_dust", new ModGlowItem(new FabricItemSettings().group(ModItemGroups.FABLED)));
+
+    //GYNORMIUM
+
+    //HUMANITE
+
+    //NATURITE
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registry.ITEM, new Identifier(FabledAdventure.MOD_ID, name), item);

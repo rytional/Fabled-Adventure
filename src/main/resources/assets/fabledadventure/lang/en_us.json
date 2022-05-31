@@ -27,6 +27,7 @@
   "item.minecraft.lingering_potion.effect.freeze_potion": "Lingering Potion of Freeze",
 
   "item.fabledadventure.raccoon_spawn_egg": "Raccoon Spawn Egg",
+  "item.fabledadventure.sky_spawn_egg": "Sky Spawn Egg",
 
   "item.fabledadventure.raining_tacos_music_disc": "Raining Tacos Music Disc",
   "item.fabledadventure.raining_tacos_music_disc.desc": "Raining Tacos - Perry Gripp & BooneBum",
@@ -54,11 +55,14 @@
   "item.fabledadventure.orcanite_pickaxe": "Orcanite Pickaxe",
   "item.fabledadventure.orcanite_shovel": "Orcanite Shovel",
   "item.fabledadventure.orcanite_sword": "Orcanite Sword",
+
   "item.fabledadventure.elfium_bow": "Elfium Bow",
 
   "item.fabledadventure.orcanite_horse_armor": "Orcanite Horse Armor",
 
   "block.fabledadventure.orcanite_ore_block": "Orcanite Ore",
   "block.fabledadventure.orcanite_deepslate_ore_block": "Orcanite Deepslate Ore",
-  "block.fabledadventure.orcanite_block": "Orcanite Block"
+  "block.fabledadventure.orcanite_block": "Orcanite Block",
+
+  "entity.minecraft.villager.fabledmaster": "Fabled Master"
 }
