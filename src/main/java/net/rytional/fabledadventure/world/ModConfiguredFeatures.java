@@ -4,8 +4,6 @@ import net.minecraft.util.math.intprovider.ConstantIntProvider;
 import net.minecraft.util.registry.RegistryEntry;
 import net.minecraft.world.gen.feature.*;
 import net.minecraft.world.gen.feature.size.TwoLayersFeatureSize;
-import net.minecraft.world.gen.foliage.BlobFoliagePlacer;
-import net.minecraft.world.gen.foliage.JungleFoliagePlacer;
 import net.minecraft.world.gen.foliage.LargeOakFoliagePlacer;
 import net.minecraft.world.gen.stateprovider.BlockStateProvider;
 import net.minecraft.world.gen.trunk.*;
@@ -37,8 +35,8 @@ public class ModConfiguredFeatures {
                             new SimpleBlockFeatureConfig(BlockStateProvider.of(ModBlocks.NATURITE_ROSE)))));
 
     public static final List<OreFeatureConfig.Target> OVERWORLD_ORCANITE_ORES = List.of(
-            OreFeatureConfig.createTarget(OreConfiguredFeatures.STONE_ORE_REPLACEABLES, ModBlocks.ORCANITE_ORE_BLOCK.getDefaultState()),
-            OreFeatureConfig.createTarget(OreConfiguredFeatures.DEEPSLATE_ORE_REPLACEABLES, ModBlocks.ORCANITE_DEEPSLATE_ORE_BLOCK.getDefaultState()));
+            OreFeatureConfig.createTarget(OreConfiguredFeatures.STONE_ORE_REPLACEABLES, ModBlocks.ORCANITE_STONE_ORE.getDefaultState()),
+            OreFeatureConfig.createTarget(OreConfiguredFeatures.DEEPSLATE_ORE_REPLACEABLES, ModBlocks.ORCANITE_DEEPSLATE_ORE.getDefaultState()));
 
     public static final RegistryEntry<ConfiguredFeature<OreFeatureConfig, ?>> ORCANITE_ORE = ConfiguredFeatures.register("orcanite_ore",
             Feature.ORE, new OreFeatureConfig(OVERWORLD_ORCANITE_ORES, 9));
