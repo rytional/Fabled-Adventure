@@ -29,8 +29,6 @@ public class FabledAdventureClient implements ClientModInitializer {
 
         ScreenRegistry.register(ModScreenHandlers.FABLED_BLASTER_SCREEN_HANDLER, FabledBlasterScreen::new);
 
-        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.FABLED_BLASTER, RenderLayer.getCutout());
-
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.NATURITE_LEAVES, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.NATURITE_SAPLING, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.NATURITE_ROSE, RenderLayer.getCutout());

@@ -3,8 +3,8 @@
   "values": [
     "fabledadventure:ultium_block",
     "fabledadventure:ultium_ore",
-    "fabledadventure:orcanite_ore_block",
-    "fabledadventure:orcanite_deepslate_ore_block",
+    "fabledadventure:orcanite_stone_ore",
+    "fabledadventure:orcanite_deepslate_ore",
     "fabledadventure:orcanite_block",
     "fabledadventure:fabled_blaster"
   ]

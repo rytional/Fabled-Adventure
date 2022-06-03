@@ -1,5 +1,8 @@
 package net.rytional.fabledadventure.world;
 
+import net.minecraft.block.Blocks;
+import net.minecraft.structure.rule.BlockMatchRuleTest;
+import net.minecraft.structure.rule.RuleTest;
 import net.minecraft.util.math.intprovider.ConstantIntProvider;
 import net.minecraft.util.registry.RegistryEntry;
 import net.minecraft.world.gen.feature.*;
@@ -34,12 +37,21 @@ public class ModConfiguredFeatures {
                     new RandomPatchFeatureConfig(32, 6, 2, PlacedFeatures.createEntry(Feature.SIMPLE_BLOCK,
                             new SimpleBlockFeatureConfig(BlockStateProvider.of(ModBlocks.NATURITE_ROSE)))));
 
+    public static final RuleTest NETHERRACK = new BlockMatchRuleTest(Blocks.NETHERRACK);
+    public static final RuleTest ENDSTONE = new BlockMatchRuleTest(Blocks.END_STONE);
+
     public static final List<OreFeatureConfig.Target> OVERWORLD_ORCANITE_ORES = List.of(
             OreFeatureConfig.createTarget(OreConfiguredFeatures.STONE_ORE_REPLACEABLES, ModBlocks.ORCANITE_STONE_ORE.getDefaultState()),
             OreFeatureConfig.createTarget(OreConfiguredFeatures.DEEPSLATE_ORE_REPLACEABLES, ModBlocks.ORCANITE_DEEPSLATE_ORE.getDefaultState()));
 
     public static final RegistryEntry<ConfiguredFeature<OreFeatureConfig, ?>> ORCANITE_ORE = ConfiguredFeatures.register("orcanite_ore",
             Feature.ORE, new OreFeatureConfig(OVERWORLD_ORCANITE_ORES, 9));
+
+    public static final RegistryEntry<ConfiguredFeature<OreFeatureConfig, ?>> ORCANITE_NETHERRACK_ORE = ConfiguredFeatures.register("orcanite_netherrack_ore",
+            Feature.ORE, new OreFeatureConfig(NETHERRACK, ModBlocks.ORCANITE_NETHERRACK_ORE.getDefaultState(), 10));
+
+    public static final RegistryEntry<ConfiguredFeature<OreFeatureConfig, ?>> ORCANITE_ENDSTONE_ORE = ConfiguredFeatures.register("orcanite_endstone_ore",
+            Feature.ORE, new OreFeatureConfig(ENDSTONE, ModBlocks.ORCANITE_ENDSTONE_ORE.getDefaultState(), 10));
 
 
     public static void registerConfiguredFeatures() {
