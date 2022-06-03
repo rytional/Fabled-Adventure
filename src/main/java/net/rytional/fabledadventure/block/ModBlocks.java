@@ -123,6 +123,8 @@ public class ModBlocks {
                     UniformIntProvider.create(3, 7)), ModItemGroups.FABLED);
     public static final Block FAENITE_BLOCK = registerBlock("faenite_block",
             new Block(FabricBlockSettings.of(Material.METAL).strength(4.0f).requiresTool().luminance(14)), ModItemGroups.FABLED);
+    public static final Block FAENITE_HOME = registerBlock("faenite_home",
+            new FaeniteHomeBlock(FabricBlockSettings.of(Material.AMETHYST).strength(4.0f).requiresTool().luminance(14)), ModItemGroups.FABLED);
 
     //GYNORMIUM
     public static final Block GYNORMIUM_STONE_ORE = registerBlock("gynormium_stone_ore",

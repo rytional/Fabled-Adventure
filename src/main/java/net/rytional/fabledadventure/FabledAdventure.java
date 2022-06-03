@@ -5,6 +5,7 @@ import net.rytional.fabledadventure.block.ModBlocks;
 import net.rytional.fabledadventure.block.entity.ModBlockEntities;
 import net.rytional.fabledadventure.effect.ModEffects;
 import net.rytional.fabledadventure.enchantment.ModEnchantments;
+import net.rytional.fabledadventure.screen.ModScreenHandlers;
 import net.rytional.fabledadventure.villager.ModVillagers;
 import net.rytional.fabledadventure.world.ModConfiguredFeatures;
 import net.rytional.fabledadventure.world.ModWorldGen;
@@ -33,6 +34,7 @@ public class FabledAdventure implements ModInitializer {
 		ModWorldGen.generateModWorldGen();
 		ModConfiguredFeatures.registerConfiguredFeatures();
 		ModVillagers.setupPOIs();
+		ModScreenHandlers.registerAllScreenHandlers();
 
 		ModRecipes.register();
 
