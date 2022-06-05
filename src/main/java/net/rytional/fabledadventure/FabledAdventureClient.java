@@ -13,6 +13,7 @@ import net.rytional.fabledadventure.entity.client.armor.SorciumBlueRobeRenderer;
 import net.rytional.fabledadventure.item.ModItems;
 import net.rytional.fabledadventure.screen.FabledBlasterScreen;
 import net.rytional.fabledadventure.screen.ModScreenHandlers;
+import net.rytional.fabledadventure.util.ModFluidHandlerRegistry;
 import net.rytional.fabledadventure.util.ModModelPredicateProvider;
 import software.bernie.geckolib3.renderers.geo.GeoArmorRenderer;
 
@@ -20,6 +21,8 @@ public class FabledAdventureClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
 
+
+        ModFluidHandlerRegistry.registerFluidStuffs();
         ModModelPredicateProvider.registerModModels();
 
         EntityRendererRegistry.register(ModEntities.RACCOON, RaccoonRenderer::new);
@@ -35,5 +38,6 @@ public class FabledAdventureClient implements ClientModInitializer {
 
         GeoArmorRenderer.registerArmorRenderer(new SorciumBlueRobeRenderer(), ModItems.SORCIUM_BLUE_BOOTS,
                 ModItems.SORCIUM_BLUE_LEGGINGS, ModItems.SORCIUM_BLUE_CHESTPLATE, ModItems.SORCIUM_BLUE_HELMET);
+
     }
 }

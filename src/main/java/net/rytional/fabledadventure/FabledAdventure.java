@@ -1,11 +1,13 @@
 package net.rytional.fabledadventure;
 
 import net.fabricmc.api.ModInitializer;
+import net.minecraft.block.cauldron.CauldronBehavior;
 import net.rytional.fabledadventure.block.ModBlocks;
 import net.rytional.fabledadventure.block.entity.ModBlockEntities;
 import net.rytional.fabledadventure.effect.ModEffects;
 import net.rytional.fabledadventure.enchantment.ModEnchantments;
 import net.rytional.fabledadventure.screen.ModScreenHandlers;
+import net.rytional.fabledadventure.util.ModCauldronBehavior;
 import net.rytional.fabledadventure.villager.ModVillagers;
 import net.rytional.fabledadventure.world.ModConfiguredFeatures;
 import net.rytional.fabledadventure.world.ModWorldGen;
@@ -35,6 +37,7 @@ public class FabledAdventure implements ModInitializer {
 		ModConfiguredFeatures.registerConfiguredFeatures();
 		ModVillagers.setupPOIs();
 		ModScreenHandlers.registerAllScreenHandlers();
+		ModCauldronBehavior.registerModBehavior();
 
 		ModRecipes.register();
 

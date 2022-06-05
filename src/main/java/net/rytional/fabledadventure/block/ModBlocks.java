@@ -7,11 +7,13 @@ import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
+import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
 import net.minecraft.util.registry.Registry;
 import net.rytional.fabledadventure.FabledAdventure;
 import net.rytional.fabledadventure.block.custom.*;
+import net.rytional.fabledadventure.fluid.ModFluids;
 import net.rytional.fabledadventure.world.feature.tree.NaturiteSaplingGenerator;
 import net.rytional.fabledadventure.item.ModItemGroups;
 
@@ -27,13 +29,13 @@ public class ModBlocks {
             new OreBlock(FabricBlockSettings.of(Material.STONE).strength(1.5f).requiresTool(),
                     UniformIntProvider.create(3, 7)), ModItemGroups.FABLED);
     public static final Block ULTIUM_DEEPSLATE_ORE = registerBlock("ultium_deepslate_ore",
-            new OreBlock(FabricBlockSettings.of(Material.STONE).strength(1.5f).requiresTool(),
+            new OreBlock(FabricBlockSettings.of(Material.STONE).strength(1.5f).requiresTool().sounds(BlockSoundGroup.DEEPSLATE),
                     UniformIntProvider.create(3, 7)), ModItemGroups.FABLED);
     public static final Block ULTIUM_BEDROCK_ORE = registerBlock("ultium_bedrock_ore",
-            new OreBlock(FabricBlockSettings.of(Material.STONE).strength(1.5f).requiresTool(),
+            new OreBlock(FabricBlockSettings.of(Material.STONE).strength(1.5f).requiresTool().sounds(BlockSoundGroup.LODESTONE),
                     UniformIntProvider.create(3, 7)), ModItemGroups.FABLED);
     public static final Block ULTIUM_NETHERRACK_ORE = registerBlock("ultium_netherrack_ore",
-            new OreBlock(FabricBlockSettings.of(Material.STONE).strength(1.5f).requiresTool(),
+            new OreBlock(FabricBlockSettings.of(Material.STONE).strength(1.5f).requiresTool().sounds(BlockSoundGroup.NETHERRACK),
                     UniformIntProvider.create(3, 7)), ModItemGroups.FABLED);
     public static final Block ULTIUM_ENDSTONE_ORE = registerBlock("ultium_endstone_ore",
             new OreBlock(FabricBlockSettings.of(Material.STONE).strength(1.5f).requiresTool(),
@@ -42,14 +44,22 @@ public class ModBlocks {
     //ORCANITE
     public static final Block ORCANITE_STONE_ORE = registerBlock("orcanite_stone_ore",
             new OrcanitePoisonOre(FabricBlockSettings.of(Material.STONE).strength(1.5f).requiresTool()), ModItemGroups.FABLED);
+    public static final Block COBBLED_ORCANITE = registerBlock("cobbled_orcanite",
+            new OrcanitePoisonOre(FabricBlockSettings.of(Material.METAL).strength(2f).requiresTool()), ModItemGroups.FABLED);
     public static final Block ORCANITE_DEEPSLATE_ORE = registerBlock("orcanite_deepslate_ore",
-            new OrcanitePoisonOre(FabricBlockSettings.of(Material.STONE).strength(1.5f).requiresTool()), ModItemGroups.FABLED);
+            new OrcanitePoisonOre(FabricBlockSettings.of(Material.STONE).strength(1.5f).requiresTool().sounds(BlockSoundGroup.DEEPSLATE)), ModItemGroups.FABLED);
     public static final Block ORCANITE_NETHERRACK_ORE = registerBlock("orcanite_netherrack_ore",
-            new OrcanitePoisonOre(FabricBlockSettings.of(Material.STONE).strength(1.5f).requiresTool()), ModItemGroups.FABLED);
+            new OrcanitePoisonOre(FabricBlockSettings.of(Material.STONE).strength(1.5f).requiresTool().sounds(BlockSoundGroup.NETHERRACK)), ModItemGroups.FABLED);
     public static final Block ORCANITE_ENDSTONE_ORE = registerBlock("orcanite_endstone_ore",
             new OrcanitePoisonOre(FabricBlockSettings.of(Material.STONE).strength(1.5f).requiresTool()), ModItemGroups.FABLED);
     public static final Block ORCANITE_BLOCK = registerBlock("orcanite_block",
             new Block(FabricBlockSettings.of(Material.AMETHYST).strength(4.0f).requiresTool().luminance(14)), ModItemGroups.FABLED);
+    public static final Block ORCANITE_FLUID_BLOCK = registerBlockWithoutBlockItem("orcanite_fluid_block",
+            new ModFluidBlock(ModFluids.MOLTEN_ORCANITE_STILL, FabricBlockSettings.of(Material.LAVA).noCollision().ticksRandomly().strength(100.0f).luminance(state -> 15).dropsNothing()));
+    public static final Block MOLTEN_ORCANITE_CAULDRON = registerBlockWithoutBlockItem("molten_orcanite_cauldron",
+            new OrcaniteCauldronBlock(FabricBlockSettings.copy(Blocks.CAULDRON)));
+
+
 
     //NATURITE
     public static final Block NATURITE_LOG = registerBlock("naturite_log",
@@ -74,10 +84,10 @@ public class ModBlocks {
             new OreBlock(FabricBlockSettings.of(Material.STONE).strength(1.5f).requiresTool(),
                     UniformIntProvider.create(3, 7)), ModItemGroups.FABLED);
     public static final Block NATURITE_DEEPSLATE_ORE = registerBlock("naturite_deepslate_ore",
-            new OreBlock(FabricBlockSettings.of(Material.STONE).strength(1.5f).requiresTool(),
+            new OreBlock(FabricBlockSettings.of(Material.STONE).strength(1.5f).requiresTool().sounds(BlockSoundGroup.DEEPSLATE),
                     UniformIntProvider.create(3, 7)), ModItemGroups.FABLED);
     public static final Block NATURITE_DIRT_ORE = registerBlock("naturite_dirt_ore",
-            new OreBlock(FabricBlockSettings.of(Material.STONE).strength(1.5f).requiresTool(),
+            new OreBlock(FabricBlockSettings.of(Material.SOIL).strength(1.5f).requiresTool().sounds(BlockSoundGroup.ROOTED_DIRT),
                     UniformIntProvider.create(3, 7)), ModItemGroups.FABLED);
     public static final Block NAURITE_BLOCK = registerBlock("naturite_block",
             new Block(FabricBlockSettings.of(Material.METAL).strength(4.0f).requiresTool().luminance(14)), ModItemGroups.FABLED);
@@ -87,10 +97,10 @@ public class ModBlocks {
             new OreBlock(FabricBlockSettings.of(Material.STONE).strength(1.5f).requiresTool(),
                     UniformIntProvider.create(3, 7)), ModItemGroups.FABLED);
     public static final Block DWARFIUM_DEEPSLATE_ORE = registerBlock("dwarfium_deepslate_ore",
-            new OreBlock(FabricBlockSettings.of(Material.STONE).strength(1.5f).requiresTool(),
+            new OreBlock(FabricBlockSettings.of(Material.STONE).strength(1.5f).requiresTool().sounds(BlockSoundGroup.DEEPSLATE),
                     UniformIntProvider.create(3, 7)), ModItemGroups.FABLED);
     public static final Block DWARFIUM_BEDROCK_ORE = registerBlock("dwarfium_bedrock_ore",
-            new OreBlock(FabricBlockSettings.of(Material.STONE).strength(1.5f).requiresTool(),
+            new OreBlock(FabricBlockSettings.of(Material.STONE).strength(1.5f).requiresTool().sounds(BlockSoundGroup.LODESTONE),
                     UniformIntProvider.create(3, 7)), ModItemGroups.FABLED);
     public static final Block DWARFIUM_BLOCK = registerBlock("dwarfium_block",
             new Block(FabricBlockSettings.of(Material.METAL).strength(4.0f).requiresTool().luminance(14)), ModItemGroups.FABLED);
@@ -100,7 +110,7 @@ public class ModBlocks {
             new OreBlock(FabricBlockSettings.of(Material.STONE).strength(1.5f).requiresTool(),
                     UniformIntProvider.create(3, 7)), ModItemGroups.FABLED);
     public static final Block ELFIUM_DEEPSLATE_ORE = registerBlock("elfium_deepslate_ore",
-            new OreBlock(FabricBlockSettings.of(Material.STONE).strength(1.5f).requiresTool(),
+            new OreBlock(FabricBlockSettings.of(Material.STONE).strength(1.5f).requiresTool().sounds(BlockSoundGroup.DEEPSLATE),
                     UniformIntProvider.create(3, 7)), ModItemGroups.FABLED);
     public static final Block ELFIUM_ENDSTONE_ORE = registerBlock("elfium_endstone_ore",
             new OreBlock(FabricBlockSettings.of(Material.STONE).strength(1.5f).requiresTool(),
@@ -112,13 +122,13 @@ public class ModBlocks {
     public static final Block FAENITE_STONE_ORE = registerBlock("faenite_stone_ore",
             new FaeniteOre(FabricBlockSettings.of(Material.STONE).strength(1.5f).requiresTool()), ModItemGroups.FABLED);
     public static final Block FAENITE_DEEPSLATE_ORE = registerBlock("faenite_deepslate_ore",
-            new FaeniteOre(FabricBlockSettings.of(Material.STONE).strength(1.5f).requiresTool()), ModItemGroups.FABLED);
+            new FaeniteOre(FabricBlockSettings.of(Material.STONE).strength(1.5f).requiresTool().sounds(BlockSoundGroup.DEEPSLATE)), ModItemGroups.FABLED);
     public static final Block FAENITE_ENDSTONE_ORE = registerBlock("faenite_endstone_ore",
             new FaeniteOre(FabricBlockSettings.of(Material.STONE).strength(1.5f).requiresTool()), ModItemGroups.FABLED);
     public static final Block FAENITE_DIRT_ORE = registerBlock("faenite_dirt_ore",
-            new FaeniteOre(FabricBlockSettings.of(Material.SOIL).strength(1.5f).requiresTool()), ModItemGroups.FABLED);
+            new FaeniteOre(FabricBlockSettings.of(Material.SOIL).strength(1.5f).requiresTool().sounds(BlockSoundGroup.ROOTED_DIRT)), ModItemGroups.FABLED);
     public static final Block FAENITE_BLOCK = registerBlock("faenite_block",
-            new FaeniteOre(FabricBlockSettings.of(Material.METAL).strength(1.5f).requiresTool()), ModItemGroups.FABLED);
+            new FaeniteOre(FabricBlockSettings.of(Material.METAL).strength(1.5f).requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK)), ModItemGroups.FABLED);
     public static final Block FAENITE_HOME = registerBlock("faenite_home",
             new Block(FabricBlockSettings.of(Material.AMETHYST).strength(4.0f).requiresTool().luminance(14)), ModItemGroups.FABLED);
 
@@ -127,10 +137,10 @@ public class ModBlocks {
             new OreBlock(FabricBlockSettings.of(Material.STONE).strength(1.5f).requiresTool(),
                     UniformIntProvider.create(3, 7)), ModItemGroups.FABLED);
     public static final Block GYNORMIUM_DEEPSLATE_ORE = registerBlock("gynormium_deepslate_ore",
-            new OreBlock(FabricBlockSettings.of(Material.STONE).strength(1.5f).requiresTool(),
+            new OreBlock(FabricBlockSettings.of(Material.STONE).strength(1.5f).requiresTool().sounds(BlockSoundGroup.DEEPSLATE),
                     UniformIntProvider.create(3, 7)), ModItemGroups.FABLED);
     public static final Block GYNORMIUM_NETHERRACK_ORE = registerBlock("gynormium_netherrack_ore",
-            new OreBlock(FabricBlockSettings.of(Material.STONE).strength(1.5f).requiresTool(),
+            new OreBlock(FabricBlockSettings.of(Material.STONE).strength(1.5f).requiresTool().sounds(BlockSoundGroup.NETHERRACK),
                     UniformIntProvider.create(3, 7)), ModItemGroups.FABLED);
     public static final Block GYNORMIUM_BLOCK = registerBlock("gynormium_block",
             new Block(FabricBlockSettings.of(Material.METAL).strength(4.0f).requiresTool().luminance(14)), ModItemGroups.FABLED);
@@ -140,10 +150,10 @@ public class ModBlocks {
             new OreBlock(FabricBlockSettings.of(Material.STONE).strength(1.5f).requiresTool(),
                     UniformIntProvider.create(3, 7)), ModItemGroups.FABLED);
     public static final Block HUMANITE_DEEPSLATE_ORE = registerBlock("humanite_deepslate_ore",
-            new OreBlock(FabricBlockSettings.of(Material.STONE).strength(1.5f).requiresTool(),
+            new OreBlock(FabricBlockSettings.of(Material.STONE).strength(1.5f).requiresTool().sounds(BlockSoundGroup.DEEPSLATE),
                     UniformIntProvider.create(3, 7)), ModItemGroups.FABLED);
     public static final Block HUMANITE_NETHERRACK_ORE = registerBlock("humanite_netherrack_ore",
-            new OreBlock(FabricBlockSettings.of(Material.STONE).strength(1.5f).requiresTool(),
+            new OreBlock(FabricBlockSettings.of(Material.STONE).strength(1.5f).requiresTool().sounds(BlockSoundGroup.NETHERRACK),
                     UniformIntProvider.create(3, 7)), ModItemGroups.FABLED);
     public static final Block HUMANITE_BLOCK = registerBlock("humanite_block",
             new Block(FabricBlockSettings.of(Material.METAL).strength(4.0f).requiresTool().luminance(14)), ModItemGroups.FABLED);
@@ -153,10 +163,10 @@ public class ModBlocks {
             new OreBlock(FabricBlockSettings.of(Material.STONE).strength(1.5f).requiresTool(),
                     UniformIntProvider.create(3, 7)), ModItemGroups.FABLED);
     public static final Block SORCIUM_DEEPSLATE_ORE = registerBlock("sorcium_deepslate_ore",
-            new OreBlock(FabricBlockSettings.of(Material.STONE).strength(1.5f).requiresTool(),
+            new OreBlock(FabricBlockSettings.of(Material.STONE).strength(1.5f).requiresTool().sounds(BlockSoundGroup.DEEPSLATE),
                     UniformIntProvider.create(3, 7)), ModItemGroups.FABLED);
     public static final Block SORCIUM_NETHERRACK_ORE = registerBlock("sorcium_netherrack_ore",
-            new OreBlock(FabricBlockSettings.of(Material.STONE).strength(1.5f).requiresTool(),
+            new OreBlock(FabricBlockSettings.of(Material.STONE).strength(1.5f).requiresTool().sounds(BlockSoundGroup.NETHERRACK),
                     UniformIntProvider.create(3, 7)), ModItemGroups.FABLED);
     public static final Block SORCIUM_ENDSTONE_ORE = registerBlock("sorcium_endstone_ore",
             new OreBlock(FabricBlockSettings.of(Material.STONE).strength(1.5f).requiresTool(),
@@ -169,16 +179,16 @@ public class ModBlocks {
             new OreBlock(FabricBlockSettings.of(Material.STONE).strength(1.5f).requiresTool(),
                     UniformIntProvider.create(3, 7)), ModItemGroups.FABLED);
     public static final Block DRAGONITE_DEEPSLATE_ORE = registerBlock("dragonite_deepslate_ore",
-            new OreBlock(FabricBlockSettings.of(Material.STONE).strength(1.5f).requiresTool(),
+            new OreBlock(FabricBlockSettings.of(Material.STONE).strength(1.5f).requiresTool().sounds(BlockSoundGroup.DEEPSLATE),
                     UniformIntProvider.create(3, 7)), ModItemGroups.FABLED);
     public static final Block DRAGONITE_NETHERRACK_ORE = registerBlock("dragonite_netherrack_ore",
-            new OreBlock(FabricBlockSettings.of(Material.STONE).strength(1.5f).requiresTool(),
+            new OreBlock(FabricBlockSettings.of(Material.STONE).strength(1.5f).requiresTool().sounds(BlockSoundGroup.NETHERRACK),
                     UniformIntProvider.create(3, 7)), ModItemGroups.FABLED);
     public static final Block DRAGONITE_ENDSTONE_ORE = registerBlock("dragonite_endstone_ore",
             new OreBlock(FabricBlockSettings.of(Material.STONE).strength(1.5f).requiresTool(),
                     UniformIntProvider.create(3, 7)), ModItemGroups.FABLED);
     public static final Block DRAGONITE_BEDROCK_ORE = registerBlock("dragonite_bedrock_ore",
-            new OreBlock(FabricBlockSettings.of(Material.STONE).strength(5.0f).requiresTool(),
+            new OreBlock(FabricBlockSettings.of(Material.STONE).strength(5.0f).requiresTool().sounds(BlockSoundGroup.LODESTONE),
                     UniformIntProvider.create(3, 7)), ModItemGroups.FABLED);
     public static final Block DRAGONITE_BLOCK = registerBlock("dragonite_block",
             new Block(FabricBlockSettings.of(Material.METAL).strength(4.0f).requiresTool().luminance(14)), ModItemGroups.FABLED);
@@ -186,6 +196,10 @@ public class ModBlocks {
     //MACHINES
     public static final Block FABLED_BLASTER = registerBlock("fabled_blaster",
             new FabledBlasterBlock(FabricBlockSettings.of(Material.METAL).nonOpaque().strength(1f).requiresTool().luminance(5)), net.rytional.fabledadventure.item.ModItemGroups.FABLED);
+
+    private static Block registerBlockWithoutBlockItem(String name, Block block) {
+        return Registry.register(Registry.BLOCK, new Identifier(FabledAdventure.MOD_ID, name), block);
+    }
 
     private static Block registerBlock(String name, Block block, ItemGroup group) {
         registerBlockItem(name, block, group);

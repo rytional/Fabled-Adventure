@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-
+    "fabledadventure:faenite_dirt_ore",
+    "fabledadventure:naturite_dirt_ore"
   ]
 }

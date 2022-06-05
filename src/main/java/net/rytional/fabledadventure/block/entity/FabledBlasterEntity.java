@@ -16,6 +16,7 @@ import net.minecraft.text.LiteralText;
 import net.minecraft.text.Text;
 import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.Direction;
 import net.minecraft.world.World;
 import net.rytional.fabledadventure.item.inventory.ImplementedInventory;
 import net.rytional.fabledadventure.recipe.FabledBlasterRecipe;
@@ -164,6 +165,17 @@ public class FabledBlasterEntity extends BlockEntity implements NamedScreenHandl
 
             entity.resetProgress();
         }
+    }
+
+    @Override
+    public int[] getAvailableSlots(Direction side) {
+        if (side == Direction.DOWN) {
+            return new int[]{3};
+        }
+        if (side == Direction.UP) {
+            return new int[]{2, 1};
+        }
+        return new int[]{0};
     }
 
     private void resetProgress() {

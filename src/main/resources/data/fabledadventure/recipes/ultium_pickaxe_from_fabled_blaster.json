@@ -9,6 +9,8 @@
     }
   ],
   "output": {
-    "item": "fabledadventure:ultium_pickaxe"
+    "item": "fabledadventure:ultium_pickaxe",
+    "experience": 0.7,
+    "cookingtime": 200
   }
 }

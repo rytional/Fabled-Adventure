@@ -1,0 +1,14 @@
+{
+  "type": "fabledadventure:fabled_blaster",
+  "ingredients": [
+    {
+      "item": "minecraft:bucket"
+    },
+    {
+      "item": "minecraft:stone"
+    }
+  ],
+  "output": {
+    "item": "fabledadventure:orcanite_bucket"
+  }
+}

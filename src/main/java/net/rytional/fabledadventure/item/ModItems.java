@@ -2,14 +2,12 @@ package net.rytional.fabledadventure.item;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.entity.EquipmentSlot;
-import net.minecraft.item.BowItem;
-import net.minecraft.item.HorseArmorItem;
-import net.minecraft.item.Item;
-import net.minecraft.item.SpawnEggItem;
+import net.minecraft.item.*;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import net.rytional.fabledadventure.FabledAdventure;
 import net.rytional.fabledadventure.entity.ModEntities;
+import net.rytional.fabledadventure.fluid.ModFluids;
 import net.rytional.fabledadventure.item.custom.*;
 import net.rytional.fabledadventure.sound.ModSounds;
 
@@ -24,15 +22,6 @@ public class ModItems {
             new FabricItemSettings().group(ModItemGroups.FABLED)));
 
     public static final Item ULTIUM_PICKAXE = registerItem("ultium_pickaxe", new ModPickaxeItem(ModToolMaterials.ULTIUM, 1, 2f,
-            new FabricItemSettings().group(ModItemGroups.FABLED)));
-
-    public static final Item ULTIUM_MACE = registerItem("ultium_mace", new ModTestSwordItem(ModToolMaterials.ULTIUM, 1, 2f,
-            new FabricItemSettings().group(ModItemGroups.FABLED)));
-
-    public static final Item SPIKED_CLUB = registerItem("spiked_club", new ModAxeItem(ModToolMaterials.ULTIUM, 4, 2f,
-            new FabricItemSettings().group(ModItemGroups.FABLED)));
-
-    public static final Item ROCKET_LAUNCHER = registerItem("rocket_launcher", new ModAxeItem(ModToolMaterials.ULTIUM, 4, 2f,
             new FabricItemSettings().group(ModItemGroups.FABLED)));
 
     public static final Item ULTIUM_PAXEL = registerItem("ultium_paxel", new ModPaxelItem(ModToolMaterials.ULTIUM, 10, 3f,
@@ -87,6 +76,7 @@ public class ModItems {
     public static final Item ORCANITE_SHEET = registerItem("orcanite_sheet", new ModGlowItem(new FabricItemSettings().group(ModItemGroups.FABLED)));
     public static final Item ORCANITE_SHARD = registerItem("orcanite_shard", new ModGlowItem(new FabricItemSettings().group(ModItemGroups.FABLED)));
     public static final Item ORCANITE_CREAM = registerItem("orcanite_cream", new ModGlowItem(new FabricItemSettings().group(ModItemGroups.FABLED)));
+    public static final Item ORCANITE_BUCKET = registerItem("orcanite_bucket", new BucketItem(ModFluids.MOLTEN_ORCANITE_STILL, new FabricItemSettings().group(ModItemGroups.FABLED).maxCount(1)));
     public static final Item ORCANITE_AXE = registerItem("orcanite_axe", new ModAxeItem(ModToolMaterials.ORCANITE, 2, 1f,
             new FabricItemSettings().group(ModItemGroups.FABLED)));
     public static final Item ORCANITE_PICKAXE = registerItem("orcanite_pickaxe", new ModPickaxeItem(ModToolMaterials.ORCANITE, 2, 1f,
