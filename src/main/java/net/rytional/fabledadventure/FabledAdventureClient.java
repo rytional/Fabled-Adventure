@@ -11,7 +11,7 @@ import net.rytional.fabledadventure.entity.client.RaccoonRenderer;
 import net.rytional.fabledadventure.entity.client.SkyRenderer;
 import net.rytional.fabledadventure.entity.client.armor.SorciumBlueRobeRenderer;
 import net.rytional.fabledadventure.item.ModItems;
-import net.rytional.fabledadventure.screen.FabledBlasterScreen;
+import net.rytional.fabledadventure.screen.DwarfiumBlasterScreen;
 import net.rytional.fabledadventure.screen.ModScreenHandlers;
 import net.rytional.fabledadventure.util.ModFluidHandlerRegistry;
 import net.rytional.fabledadventure.util.ModModelPredicateProvider;
@@ -28,9 +28,9 @@ public class FabledAdventureClient implements ClientModInitializer {
         EntityRendererRegistry.register(ModEntities.RACCOON, RaccoonRenderer::new);
         EntityRendererRegistry.register(ModEntities.SKY, SkyRenderer::new);
 
-        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.FABLED_BLASTER, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.DWARFIUM_BLASTER, RenderLayer.getCutout());
 
-        ScreenRegistry.register(ModScreenHandlers.FABLED_BLASTER_SCREEN_HANDLER, FabledBlasterScreen::new);
+        ScreenRegistry.register(ModScreenHandlers.DWARFIUM_BLASTER_SCREEN_HANDLER, DwarfiumBlasterScreen::new);
 
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.NATURITE_LEAVES, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.NATURITE_SAPLING, RenderLayer.getCutout());

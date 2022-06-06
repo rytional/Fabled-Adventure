@@ -3,8 +3,8 @@
 	"parent": "minecraft:blast_furnace",
 	"texture_size": [64, 64],
 	"textures": {
-		"3": "fabledadventure:block/machines/fabled_blaster_template",
-		"particle": "fabledadventure:block/machines/fabled_blaster_template"
+		"3": "fabledadventure:block/machines/dwarfium_blaster_template",
+		"particle": "fabledadventure:block/machines/dwarfium_blaster_template"
 	},
 	"elements": [
 		{

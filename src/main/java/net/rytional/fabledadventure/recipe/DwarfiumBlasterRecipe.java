@@ -11,12 +11,12 @@ import net.minecraft.util.JsonHelper;
 import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.world.World;
 
-public class FabledBlasterRecipe implements Recipe<SimpleInventory> {
+public class DwarfiumBlasterRecipe implements Recipe<SimpleInventory> {
     private final Identifier id;
     private final ItemStack output;
     private final DefaultedList<Ingredient> recipeItems;
 
-    public FabledBlasterRecipe(Identifier id, ItemStack output, DefaultedList<Ingredient> recipeItems) {
+    public DwarfiumBlasterRecipe(Identifier id, ItemStack output, DefaultedList<Ingredient> recipeItems) {
         this.id = id;
         this.output = output;
         this.recipeItems = recipeItems;
@@ -63,19 +63,19 @@ public class FabledBlasterRecipe implements Recipe<SimpleInventory> {
         return Type.INSTANCE;
     }
 
-    public static class Type implements RecipeType<FabledBlasterRecipe> {
+    public static class Type implements RecipeType<DwarfiumBlasterRecipe> {
         private Type() { }
         public static final Type INSTANCE = new Type();
-        public static final String ID = "fabled_blaster";
+        public static final String ID = "dwarfium_blaster";
     }
 
-    public static class Serializer implements RecipeSerializer<FabledBlasterRecipe> {
+    public static class Serializer implements RecipeSerializer<DwarfiumBlasterRecipe> {
         public static final Serializer INSTANCE = new Serializer();
-        public static final String ID = "fabled_blaster";
+        public static final String ID = "dwarfium_blaster";
         // this is the name given in the json file
 
         @Override
-        public FabledBlasterRecipe read(Identifier id, JsonObject json) {
+        public DwarfiumBlasterRecipe read(Identifier id, JsonObject json) {
             ItemStack output = ShapedRecipe.outputFromJson(JsonHelper.getObject(json, "output"));
 
             JsonArray ingredients = JsonHelper.getArray(json, "ingredients");
@@ -85,11 +85,11 @@ public class FabledBlasterRecipe implements Recipe<SimpleInventory> {
                 inputs.set(i, Ingredient.fromJson(ingredients.get(i)));
             }
 
-            return new FabledBlasterRecipe(id, output, inputs);
+            return new DwarfiumBlasterRecipe(id, output, inputs);
         }
 
         @Override
-        public FabledBlasterRecipe read(Identifier id, PacketByteBuf buf) {
+        public DwarfiumBlasterRecipe read(Identifier id, PacketByteBuf buf) {
             DefaultedList<Ingredient> inputs = DefaultedList.ofSize(buf.readInt(), Ingredient.EMPTY);
 
             for (int i = 0; i < inputs.size(); i++) {
@@ -97,11 +97,11 @@ public class FabledBlasterRecipe implements Recipe<SimpleInventory> {
             }
 
             ItemStack output = buf.readItemStack();
-            return new FabledBlasterRecipe(id, output, inputs);
+            return new DwarfiumBlasterRecipe(id, output, inputs);
         }
 
         @Override
-        public void write(PacketByteBuf buf, FabledBlasterRecipe recipe) {
+        public void write(PacketByteBuf buf, DwarfiumBlasterRecipe recipe) {
             buf.writeInt(recipe.getIngredients().size());
             for (Ingredient ing : recipe.getIngredients()) {
                 ing.write(buf);

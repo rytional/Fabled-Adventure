@@ -18,16 +18,16 @@ import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
-import net.rytional.fabledadventure.block.entity.FabledBlasterEntity;
+import net.rytional.fabledadventure.block.entity.DwarfiumBlasterEntity;
 import net.rytional.fabledadventure.block.entity.ModBlockEntities;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.stream.Stream;
 
-public class FabledBlasterBlock extends BlockWithEntity implements BlockEntityProvider {
+public class DwarfiumBlasterBlock extends BlockWithEntity implements BlockEntityProvider {
     public static final DirectionProperty FACING = Properties.HORIZONTAL_FACING;
 
-    public FabledBlasterBlock(Settings settings) {
+    public DwarfiumBlasterBlock(Settings settings) {
         super(settings);
     }
     private static final VoxelShape SHAPE_N = Stream.of(
@@ -136,8 +136,8 @@ public class FabledBlasterBlock extends BlockWithEntity implements BlockEntityPr
     public void onStateReplaced(BlockState state, World world, BlockPos pos, BlockState newState, boolean moved) {
         if (state.getBlock() != newState.getBlock()) {
             BlockEntity blockEntity = world.getBlockEntity(pos);
-            if (blockEntity instanceof FabledBlasterEntity) {
-                ItemScatterer.spawn(world, pos, (FabledBlasterEntity)blockEntity);
+            if (blockEntity instanceof DwarfiumBlasterEntity) {
+                ItemScatterer.spawn(world, pos, (DwarfiumBlasterEntity)blockEntity);
                 world.updateComparators(pos,this);
             }
             super.onStateReplaced(state, world, pos, newState, moved);
@@ -161,12 +161,12 @@ public class FabledBlasterBlock extends BlockWithEntity implements BlockEntityPr
     @Nullable
     @Override
     public BlockEntity createBlockEntity(BlockPos pos, BlockState state) {
-        return new FabledBlasterEntity(pos, state);
+        return new DwarfiumBlasterEntity(pos, state);
     }
 
     @Nullable
     @Override
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(World world, BlockState state, BlockEntityType<T> type) {
-        return checkType(type, ModBlockEntities.FABLED_BLASTER, FabledBlasterEntity::tick);
+        return checkType(type, ModBlockEntities.DWARFIUM_BLASTER, DwarfiumBlasterEntity::tick);
     }
 }

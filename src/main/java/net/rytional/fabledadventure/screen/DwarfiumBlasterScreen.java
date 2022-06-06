@@ -10,11 +10,11 @@ import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import net.rytional.fabledadventure.FabledAdventure;
 
-public class FabledBlasterScreen extends HandledScreen<FabledBlasterScreenHandler> {
+public class DwarfiumBlasterScreen extends HandledScreen<DwarfiumBlasterScreenHandler> {
     private static final Identifier TEXTURE =
-            new Identifier(FabledAdventure.MOD_ID, "textures/gui/fabled_blaster_gui.png");
+            new Identifier(FabledAdventure.MOD_ID, "textures/gui/dwarfium_blaster_gui.png");
 
-    public FabledBlasterScreen(FabledBlasterScreenHandler handler, PlayerInventory inventory, Text title) {
+    public DwarfiumBlasterScreen(DwarfiumBlasterScreenHandler handler, PlayerInventory inventory, Text title) {
         super(handler, inventory, title);
     }
 

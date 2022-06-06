@@ -19,13 +19,13 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.world.World;
 import net.rytional.fabledadventure.item.inventory.ImplementedInventory;
-import net.rytional.fabledadventure.recipe.FabledBlasterRecipe;
-import net.rytional.fabledadventure.screen.FabledBlasterScreenHandler;
+import net.rytional.fabledadventure.recipe.DwarfiumBlasterRecipe;
+import net.rytional.fabledadventure.screen.DwarfiumBlasterScreenHandler;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.Optional;
 
-public class FabledBlasterEntity extends BlockEntity implements NamedScreenHandlerFactory, ImplementedInventory {
+public class DwarfiumBlasterEntity extends BlockEntity implements NamedScreenHandlerFactory, ImplementedInventory {
     private final DefaultedList<ItemStack> inventory =
             DefaultedList.ofSize(4, ItemStack.EMPTY);
 
@@ -35,25 +35,25 @@ public class FabledBlasterEntity extends BlockEntity implements NamedScreenHandl
     private int fuelTime = 0;
     private int maxFuelTime = 0;
 
-    public FabledBlasterEntity(BlockPos pos, BlockState state) {
-        super(ModBlockEntities.FABLED_BLASTER, pos, state);
+    public DwarfiumBlasterEntity(BlockPos pos, BlockState state) {
+        super(ModBlockEntities.DWARFIUM_BLASTER, pos, state);
         this.propertyDelegate = new PropertyDelegate() {
             public int get(int index) {
                 switch (index) {
-                    case 0: return FabledBlasterEntity.this.progress;
-                    case 1: return FabledBlasterEntity.this.maxProgress;
-                    case 2: return FabledBlasterEntity.this.fuelTime;
-                    case 3: return FabledBlasterEntity.this.maxFuelTime;
+                    case 0: return DwarfiumBlasterEntity.this.progress;
+                    case 1: return DwarfiumBlasterEntity.this.maxProgress;
+                    case 2: return DwarfiumBlasterEntity.this.fuelTime;
+                    case 3: return DwarfiumBlasterEntity.this.maxFuelTime;
                     default: return 0;
                 }
             }
 
             public void set(int index, int value) {
                 switch(index) {
-                    case 0: FabledBlasterEntity.this.progress = value; break;
-                    case 1: FabledBlasterEntity.this.maxProgress = value; break;
-                    case 2: FabledBlasterEntity.this.fuelTime = value; break;
-                    case 3: FabledBlasterEntity.this.maxFuelTime = value; break;
+                    case 0: DwarfiumBlasterEntity.this.progress = value; break;
+                    case 1: DwarfiumBlasterEntity.this.maxProgress = value; break;
+                    case 2: DwarfiumBlasterEntity.this.fuelTime = value; break;
+                    case 3: DwarfiumBlasterEntity.this.maxFuelTime = value; break;
                 }
             }
 
@@ -70,13 +70,13 @@ public class FabledBlasterEntity extends BlockEntity implements NamedScreenHandl
 
     @Override
     public Text getDisplayName() {
-        return new LiteralText("Fabled Blaster");
+        return new LiteralText("Dwarfium Blaster");
     }
 
     @Nullable
     @Override
     public ScreenHandler createMenu(int syncId, PlayerInventory inv, PlayerEntity player) {
-        return new FabledBlasterScreenHandler(syncId, inv, this, this.propertyDelegate);
+        return new DwarfiumBlasterScreenHandler(syncId, inv, this, this.propertyDelegate);
     }
 
     @Override
@@ -104,7 +104,7 @@ public class FabledBlasterEntity extends BlockEntity implements NamedScreenHandl
         }
     }
 
-    public static void tick(World world, BlockPos pos, BlockState state, FabledBlasterEntity entity) {
+    public static void tick(World world, BlockPos pos, BlockState state, DwarfiumBlasterEntity entity) {
         if(isConsumingFuel(entity)) {
             entity.fuelTime--;
         }
@@ -124,37 +124,37 @@ public class FabledBlasterEntity extends BlockEntity implements NamedScreenHandl
         }
     }
 
-    private static boolean hasFuelInFuelSlot(FabledBlasterEntity entity) {
+    private static boolean hasFuelInFuelSlot(DwarfiumBlasterEntity entity) {
         return !entity.getStack(0).isEmpty();
     }
 
-    private static boolean isConsumingFuel(FabledBlasterEntity entity) {
+    private static boolean isConsumingFuel(DwarfiumBlasterEntity entity) {
         return entity.fuelTime > 0;
     }
 
-    private static boolean hasRecipe(FabledBlasterEntity entity) {
+    private static boolean hasRecipe(DwarfiumBlasterEntity entity) {
         World world = entity.world;
         SimpleInventory inventory = new SimpleInventory(entity.inventory.size());
         for (int i = 0; i < entity.inventory.size(); i++) {
             inventory.setStack(i, entity.getStack(i));
         }
 
-        Optional<FabledBlasterRecipe> match = world.getRecipeManager()
-                .getFirstMatch(FabledBlasterRecipe.Type.INSTANCE, inventory, world);
+        Optional<DwarfiumBlasterRecipe> match = world.getRecipeManager()
+                .getFirstMatch(DwarfiumBlasterRecipe.Type.INSTANCE, inventory, world);
 
         return match.isPresent() && canInsertAmountIntoOutputSlot(inventory)
                 && canInsertItemIntoOutputSlot(inventory, match.get().getOutput());
     }
 
-    private static void craftItem(FabledBlasterEntity entity) {
+    private static void craftItem(DwarfiumBlasterEntity entity) {
         World world = entity.world;
         SimpleInventory inventory = new SimpleInventory(entity.inventory.size());
         for (int i = 0; i < entity.inventory.size(); i++) {
             inventory.setStack(i, entity.getStack(i));
         }
 
-        Optional<FabledBlasterRecipe> match = world.getRecipeManager()
-                .getFirstMatch(FabledBlasterRecipe.Type.INSTANCE, inventory, world);
+        Optional<DwarfiumBlasterRecipe> match = world.getRecipeManager()
+                .getFirstMatch(DwarfiumBlasterRecipe.Type.INSTANCE, inventory, world);
 
         if(match.isPresent()) {
             entity.removeStack(1,1);

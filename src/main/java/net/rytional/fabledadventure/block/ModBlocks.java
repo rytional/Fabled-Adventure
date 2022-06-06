@@ -194,8 +194,8 @@ public class ModBlocks {
             new Block(FabricBlockSettings.of(Material.METAL).strength(4.0f).requiresTool().luminance(14)), ModItemGroups.FABLED);
 
     //MACHINES
-    public static final Block FABLED_BLASTER = registerBlock("fabled_blaster",
-            new FabledBlasterBlock(FabricBlockSettings.of(Material.METAL).nonOpaque().strength(1f).requiresTool().luminance(5)), net.rytional.fabledadventure.item.ModItemGroups.FABLED);
+    public static final Block DWARFIUM_BLASTER = registerBlock("dwarfium_blaster",
+            new DwarfiumBlasterBlock(FabricBlockSettings.of(Material.METAL).nonOpaque().strength(1f).requiresTool().luminance(5)), net.rytional.fabledadventure.item.ModItemGroups.FABLED);
 
     private static Block registerBlockWithoutBlockItem(String name, Block block) {
         return Registry.register(Registry.BLOCK, new Identifier(FabledAdventure.MOD_ID, name), block);

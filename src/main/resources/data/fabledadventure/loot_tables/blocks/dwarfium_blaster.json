@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "fabledadventure:fabled_blaster"
+          "name": "fabledadventure:dwarfium_blaster"
         }
       ],
       "conditions": [

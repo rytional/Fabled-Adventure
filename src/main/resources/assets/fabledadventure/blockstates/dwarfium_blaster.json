@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "fabledadventure:block/dwarfium_blaster" },
+    "facing=east": { "model": "fabledadventure:block/dwarfium_blaster", "y": 90 },
+    "facing=south": { "model": "fabledadventure:block/dwarfium_blaster", "y": 180 },
+    "facing=west": { "model": "fabledadventure:block/dwarfium_blaster", "y": 270 }
+  }
+}

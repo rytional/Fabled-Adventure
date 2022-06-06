@@ -13,18 +13,18 @@ import net.minecraft.world.World;
 import net.rytional.fabledadventure.screen.slot.ModFuelSlot;
 import net.rytional.fabledadventure.screen.slot.ModResultSlot;
 
-public class FabledBlasterScreenHandler extends ScreenHandler {
+public class DwarfiumBlasterScreenHandler extends ScreenHandler {
     private final Inventory inventory;
     private final World world;
     private final PropertyDelegate propertyDelegate;
 
-    public FabledBlasterScreenHandler(int syncId, PlayerInventory playerInventory) {
+    public DwarfiumBlasterScreenHandler(int syncId, PlayerInventory playerInventory) {
         this(syncId, playerInventory, new SimpleInventory(4), new ArrayPropertyDelegate(4));
     }
 
-    public FabledBlasterScreenHandler(int syncId, PlayerInventory playerInventory,
+    public DwarfiumBlasterScreenHandler(int syncId, PlayerInventory playerInventory,
                                           Inventory inventory, PropertyDelegate delegate) {
-        super(ModScreenHandlers.FABLED_BLASTER_SCREEN_HANDLER, syncId);
+        super(ModScreenHandlers.DWARFIUM_BLASTER_SCREEN_HANDLER, syncId);
         checkSize(inventory, 4);
         this.inventory = inventory;
         this.world = playerInventory.player.world;

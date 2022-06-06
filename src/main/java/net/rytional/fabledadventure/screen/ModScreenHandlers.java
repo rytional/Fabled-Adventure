@@ -6,11 +6,11 @@ import net.minecraft.util.Identifier;
 import net.rytional.fabledadventure.FabledAdventure;
 
 public class ModScreenHandlers {
-    public static ScreenHandlerType FABLED_BLASTER_SCREEN_HANDLER;
+    public static ScreenHandlerType DWARFIUM_BLASTER_SCREEN_HANDLER;
 
     public static void registerAllScreenHandlers() {
-        FABLED_BLASTER_SCREEN_HANDLER =
-                ScreenHandlerRegistry.registerSimple(new Identifier(FabledAdventure.MOD_ID, "fabled_blaster"),
-                        FabledBlasterScreenHandler::new);
+        DWARFIUM_BLASTER_SCREEN_HANDLER =
+                ScreenHandlerRegistry.registerSimple(new Identifier(FabledAdventure.MOD_ID, "dwarfium_blaster"),
+                        DwarfiumBlasterScreenHandler::new);
     }
 }

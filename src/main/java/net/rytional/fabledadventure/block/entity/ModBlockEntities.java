@@ -9,12 +9,12 @@ import net.rytional.fabledadventure.block.ModBlocks;
 
 public class ModBlockEntities {
 
-    public static BlockEntityType<FabledBlasterEntity> FABLED_BLASTER;
+    public static BlockEntityType<DwarfiumBlasterEntity> DWARFIUM_BLASTER;
 
     public static void registerAllEntities() {
-        FABLED_BLASTER = Registry.register(Registry.BLOCK_ENTITY_TYPE,
-                new Identifier(FabledAdventure.MOD_ID, "fabled_blaster"),
-                FabricBlockEntityTypeBuilder.create(FabledBlasterEntity::new,
-                        ModBlocks.FABLED_BLASTER).build(null));
+        DWARFIUM_BLASTER = Registry.register(Registry.BLOCK_ENTITY_TYPE,
+                new Identifier(FabledAdventure.MOD_ID, "dwarfium_blaster"),
+                FabricBlockEntityTypeBuilder.create(DwarfiumBlasterEntity::new,
+                        ModBlocks.DWARFIUM_BLASTER).build(null));
     }
 }
