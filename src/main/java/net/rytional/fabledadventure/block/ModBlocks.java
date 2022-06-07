@@ -129,8 +129,6 @@ public class ModBlocks {
             new FaeniteOre(FabricBlockSettings.of(Material.SOIL).strength(1.5f).requiresTool().sounds(BlockSoundGroup.ROOTED_DIRT)), ModItemGroups.FABLED);
     public static final Block FAENITE_BLOCK = registerBlock("faenite_block",
             new FaeniteOre(FabricBlockSettings.of(Material.METAL).strength(1.5f).requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK)), ModItemGroups.FABLED);
-    public static final Block FAENITE_HOME = registerBlock("faenite_home",
-            new Block(FabricBlockSettings.of(Material.AMETHYST).strength(4.0f).requiresTool().luminance(14)), ModItemGroups.FABLED);
 
     //GYNORMIUM
     public static final Block GYNORMIUM_STONE_ORE = registerBlock("gynormium_stone_ore",
@@ -173,6 +171,8 @@ public class ModBlocks {
                     UniformIntProvider.create(3, 7)), ModItemGroups.FABLED);
     public static final Block SORCIUM_BLOCK = registerBlock("sorcium_block",
             new Block(FabricBlockSettings.of(Material.METAL).strength(4.0f).requiresTool().luminance(14)), ModItemGroups.FABLED);
+    public static final Block SORCIUM_TOME = registerBlock("sorcium_tome",
+            new Block(FabricBlockSettings.of(Material.DECORATION).strength(4.0f).requiresTool().luminance(14)), ModItemGroups.FABLED);
 
     //DRAGONITE
     public static final Block DRAGONITE_STONE_ORE = registerBlock("dragonite_stone_ore",
@@ -196,6 +196,14 @@ public class ModBlocks {
     //MACHINES
     public static final Block DWARFIUM_BLASTER = registerBlock("dwarfium_blaster",
             new DwarfiumBlasterBlock(FabricBlockSettings.of(Material.METAL).nonOpaque().strength(1f).requiresTool().luminance(5)), net.rytional.fabledadventure.item.ModItemGroups.FABLED);
+    public static final Block SORCIUM_CRAFTER = registerBlock("sorcium_crafter",
+            new Block(FabricBlockSettings.of(Material.STONE).strength(4.0f).requiresTool().luminance(14)), ModItemGroups.FABLED);
+    public static final Block GYNORMIUM_TABLE = registerBlock("gynormium_table",
+            new Block(FabricBlockSettings.of(Material.METAL).strength(4.0f).requiresTool().luminance(14)), ModItemGroups.FABLED);
+    public static final Block DRAGONITE_INFUSER = registerBlock("dragonite_infuser",
+            new Block(FabricBlockSettings.of(Material.METAL).strength(4.0f).requiresTool().luminance(14)), ModItemGroups.FABLED);
+    public static final Block FAENITE_HOME = registerBlock("faenite_home",
+            new Block(FabricBlockSettings.of(Material.METAL).strength(4.0f).requiresTool().luminance(14)), ModItemGroups.FABLED);
 
     private static Block registerBlockWithoutBlockItem(String name, Block block) {
         return Registry.register(Registry.BLOCK, new Identifier(FabledAdventure.MOD_ID, name), block);

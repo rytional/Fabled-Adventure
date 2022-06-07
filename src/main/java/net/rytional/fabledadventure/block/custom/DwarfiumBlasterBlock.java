@@ -21,7 +21,6 @@ import net.minecraft.world.World;
 import net.rytional.fabledadventure.block.entity.DwarfiumBlasterEntity;
 import net.rytional.fabledadventure.block.entity.ModBlockEntities;
 import org.jetbrains.annotations.Nullable;
-
 import java.util.stream.Stream;
 
 public class DwarfiumBlasterBlock extends BlockWithEntity implements BlockEntityProvider {

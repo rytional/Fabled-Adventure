@@ -29,6 +29,10 @@ public class FabledAdventureClient implements ClientModInitializer {
         EntityRendererRegistry.register(ModEntities.SKY, SkyRenderer::new);
 
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.DWARFIUM_BLASTER, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.SORCIUM_CRAFTER, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.GYNORMIUM_TABLE, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.DRAGONITE_INFUSER, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.FAENITE_HOME, RenderLayer.getCutout());
 
         ScreenRegistry.register(ModScreenHandlers.DWARFIUM_BLASTER_SCREEN_HANDLER, DwarfiumBlasterScreen::new);
 
