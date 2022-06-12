@@ -62,6 +62,7 @@ public class ModItems {
             new FabricItemSettings().group(ModItemGroups.FABLED)));
     public static final Item SORCIUM_BLUE_BOOTS = registerItem("sorcium_blue_boots", new SorciumBlueRobeItem(ModArmorMaterials.SORCIUM, EquipmentSlot.FEET,
             new FabricItemSettings().group(ModItemGroups.FABLED)));
+    public static final Item SORCIUM_TOME = registerItem("sorcium_tome", new Item(new FabricItemSettings().group(ModItemGroups.FABLED)));
 
     //ELFIUM
     public static final Item ELFIUM_BOW = registerItem("elfium_bow",

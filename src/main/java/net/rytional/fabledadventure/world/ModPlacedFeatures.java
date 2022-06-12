@@ -1,5 +1,6 @@
 package net.rytional.fabledadventure.world;
 
+import net.minecraft.block.Block;
 import net.minecraft.util.registry.RegistryEntry;
 import net.minecraft.world.gen.YOffset;
 import net.minecraft.world.gen.feature.*;
@@ -48,6 +49,10 @@ public class ModPlacedFeatures {
     //FAENITE
     public static final RegistryEntry<PlacedFeature> FAENITE_DIRT_ORE_PLACED = PlacedFeatures.register("faenite_dirt_ore_placed",
             ModConfiguredFeatures.FAENITE_DIRT_ORE, ModOreFeatures.modifiersWithCount(18, HeightRangePlacementModifier.uniform(YOffset.fixed(0), YOffset.fixed(160))));
+    public static final RegistryEntry<PlacedFeature> FAENITE_TREE_PLACED = PlacedFeatures.register("faenite_tree_placed",
+            ModConfiguredFeatures.FAENITE_SPAWN, VegetationPlacedFeatures.modifiers(
+                    PlacedFeatures.createCountExtraModifier(1, 0.1f, 2)));
+
 
     //GYNORMIUM
     public static final RegistryEntry<PlacedFeature> GYNORMIUM_ORE_PLACED = PlacedFeatures.register("gynormium_ore_placed",

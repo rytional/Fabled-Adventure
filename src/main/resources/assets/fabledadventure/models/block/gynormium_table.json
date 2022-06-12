@@ -2,8 +2,8 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [128, 128],
 	"textures": {
-		"1": "fabledadventure:block/machines/gynormium_table",
-		"particle": "fabledadventure:block/machines/gynormium_table"
+		"1": "gynormium_table",
+		"particle": "gynormium_table"
 	},
 	"elements": [
 		{
@@ -68,6 +68,38 @@
 			}
 		}
 	],
+	"display": {
+		"thirdperson_righthand": {
+			"translation": [2.75, -0.75, -10.5],
+			"scale": [0.5, 0.5, 0.5]
+		},
+		"thirdperson_lefthand": {
+			"translation": [11, 0, -10],
+			"scale": [0.5, 0.5, 0.5]
+		},
+		"firstperson_righthand": {
+			"scale": [0.25, 0.25, 0.25]
+		},
+		"firstperson_lefthand": {
+			"scale": [0.25, 0.25, 0.25]
+		},
+		"ground": {
+			"translation": [-4, 0, -4],
+			"scale": [0.5, 0.5, 0.5]
+		},
+		"gui": {
+			"translation": [-4, -4, 0],
+			"scale": [0.5, 0.5, 0.5]
+		},
+		"head": {
+			"translation": [-7.75, -13.75, -8.25]
+		},
+		"fixed": {
+			"rotation": [-17, 9, -12],
+			"translation": [-3.25, -2.75, -2],
+			"scale": [0.4, 0.4, 0.4]
+		}
+	},
 	"groups": [
 		0,
 		{

@@ -3,18 +3,20 @@ package net.rytional.fabledadventure.world;
 import net.minecraft.block.Blocks;
 import net.minecraft.structure.rule.BlockMatchRuleTest;
 import net.minecraft.structure.rule.RuleTest;
-import net.minecraft.structure.rule.TagMatchRuleTest;
-import net.minecraft.tag.BlockTags;
 import net.minecraft.util.math.intprovider.ConstantIntProvider;
 import net.minecraft.util.registry.RegistryEntry;
 import net.minecraft.world.gen.feature.*;
 import net.minecraft.world.gen.feature.size.TwoLayersFeatureSize;
+import net.minecraft.world.gen.foliage.BlobFoliagePlacer;
 import net.minecraft.world.gen.foliage.LargeOakFoliagePlacer;
 import net.minecraft.world.gen.stateprovider.BlockStateProvider;
 import net.minecraft.world.gen.trunk.*;
 import net.rytional.fabledadventure.FabledAdventure;
 import net.rytional.fabledadventure.block.ModBlocks;
+import net.rytional.fabledadventure.mixin.TreeDecoratorType;
+import net.rytional.fabledadventure.world.gen.FaeniteHomeTreeDecorator;
 
+import java.util.Collections;
 import java.util.List;
 
 public class ModConfiguredFeatures {
@@ -79,6 +81,21 @@ public class ModConfiguredFeatures {
     //FAENITE
     public static final RegistryEntry<ConfiguredFeature<OreFeatureConfig, ?>> FAENITE_DIRT_ORE = ConfiguredFeatures.register("faenite_dirt_ore",
             Feature.ORE, new OreFeatureConfig(DIRT, ModBlocks.FAENITE_DIRT_ORE.getDefaultState(), 5));
+
+    public static final RegistryEntry<ConfiguredFeature<TreeFeatureConfig, ?>> FAENITE_TREE =
+            ConfiguredFeatures.register("faenite_tree", Feature.TREE, new TreeFeatureConfig.Builder(
+                    BlockStateProvider.of(Blocks.OAK_LOG),
+                    new StraightTrunkPlacer(3,2,1),
+                    BlockStateProvider.of(Blocks.OAK_LEAVES),
+                    new BlobFoliagePlacer(ConstantIntProvider.create(3), ConstantIntProvider.create(2), 3),
+                    new TwoLayersFeatureSize(2, 1, 2)).decorators(Collections.singletonList(FaeniteHomeTreeDecorator.INSTANCE)).build());
+    public static final RegistryEntry<PlacedFeature> FAENITE_CHECKED = PlacedFeatures.register("faenite_checked",
+            FAENITE_TREE, PlacedFeatures.wouldSurvive(ModBlocks.FAENITE_SAPLING));
+    public static final RegistryEntry<ConfiguredFeature<RandomFeatureConfig, ?>> FAENITE_SPAWN =
+            ConfiguredFeatures.register("faenite_spawn", Feature.RANDOM_SELECTOR,
+                    new RandomFeatureConfig(List.of(new RandomFeatureEntry(FAENITE_CHECKED,
+                            0.5F)), FAENITE_CHECKED));
+    public static final TreeDecoratorType<FaeniteHomeTreeDecorator> FAENITE_HOME_TREE_DECORATOR = (TreeDecoratorType<FaeniteHomeTreeDecorator>) TreeDecoratorType.callRegister("rich_tree_decorator", FaeniteHomeTreeDecorator.CODEC);
 
     //GYNORMIUM
     public static final List<OreFeatureConfig.Target> OVERWORLD_GYNORMIUM_ORES = List.of(

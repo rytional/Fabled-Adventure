@@ -10,5 +10,9 @@ public class ModRecipes {
                 DwarfiumBlasterRecipe.Serializer.INSTANCE);
         Registry.register(Registry.RECIPE_TYPE, new Identifier(FabledAdventure.MOD_ID, DwarfiumBlasterRecipe.Type.ID),
                 DwarfiumBlasterRecipe.Type.INSTANCE);
+        Registry.register(Registry.RECIPE_SERIALIZER, new Identifier(FabledAdventure.MOD_ID, SorciumCrafterRecipe.Serializer.ID),
+                SorciumCrafterRecipe.Serializer.INSTANCE);
+        Registry.register(Registry.RECIPE_TYPE, new Identifier(FabledAdventure.MOD_ID, SorciumCrafterRecipe.Type.ID),
+                SorciumCrafterRecipe.Type.INSTANCE);
     }
 }

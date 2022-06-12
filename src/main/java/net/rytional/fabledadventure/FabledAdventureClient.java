@@ -13,6 +13,7 @@ import net.rytional.fabledadventure.entity.client.armor.SorciumBlueRobeRenderer;
 import net.rytional.fabledadventure.item.ModItems;
 import net.rytional.fabledadventure.screen.DwarfiumBlasterScreen;
 import net.rytional.fabledadventure.screen.ModScreenHandlers;
+import net.rytional.fabledadventure.screen.SorciumCrafterScreen;
 import net.rytional.fabledadventure.util.ModFluidHandlerRegistry;
 import net.rytional.fabledadventure.util.ModModelPredicateProvider;
 import software.bernie.geckolib3.renderers.geo.GeoArmorRenderer;
@@ -35,6 +36,7 @@ public class FabledAdventureClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.FAENITE_HOME, RenderLayer.getCutout());
 
         ScreenRegistry.register(ModScreenHandlers.DWARFIUM_BLASTER_SCREEN_HANDLER, DwarfiumBlasterScreen::new);
+        ScreenRegistry.register(ModScreenHandlers.SORCIUM_CRAFTER_SCREEN_HANDLER, SorciumCrafterScreen::new);
 
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.NATURITE_LEAVES, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.NATURITE_SAPLING, RenderLayer.getCutout());
