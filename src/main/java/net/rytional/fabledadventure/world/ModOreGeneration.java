@@ -37,11 +37,11 @@ public class ModOreGeneration {
         BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(),
                 GenerationStep.Feature.UNDERGROUND_ORES, ModPlacedFeatures.FAENITE_DIRT_ORE_PLACED.getKey().get());
 
-        //GYNORMIUM
+        //GINORMIUM
         BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(),
-                GenerationStep.Feature.UNDERGROUND_ORES, ModPlacedFeatures.GYNORMIUM_ORE_PLACED.getKey().get());
+                GenerationStep.Feature.UNDERGROUND_ORES, ModPlacedFeatures.GINORMIUM_ORE_PLACED.getKey().get());
         BiomeModifications.addFeature(BiomeSelectors.foundInTheNether(),
-                GenerationStep.Feature.UNDERGROUND_DECORATION, ModPlacedFeatures.GYNORMIUM_NETHERRACK_ORE_PLACED.getKey().get());
+                GenerationStep.Feature.UNDERGROUND_DECORATION, ModPlacedFeatures.GINORMIUM_NETHERRACK_ORE_PLACED.getKey().get());
 
         //HUMANITE
         BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(),

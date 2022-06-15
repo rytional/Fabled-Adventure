@@ -15,27 +15,19 @@ public class ModItems {
 
     //ULTIUM
     public static final Item ULTIUM_INGOT = registerItem("ultium_ingot", new Item(new FabricItemSettings().group(ModItemGroups.FABLED)));
-
     public static final Item ULTIUM_NUGGET = registerItem("ultium_nugget", new Item(new FabricItemSettings().group(ModItemGroups.FABLED)));
-
     public static final Item ULTIUM_AXE = registerItem("ultium_axe", new net.rytional.fabledadventure.item.custom.ModAxeItem(ModToolMaterials.ULTIUM, 2, 1f,
             new FabricItemSettings().group(ModItemGroups.FABLED)));
-
     public static final Item ULTIUM_PICKAXE = registerItem("ultium_pickaxe", new ModPickaxeItem(ModToolMaterials.ULTIUM, 1, 2f,
             new FabricItemSettings().group(ModItemGroups.FABLED)));
-
     public static final Item ULTIUM_PAXEL = registerItem("ultium_paxel", new ModPaxelItem(ModToolMaterials.ULTIUM, 10, 3f,
             new FabricItemSettings().group(ModItemGroups.FABLED)));
-
     public static final Item ULTIUM_HELMET = registerItem("ultium_helmet", new ModArmorItem(ModArmorMaterials.ULTIUM, EquipmentSlot.HEAD,
             new FabricItemSettings().group(ModItemGroups.FABLED)));
-
     public static final Item ULTIUM_CHESTPLATE = registerItem("ultium_chestplate", new ModArmorItem(ModArmorMaterials.ULTIUM, EquipmentSlot.CHEST,
             new FabricItemSettings().group(ModItemGroups.FABLED)));
-
     public static final Item ULTIUM_LEGGINGS = registerItem("ultium_leggings", new ModArmorItem(ModArmorMaterials.ULTIUM, EquipmentSlot.LEGS,
             new FabricItemSettings().group(ModItemGroups.FABLED)));
-
     public static final Item ULTIUM_BOOTS = registerItem("ultium_boots", new ModArmorItem(ModArmorMaterials.ULTIUM, EquipmentSlot.FEET,
             new FabricItemSettings().group(ModItemGroups.FABLED)));
 
@@ -64,9 +56,43 @@ public class ModItems {
             new FabricItemSettings().group(ModItemGroups.FABLED)));
     public static final Item SORCIUM_TOME = registerItem("sorcium_tome", new Item(new FabricItemSettings().group(ModItemGroups.FABLED)));
 
+    public static final Item RAW_SORCIUM = registerItem("raw_sorcium", new Item(new FabricItemSettings().group(ModItemGroups.FABLED)));
+    public static final Item SORCIUM_AXE = registerItem("sorcium_axe", new ModAxeItem(ModToolMaterials.SORCIUM, 2, 1f,
+            new FabricItemSettings().group(ModItemGroups.FABLED)));
+    public static final Item SORCIUM_PICKAXE = registerItem("sorcium_pickaxe", new ModPickaxeItem(ModToolMaterials.SORCIUM, 2, 1f,
+            new FabricItemSettings().group(ModItemGroups.FABLED)));
+    public static final Item SORCIUM_SHOVEL = registerItem("sorcium_shovel", new ModShoveltem(ModToolMaterials.SORCIUM, 2, 1f,
+            new FabricItemSettings().group(ModItemGroups.FABLED)));
+    public static final Item SORCIUM_SWORD = registerItem("sorcium_sword", new ModSwordItem(ModToolMaterials.SORCIUM, 2, 1f,
+            new FabricItemSettings().group(ModItemGroups.FABLED)));
+    public static final Item SORCIUM_PAXEL = registerItem("sorcium_paxel", new ModPaxelItem(ModToolMaterials.SORCIUM, 2, 1f,
+            new FabricItemSettings().group(ModItemGroups.FABLED)));
+
+    public static final Item SORCIUM_HOE = registerItem("sorcium_hoe", new ModShoveltem(ModToolMaterials.SORCIUM, 2, 1f,
+            new FabricItemSettings().group(ModItemGroups.FABLED)));
+    public static final Item SORCIUM_HORSE_ARMOR = registerItem("sorcium_horse_armor", new HorseArmorItem(15, "sorcium",
+            new FabricItemSettings().group(ModItemGroups.FABLED)));
+
     //ELFIUM
     public static final Item ELFIUM_BOW = registerItem("elfium_bow",
             new ModBowItem(new FabricItemSettings().group(ModItemGroups.FABLED).maxCount(1)));
+    public static final Item ELFIUM_INGOT = registerItem("elfium_ingot", new Item(new FabricItemSettings().group(ModItemGroups.FABLED)));
+    public static final Item RAW_ELFIUM = registerItem("raw_elfium", new Item(new FabricItemSettings().group(ModItemGroups.FABLED)));
+    public static final Item ELFIUM_AXE = registerItem("elfium_axe", new ModAxeItem(ModToolMaterials.ELFIUM, 2, 1f,
+            new FabricItemSettings().group(ModItemGroups.FABLED)));
+    public static final Item ELFIUM_PICKAXE = registerItem("elfium_pickaxe", new ModPickaxeItem(ModToolMaterials.ELFIUM, 2, 1f,
+            new FabricItemSettings().group(ModItemGroups.FABLED)));
+    public static final Item ELFIUM_SHOVEL = registerItem("elfium_shovel", new ModShoveltem(ModToolMaterials.ELFIUM, 2, 1f,
+            new FabricItemSettings().group(ModItemGroups.FABLED)));
+    public static final Item ELFIUM_SWORD = registerItem("elfium_sword", new ModSwordItem(ModToolMaterials.ELFIUM, 2, 1f,
+            new FabricItemSettings().group(ModItemGroups.FABLED)));
+    public static final Item ELFIUM_PAXEL = registerItem("elfium_paxel", new ModPaxelItem(ModToolMaterials.ELFIUM, 2, 1f,
+            new FabricItemSettings().group(ModItemGroups.FABLED)));
+
+    public static final Item ELFIUM_HOE = registerItem("elfium_hoe", new ModShoveltem(ModToolMaterials.ELFIUM, 2, 1f,
+            new FabricItemSettings().group(ModItemGroups.FABLED)));
+    public static final Item ELFIUM_HORSE_ARMOR = registerItem("elfium_horse_armor", new HorseArmorItem(15, "elfium",
+            new FabricItemSettings().group(ModItemGroups.FABLED)));
 
     //ORCANITE
     public static final Item ORCANITE_INGOT = registerItem("orcanite_ingot", new ModGlowItem(new FabricItemSettings().group(ModItemGroups.FABLED)));
@@ -96,15 +122,119 @@ public class ModItems {
             new FabricItemSettings().group(ModItemGroups.FABLED)));
 
     //DWARFIUM
+    public static final Item DWARFIUM_INGOT = registerItem("dwarfium_ingot", new Item(new FabricItemSettings().group(ModItemGroups.FABLED)));
+    public static final Item RAW_DWARFIUM = registerItem("raw_dwarfium", new ModGlowItem(new FabricItemSettings().group(ModItemGroups.FABLED)));
+    public static final Item DWARFIUM_AXE = registerItem("dwarfium_axe", new ModAxeItem(ModToolMaterials.ORCANITE, 2, 1f,
+            new FabricItemSettings().group(ModItemGroups.FABLED)));
+    public static final Item DWARFIUM_PICKAXE = registerItem("dwarfium_pickaxe", new ModPickaxeItem(ModToolMaterials.ORCANITE, 2, 1f,
+            new FabricItemSettings().group(ModItemGroups.FABLED)));
+    public static final Item DWARFIUM_SHOVEL = registerItem("dwarfium_shovel", new ModShoveltem(ModToolMaterials.ORCANITE, 2, 1f,
+            new FabricItemSettings().group(ModItemGroups.FABLED)));
+    public static final Item DWARFIUM_SWORD = registerItem("dwarfium_sword", new ModSwordItem(ModToolMaterials.ORCANITE, 2, 1f,
+            new FabricItemSettings().group(ModItemGroups.FABLED)));
+    public static final Item DWARFIUM_PAXEL = registerItem("dwarfium_paxel", new ModPaxelItem(ModToolMaterials.ORCANITE, 2, 1f,
+            new FabricItemSettings().group(ModItemGroups.FABLED)));
+
+    public static final Item DWARFIUM_HOE = registerItem("dwarfium_hoe", new ModShoveltem(ModToolMaterials.ORCANITE, 2, 1f,
+            new FabricItemSettings().group(ModItemGroups.FABLED)));
+    public static final Item DWARFIUM_HORSE_ARMOR = registerItem("dwarfium_horse_armor", new HorseArmorItem(15, "dwarfium",
+            new FabricItemSettings().group(ModItemGroups.FABLED)));
 
     //FAENITE
     public static final Item FAENITE_DUST = registerItem("faenite_dust", new ModGlowItem(new FabricItemSettings().group(ModItemGroups.FABLED)));
+    public static final Item FAENITE_INGOT = registerItem("faenite_ingot", new Item(new FabricItemSettings().group(ModItemGroups.FABLED)));
+    public static final Item RAW_FAENITE = registerItem("raw_faenite", new Item(new FabricItemSettings().group(ModItemGroups.FABLED)));
+    public static final Item FAENITE_AXE = registerItem("faenite_axe", new ModAxeItem(ModToolMaterials.FAENITE, 2, 1f,
+            new FabricItemSettings().group(ModItemGroups.FABLED)));
+    public static final Item FAENITE_PICKAXE = registerItem("faenite_pickaxe", new ModPickaxeItem(ModToolMaterials.FAENITE, 2, 1f,
+            new FabricItemSettings().group(ModItemGroups.FABLED)));
+    public static final Item FAENITE_SHOVEL = registerItem("faenite_shovel", new ModShoveltem(ModToolMaterials.FAENITE, 2, 1f,
+            new FabricItemSettings().group(ModItemGroups.FABLED)));
+    public static final Item FAENITE_SWORD = registerItem("faenite_sword", new ModSwordItem(ModToolMaterials.FAENITE, 2, 1f,
+            new FabricItemSettings().group(ModItemGroups.FABLED)));
+    public static final Item FAENITE_PAXEL = registerItem("faenite_paxel", new ModPaxelItem(ModToolMaterials.FAENITE, 2, 1f,
+            new FabricItemSettings().group(ModItemGroups.FABLED)));
 
-    //GYNORMIUM
+    public static final Item FAENITE_HOE = registerItem("faenite_hoe", new ModShoveltem(ModToolMaterials.FAENITE, 2, 1f,
+            new FabricItemSettings().group(ModItemGroups.FABLED)));
+    public static final Item FAENITE_HORSE_ARMOR = registerItem("faenite_horse_armor", new HorseArmorItem(15, "faenite",
+            new FabricItemSettings().group(ModItemGroups.FABLED)));
+
+    //GINORMIUM
+    public static final Item GINORMIUM_INGOT = registerItem("ginormium_ingot", new Item(new FabricItemSettings().group(ModItemGroups.FABLED)));
+    public static final Item RAW_GINORMIUM = registerItem("raw_ginormium", new Item(new FabricItemSettings().group(ModItemGroups.FABLED)));
+    public static final Item GINORMIUM_AXE = registerItem("ginormium_axe", new ModAxeItem(ModToolMaterials.GINORMIUM, 2, 1f,
+            new FabricItemSettings().group(ModItemGroups.FABLED)));
+    public static final Item GINORMIUM_PICKAXE = registerItem("ginormium_pickaxe", new ModPickaxeItem(ModToolMaterials.GINORMIUM, 2, 1f,
+            new FabricItemSettings().group(ModItemGroups.FABLED)));
+    public static final Item GINORMIUM_SHOVEL = registerItem("ginormium_shovel", new ModShoveltem(ModToolMaterials.GINORMIUM, 2, 1f,
+            new FabricItemSettings().group(ModItemGroups.FABLED)));
+    public static final Item GINORMIUM_SWORD = registerItem("ginormium_sword", new ModSwordItem(ModToolMaterials.GINORMIUM, 2, 1f,
+            new FabricItemSettings().group(ModItemGroups.FABLED)));
+    public static final Item GINORMIUM_PAXEL = registerItem("ginormium_paxel", new ModPaxelItem(ModToolMaterials.GINORMIUM, 2, 1f,
+            new FabricItemSettings().group(ModItemGroups.FABLED)));
+
+    public static final Item GINORMIUM_HOE = registerItem("ginormium_hoe", new ModShoveltem(ModToolMaterials.GINORMIUM, 2, 1f,
+            new FabricItemSettings().group(ModItemGroups.FABLED)));
+    public static final Item GINORMIUM_HORSE_ARMOR = registerItem("ginormium_horse_armor", new HorseArmorItem(15, "ginormium",
+            new FabricItemSettings().group(ModItemGroups.FABLED)));
 
     //HUMANITE
+    public static final Item HUMANITE_INGOT = registerItem("humanite_ingot", new Item(new FabricItemSettings().group(ModItemGroups.FABLED)));
+    public static final Item RAW_HUMANITE = registerItem("raw_humanite", new Item(new FabricItemSettings().group(ModItemGroups.FABLED)));
+    public static final Item HUMANITE_AXE = registerItem("humanite_axe", new ModAxeItem(ModToolMaterials.HUMANITE, 2, 1f,
+            new FabricItemSettings().group(ModItemGroups.FABLED)));
+    public static final Item HUMANITE_PICKAXE = registerItem("humanite_pickaxe", new ModPickaxeItem(ModToolMaterials.HUMANITE, 2, 1f,
+            new FabricItemSettings().group(ModItemGroups.FABLED)));
+    public static final Item HUMANITE_SHOVEL = registerItem("humanite_shovel", new ModShoveltem(ModToolMaterials.HUMANITE, 2, 1f,
+            new FabricItemSettings().group(ModItemGroups.FABLED)));
+    public static final Item HUMANITE_SWORD = registerItem("humanite_sword", new ModSwordItem(ModToolMaterials.HUMANITE, 2, 1f,
+            new FabricItemSettings().group(ModItemGroups.FABLED)));
+    public static final Item HUMANITE_PAXEL = registerItem("humanite_paxel", new ModPaxelItem(ModToolMaterials.HUMANITE, 2, 1f,
+            new FabricItemSettings().group(ModItemGroups.FABLED)));
+
+    public static final Item HUMANITE_HOE = registerItem("humanite_hoe", new ModShoveltem(ModToolMaterials.HUMANITE, 2, 1f,
+            new FabricItemSettings().group(ModItemGroups.FABLED)));
+    public static final Item HUMANITE_HORSE_ARMOR = registerItem("humanite_horse_armor", new HorseArmorItem(15, "humanite",
+            new FabricItemSettings().group(ModItemGroups.FABLED)));
 
     //NATURITE
+    public static final Item NATURITE_INGOT = registerItem("naturite_ingot", new Item(new FabricItemSettings().group(ModItemGroups.FABLED)));
+    public static final Item RAW_NATURITE = registerItem("raw_naturite", new Item(new FabricItemSettings().group(ModItemGroups.FABLED)));
+    public static final Item NATURITE_AXE = registerItem("naturite_axe", new ModAxeItem(ModToolMaterials.NATURITE, 2, 1f,
+            new FabricItemSettings().group(ModItemGroups.FABLED)));
+    public static final Item NATURITE_PICKAXE = registerItem("naturite_pickaxe", new ModPickaxeItem(ModToolMaterials.NATURITE, 2, 1f,
+            new FabricItemSettings().group(ModItemGroups.FABLED)));
+    public static final Item NATURITE_SHOVEL = registerItem("naturite_shovel", new ModShoveltem(ModToolMaterials.NATURITE, 2, 1f,
+            new FabricItemSettings().group(ModItemGroups.FABLED)));
+    public static final Item NATURITE_SWORD = registerItem("naturite_sword", new ModSwordItem(ModToolMaterials.NATURITE, 2, 1f,
+            new FabricItemSettings().group(ModItemGroups.FABLED)));
+    public static final Item NATURITE_PAXEL = registerItem("naturite_paxel", new ModPaxelItem(ModToolMaterials.NATURITE, 2, 1f,
+            new FabricItemSettings().group(ModItemGroups.FABLED)));
+
+    public static final Item NATURITE_HOE = registerItem("naturite_hoe", new ModShoveltem(ModToolMaterials.NATURITE, 2, 1f,
+            new FabricItemSettings().group(ModItemGroups.FABLED)));
+    public static final Item NATURITE_HORSE_ARMOR = registerItem("naturite_horse_armor", new HorseArmorItem(15, "naturite",
+            new FabricItemSettings().group(ModItemGroups.FABLED)));
+
+    //DRAGONITE
+    public static final Item DRAGONITE_INGOT = registerItem("dragonite_ingot", new Item(new FabricItemSettings().group(ModItemGroups.FABLED)));
+    public static final Item RAW_DRAGONITE = registerItem("raw_dragonite", new Item(new FabricItemSettings().group(ModItemGroups.FABLED)));
+    public static final Item DRAGONITE_AXE = registerItem("dragonite_axe", new ModAxeItem(ModToolMaterials.DRAGONITE, 2, 1f,
+            new FabricItemSettings().group(ModItemGroups.FABLED)));
+    public static final Item DRAGONITE_PICKAXE = registerItem("dragonite_pickaxe", new ModPickaxeItem(ModToolMaterials.DRAGONITE, 2, 1f,
+            new FabricItemSettings().group(ModItemGroups.FABLED)));
+    public static final Item DRAGONITE_SHOVEL = registerItem("dragonite_shovel", new ModShoveltem(ModToolMaterials.DRAGONITE, 2, 1f,
+            new FabricItemSettings().group(ModItemGroups.FABLED)));
+    public static final Item DRAGONITE_SWORD = registerItem("dragonite_sword", new ModSwordItem(ModToolMaterials.DRAGONITE, 2, 1f,
+            new FabricItemSettings().group(ModItemGroups.FABLED)));
+    public static final Item DRAGONITE_PAXEL = registerItem("dragonite_paxel", new ModPaxelItem(ModToolMaterials.DRAGONITE, 2, 1f,
+            new FabricItemSettings().group(ModItemGroups.FABLED)));
+
+    public static final Item DRAGONITE_HOE = registerItem("dragonite_hoe", new ModShoveltem(ModToolMaterials.DRAGONITE, 2, 1f,
+            new FabricItemSettings().group(ModItemGroups.FABLED)));
+    public static final Item DRAGONITE_HORSE_ARMOR = registerItem("dragonite_horse_armor", new HorseArmorItem(15, "dragonite",
+            new FabricItemSettings().group(ModItemGroups.FABLED)));
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registry.ITEM, new Identifier(FabledAdventure.MOD_ID, name), item);

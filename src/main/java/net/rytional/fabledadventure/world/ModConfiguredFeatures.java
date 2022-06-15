@@ -97,14 +97,14 @@ public class ModConfiguredFeatures {
                             0.5F)), FAENITE_CHECKED));
     public static final TreeDecoratorType<FaeniteHomeTreeDecorator> FAENITE_HOME_TREE_DECORATOR = (TreeDecoratorType<FaeniteHomeTreeDecorator>) TreeDecoratorType.callRegister("rich_tree_decorator", FaeniteHomeTreeDecorator.CODEC);
 
-    //GYNORMIUM
-    public static final List<OreFeatureConfig.Target> OVERWORLD_GYNORMIUM_ORES = List.of(
-            OreFeatureConfig.createTarget(OreConfiguredFeatures.STONE_ORE_REPLACEABLES, ModBlocks.GYNORMIUM_STONE_ORE.getDefaultState()),
-            OreFeatureConfig.createTarget(OreConfiguredFeatures.DEEPSLATE_ORE_REPLACEABLES, ModBlocks.GYNORMIUM_DEEPSLATE_ORE.getDefaultState()));
-    public static final RegistryEntry<ConfiguredFeature<OreFeatureConfig, ?>> GYNORMIUM_ORE = ConfiguredFeatures.register("gynormium_ore",
-            Feature.ORE, new OreFeatureConfig(OVERWORLD_GYNORMIUM_ORES, 4));
-    public static final RegistryEntry<ConfiguredFeature<OreFeatureConfig, ?>> GYNORMIUM_NETHERRACK_ORE = ConfiguredFeatures.register("gynormium_netherrack_ore",
-            Feature.ORE, new OreFeatureConfig(NETHERRACK, ModBlocks.GYNORMIUM_NETHERRACK_ORE.getDefaultState(), 3));
+    //GINORMIUM
+    public static final List<OreFeatureConfig.Target> OVERWORLD_GINORMIUM_ORES = List.of(
+            OreFeatureConfig.createTarget(OreConfiguredFeatures.STONE_ORE_REPLACEABLES, ModBlocks.GINORMIUM_STONE_ORE.getDefaultState()),
+            OreFeatureConfig.createTarget(OreConfiguredFeatures.DEEPSLATE_ORE_REPLACEABLES, ModBlocks.GINORMIUM_DEEPSLATE_ORE.getDefaultState()));
+    public static final RegistryEntry<ConfiguredFeature<OreFeatureConfig, ?>> GINORMIUM_ORE = ConfiguredFeatures.register("ginormium_ore",
+            Feature.ORE, new OreFeatureConfig(OVERWORLD_GINORMIUM_ORES, 4));
+    public static final RegistryEntry<ConfiguredFeature<OreFeatureConfig, ?>> GINORMIUM_NETHERRACK_ORE = ConfiguredFeatures.register("ginormium_netherrack_ore",
+            Feature.ORE, new OreFeatureConfig(NETHERRACK, ModBlocks.GINORMIUM_NETHERRACK_ORE.getDefaultState(), 3));
 
     //HUMANITE
     public static final List<OreFeatureConfig.Target> OVERWORLD_HUMANITE_ORES = List.of(

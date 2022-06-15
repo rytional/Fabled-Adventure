@@ -14,5 +14,11 @@ public class ModRecipes {
                 SorciumCrafterRecipe.Serializer.INSTANCE);
         Registry.register(Registry.RECIPE_TYPE, new Identifier(FabledAdventure.MOD_ID, SorciumCrafterRecipe.Type.ID),
                 SorciumCrafterRecipe.Type.INSTANCE);
+        Registry.register(Registry.RECIPE_TYPE, new Identifier(FabledAdventure.MOD_ID, FaeniteHomeRecipe.Type.ID),
+                FaeniteHomeRecipe.Type.INSTANCE);
+        Registry.register(Registry.RECIPE_TYPE, new Identifier(FabledAdventure.MOD_ID, GinormiumTableRecipe.Type.ID),
+                GinormiumTableRecipe.Type.INSTANCE);
+        Registry.register(Registry.RECIPE_TYPE, new Identifier(FabledAdventure.MOD_ID, NaturiteStumpRecipe.Type.ID),
+                NaturiteStumpRecipe.Type.INSTANCE);
     }
 }

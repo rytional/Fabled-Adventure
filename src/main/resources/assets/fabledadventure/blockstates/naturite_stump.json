@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "fabledadventure:block/naturite_stump" },
+    "facing=east": { "model": "fabledadventure:block/naturite_stump", "y": 90 },
+    "facing=south": { "model": "fabledadventure:block/naturite_stump", "y": 180 },
+    "facing=west": { "model": "fabledadventure:block/naturite_stump", "y": 270 }
+  }
+}

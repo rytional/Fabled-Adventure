@@ -4,8 +4,9 @@
 	"ambientocclusion": false,
 	"texture_size": [64, 32],
 	"textures": {
-		"1": "dragon_egg",
-		"4": "dragon_head"
+		"1": "fabledadventure:block/machines/dragon_egg",
+		"4": "fabledadventure:block/machines/dragon_head",
+		"particle": "fabledadventure:block/machines/dragon_egg"
 	},
 	"elements": [
 		{

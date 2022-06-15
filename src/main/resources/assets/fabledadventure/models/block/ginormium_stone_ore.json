@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "fabledadventure:block/ginormium_stone_ore"
+  }
+}

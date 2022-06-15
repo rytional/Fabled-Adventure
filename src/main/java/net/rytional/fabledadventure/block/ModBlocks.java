@@ -134,17 +134,17 @@ public class ModBlocks {
             new ModSaplingBlock(new FaeniteSaplingGenerator(),
                     FabricBlockSettings.copy(Blocks.OAK_SAPLING)), ModItemGroups.FABLED);
 
-    //GYNORMIUM
-    public static final Block GYNORMIUM_STONE_ORE = registerBlock("gynormium_stone_ore",
+    //GINORMIUM
+    public static final Block GINORMIUM_STONE_ORE = registerBlock("ginormium_stone_ore",
             new OreBlock(FabricBlockSettings.of(Material.STONE).strength(1.5f).requiresTool(),
                     UniformIntProvider.create(3, 7)), ModItemGroups.FABLED);
-    public static final Block GYNORMIUM_DEEPSLATE_ORE = registerBlock("gynormium_deepslate_ore",
+    public static final Block GINORMIUM_DEEPSLATE_ORE = registerBlock("ginormium_deepslate_ore",
             new OreBlock(FabricBlockSettings.of(Material.STONE).strength(1.5f).requiresTool().sounds(BlockSoundGroup.DEEPSLATE),
                     UniformIntProvider.create(3, 7)), ModItemGroups.FABLED);
-    public static final Block GYNORMIUM_NETHERRACK_ORE = registerBlock("gynormium_netherrack_ore",
+    public static final Block GINORMIUM_NETHERRACK_ORE = registerBlock("ginormium_netherrack_ore",
             new OreBlock(FabricBlockSettings.of(Material.STONE).strength(1.5f).requiresTool().sounds(BlockSoundGroup.NETHERRACK),
                     UniformIntProvider.create(3, 7)), ModItemGroups.FABLED);
-    public static final Block GYNORMIUM_BLOCK = registerBlock("gynormium_block",
+    public static final Block GINORMIUM_BLOCK = registerBlock("ginormium_block",
             new Block(FabricBlockSettings.of(Material.METAL).strength(4.0f).requiresTool().luminance(14)), ModItemGroups.FABLED);
 
     //HUMANITE
@@ -202,12 +202,14 @@ public class ModBlocks {
             new DwarfiumBlasterBlock(FabricBlockSettings.of(Material.METAL).nonOpaque().strength(1f).requiresTool().luminance(5)), net.rytional.fabledadventure.item.ModItemGroups.FABLED);
     public static final Block SORCIUM_CRAFTER = registerBlock("sorcium_crafter",
             new SorciumCrafterBlock(FabricBlockSettings.of(Material.STONE).strength(4.0f).requiresTool().luminance(14)), ModItemGroups.FABLED);
-    public static final Block GYNORMIUM_TABLE = registerBlock("gynormium_table",
-            new Block(FabricBlockSettings.of(Material.METAL).strength(4.0f).requiresTool().luminance(14)), ModItemGroups.FABLED);
+    public static final Block GINORMIUM_TABLE = registerBlock("ginormium_table",
+            new GinormiumTableBlock(FabricBlockSettings.of(Material.METAL).strength(4.0f).requiresTool().luminance(14)), ModItemGroups.FABLED);
     public static final Block DRAGONITE_INFUSER = registerBlock("dragonite_infuser",
-            new Block(FabricBlockSettings.of(Material.METAL).strength(4.0f).requiresTool().luminance(14)), ModItemGroups.FABLED);
+            new DragoniteInfuserBlock(FabricBlockSettings.of(Material.METAL).strength(4.0f).requiresTool().luminance(14)), ModItemGroups.FABLED);
     public static final Block FAENITE_HOME = registerBlock("faenite_home",
-            new Block(FabricBlockSettings.of(Material.METAL).strength(4.0f).requiresTool().luminance(14)), ModItemGroups.FABLED);
+            new FaeniteHomeBlock(FabricBlockSettings.of(Material.METAL).strength(4.0f).requiresTool().luminance(14)), ModItemGroups.FABLED);
+    public static final Block NATURITE_STUMP = registerBlock("naturite_stump",
+            new NaturiteStumpBlock(FabricBlockSettings.of(Material.WOOD).strength(4.0f).requiresTool().luminance(14)), ModItemGroups.FABLED);
 
     private static Block registerBlockWithoutBlockItem(String name, Block block) {
         return Registry.register(Registry.BLOCK, new Identifier(FabledAdventure.MOD_ID, name), block);

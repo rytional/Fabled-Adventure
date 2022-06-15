@@ -11,9 +11,7 @@ import net.rytional.fabledadventure.entity.client.RaccoonRenderer;
 import net.rytional.fabledadventure.entity.client.SkyRenderer;
 import net.rytional.fabledadventure.entity.client.armor.SorciumBlueRobeRenderer;
 import net.rytional.fabledadventure.item.ModItems;
-import net.rytional.fabledadventure.screen.DwarfiumBlasterScreen;
-import net.rytional.fabledadventure.screen.ModScreenHandlers;
-import net.rytional.fabledadventure.screen.SorciumCrafterScreen;
+import net.rytional.fabledadventure.screen.*;
 import net.rytional.fabledadventure.util.ModFluidHandlerRegistry;
 import net.rytional.fabledadventure.util.ModModelPredicateProvider;
 import software.bernie.geckolib3.renderers.geo.GeoArmorRenderer;
@@ -31,12 +29,17 @@ public class FabledAdventureClient implements ClientModInitializer {
 
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.DWARFIUM_BLASTER, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.SORCIUM_CRAFTER, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.GYNORMIUM_TABLE, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.GINORMIUM_TABLE, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.DRAGONITE_INFUSER, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.FAENITE_HOME, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.NATURITE_STUMP, RenderLayer.getCutout());
 
         ScreenRegistry.register(ModScreenHandlers.DWARFIUM_BLASTER_SCREEN_HANDLER, DwarfiumBlasterScreen::new);
         ScreenRegistry.register(ModScreenHandlers.SORCIUM_CRAFTER_SCREEN_HANDLER, SorciumCrafterScreen::new);
+        ScreenRegistry.register(ModScreenHandlers.DRAGONITE_INFUSER_SCREEN_HANDLER, DragoniteInfuserScreen::new);
+        ScreenRegistry.register(ModScreenHandlers.FAENITE_HOME_SCREEN_HANDLER, FaeniteHomeScreen::new);
+        ScreenRegistry.register(ModScreenHandlers.GINORMIUM_TABLE_SCREEN_HANDLER, GinormiumTableScreen::new);
+        ScreenRegistry.register(ModScreenHandlers.NATURITE_STUMP_SCREEN_HANDLER, NaturiteStumpScreen::new);
 
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.NATURITE_LEAVES, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.NATURITE_SAPLING, RenderLayer.getCutout());

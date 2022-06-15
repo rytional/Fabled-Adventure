@@ -9,12 +9,25 @@ import java.util.function.Supplier;
 
 public enum ModToolMaterials implements ToolMaterial {
 
-    ULTIUM(3, 1800, 10.0F, 4.5F, 24, () -> Ingredient.ofItems(ModItems.ULTIUM_INGOT)),
+    ULTIUM(3, 3200, 12.0F, 5.0F, 32, () -> Ingredient.ofItems(ModItems.ULTIUM_INGOT)),
 
     SORCIUM(3, 1600, 8.0F, 3.5F, 24, () -> Ingredient.ofItems(ModItems.SORCIUM_INGOT)),
 
-    ORCANITE(3, 1600, 8.0F, 3.5F, 24, () -> Ingredient.ofItems(ModItems.ORCANITE_INGOT))
+    ORCANITE(3, 1600, 8.0F, 3.5F, 24, () -> Ingredient.ofItems(ModItems.ORCANITE_INGOT)),
 
+    DWARFIUM(3, 1600, 8.0F, 3.5F, 24, () -> Ingredient.ofItems(ModItems.DWARFIUM_INGOT)),
+
+    DRAGONITE(3, 1600, 8.0F, 3.5F, 24, () -> Ingredient.ofItems(ModItems.DRAGONITE_INGOT)),
+
+    ELFIUM(3, 1600, 8.0F, 3.5F, 24, () -> Ingredient.ofItems(ModItems.ELFIUM_INGOT)),
+
+    FAENITE(3, 1600, 8.0F, 3.5F, 24, () -> Ingredient.ofItems(ModItems.FAENITE_INGOT)),
+
+    GINORMIUM(3, 1600, 8.0F, 3.5F, 24, () -> Ingredient.ofItems(ModItems.GINORMIUM_INGOT)),
+
+    NATURITE(3, 1600, 8.0F, 3.5F, 24, () -> Ingredient.ofItems(ModItems.NATURITE_INGOT)),
+
+    HUMANITE(3, 1600, 8.0F, 3.5F, 24, () -> Ingredient.ofItems(ModItems.HUMANITE_INGOT))
     ;
 
     private final int miningLevel;

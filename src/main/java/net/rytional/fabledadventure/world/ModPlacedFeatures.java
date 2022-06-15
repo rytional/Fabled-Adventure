@@ -54,12 +54,12 @@ public class ModPlacedFeatures {
                     PlacedFeatures.createCountExtraModifier(1, 0.1f, 2)));
 
 
-    //GYNORMIUM
-    public static final RegistryEntry<PlacedFeature> GYNORMIUM_ORE_PLACED = PlacedFeatures.register("gynormium_ore_placed",
-            ModConfiguredFeatures.GYNORMIUM_ORE, ModOreFeatures.modifiersWithCount(14,
+    //GINORMIUM
+    public static final RegistryEntry<PlacedFeature> GINORMIUM_ORE_PLACED = PlacedFeatures.register("ginormium_ore_placed",
+            ModConfiguredFeatures.GINORMIUM_ORE, ModOreFeatures.modifiersWithCount(14,
                     HeightRangePlacementModifier.uniform(YOffset.aboveBottom(5), YOffset.aboveBottom(84))));
-    public static final RegistryEntry<PlacedFeature> GYNORMIUM_NETHERRACK_ORE_PLACED = PlacedFeatures.register("gynormium_netherrack_ore_placed",
-            ModConfiguredFeatures.GYNORMIUM_NETHERRACK_ORE, ModOreFeatures.modifiersWithCount(7, PlacedFeatures.TEN_ABOVE_AND_BELOW_RANGE));
+    public static final RegistryEntry<PlacedFeature> GINORMIUM_NETHERRACK_ORE_PLACED = PlacedFeatures.register("ginormium_netherrack_ore_placed",
+            ModConfiguredFeatures.GINORMIUM_NETHERRACK_ORE, ModOreFeatures.modifiersWithCount(7, PlacedFeatures.TEN_ABOVE_AND_BELOW_RANGE));
 
     //HUMANITE
     public static final RegistryEntry<PlacedFeature> HUMANITE_ORE_PLACED = PlacedFeatures.register("humanite_ore_placed",

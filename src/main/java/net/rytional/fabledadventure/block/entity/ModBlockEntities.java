@@ -11,6 +11,10 @@ public class ModBlockEntities {
 
     public static BlockEntityType<DwarfiumBlasterEntity> DWARFIUM_BLASTER;
     public static BlockEntityType<SorciumCrafterEntity> SORCIUM_CRAFTER;
+    public static BlockEntityType<DragoniteInfuserEntity> DRAGONITE_INFUSER;
+    public static BlockEntityType<FaeniteHomeEntity> FAENITE_HOME;
+    public static BlockEntityType<GinormiumTableEntity> GINORMIUM_TABLE;
+    public static BlockEntityType<NaturiteStumpEntity> NATURITE_STUMP;
 
     public static void registerAllEntities() {
         DWARFIUM_BLASTER = Registry.register(Registry.BLOCK_ENTITY_TYPE,
@@ -22,5 +26,25 @@ public class ModBlockEntities {
                 new Identifier(FabledAdventure.MOD_ID, "sorcium_crafter"),
                 FabricBlockEntityTypeBuilder.create(SorciumCrafterEntity::new,
                         ModBlocks.SORCIUM_CRAFTER).build(null));
+
+        DRAGONITE_INFUSER = Registry.register(Registry.BLOCK_ENTITY_TYPE,
+                new Identifier(FabledAdventure.MOD_ID, "dragonite_infuser"),
+                FabricBlockEntityTypeBuilder.create(DragoniteInfuserEntity::new,
+                        ModBlocks.DRAGONITE_INFUSER).build(null));
+
+        FAENITE_HOME = Registry.register(Registry.BLOCK_ENTITY_TYPE,
+                new Identifier(FabledAdventure.MOD_ID, "faenite_home"),
+                FabricBlockEntityTypeBuilder.create(FaeniteHomeEntity::new,
+                        ModBlocks.FAENITE_HOME).build(null));
+
+        GINORMIUM_TABLE = Registry.register(Registry.BLOCK_ENTITY_TYPE,
+                new Identifier(FabledAdventure.MOD_ID, "ginormium_table"),
+                FabricBlockEntityTypeBuilder.create(GinormiumTableEntity::new,
+                        ModBlocks.GINORMIUM_TABLE).build(null));
+
+        NATURITE_STUMP = Registry.register(Registry.BLOCK_ENTITY_TYPE,
+                new Identifier(FabledAdventure.MOD_ID, "naturite_stump"),
+                FabricBlockEntityTypeBuilder.create(NaturiteStumpEntity::new,
+                        ModBlocks.NATURITE_STUMP).build(null));
     }
 }

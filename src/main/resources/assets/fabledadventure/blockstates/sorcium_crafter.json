@@ -1,5 +1,8 @@
 {
   "variants": {
-    "": { "model": "fabledadventure:block/sorcium_crafter" }
+    "facing=north": { "model": "fabledadventure:block/sorcium_crafter" },
+    "facing=east": { "model": "fabledadventure:block/sorcium_crafter", "y": 90 },
+    "facing=south": { "model": "fabledadventure:block/sorcium_crafter", "y": 180 },
+    "facing=west": { "model": "fabledadventure:block/sorcium_crafter", "y": 270 }
   }
 }
