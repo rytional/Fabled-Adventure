@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "AA",
+    "AE",
+    " E"
+  ],
+  "key": {
+    "A": {
+      "item": "fabledadventure:ginormium_ingot"
+    },
+    "E": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "fabledadventure:ginormium_axe"
+  }
+}

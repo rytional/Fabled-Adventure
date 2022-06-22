@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "fabledadventure:dwarfium_ingot"
+    }
+  },
+  "result": {
+    "item": "fabledadventure:dwarfium_block"
+  }
+}

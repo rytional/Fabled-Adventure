@@ -1,7 +1,14 @@
 {
   "replace": false,
   "values": [
-    "fabledadventure:ultium_axe",
-    "fabledadventure:orcanite_axe"
+    "fabledadventure:orcanite_axe",
+    "fabledadventure:dragonite_axe",
+    "fabledadventure:dwarfium_axe",
+    "fabledadventure:elfium_axe",
+    "fabledadventure:faenite_axe",
+    "fabledadventure:ginormium_axe",
+    "fabledadventure:humanite_axe",
+    "fabledadventure:naturite_axe",
+    "fabledadventure:sorcium_axe"
   ]
 }

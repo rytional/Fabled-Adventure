@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ABC",
+    " D ",
+    " E "
+  ],
+  "key": {
+    "A": {
+      "item": "fabledadventure:ginormium_pickaxe"
+    },
+    "B": {
+      "item": "fabledadventure:ginormium_shovel"
+    },
+    "C": {
+      "item": "fabledadventure:ginormium_axe"
+    },
+    "D": {
+      "item": "fabledadventure:ginormium_hoe"
+    },
+    "E": {
+      "item": "fabledadventure:ginormium_block"
+    }
+  },
+  "result": {
+    "item": "fabledadventure:ginormium_paxel"
+  }
+}

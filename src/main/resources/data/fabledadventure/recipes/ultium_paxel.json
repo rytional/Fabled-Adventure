@@ -2,21 +2,36 @@
   "type": "minecraft:crafting_shaped",
   "pattern": [
     "ABC",
-    " S ",
-    " S "
+    "DEF",
+    "GHI"
   ],
   "key": {
     "A": {
-      "item": "fabledadventure:ultium_ingot"
+      "item": "fabledadventure:dragonite_paxel"
     },
     "B": {
-      "item": "fabledadventure:ultium_block"
+      "item": "fabledadventure:dwarfium_paxel"
     },
     "C": {
-      "item": "fabledadventure:ultium_ingot"
+      "item": "fabledadventure:elfium_paxel"
     },
-    "S": {
-      "item": "minecraft:stick"
+    "D": {
+      "item": "fabledadventure:faenite_paxel"
+    },
+    "E": {
+      "item": "fabledadventure:ginormium_paxel"
+    },
+    "F": {
+      "item": "fabledadventure:humanite_paxel"
+    },
+    "G": {
+      "item": "fabledadventure:naturite_paxel"
+    },
+    "H": {
+      "item": "fabledadventure:orcanite_paxel"
+    },
+    "I": {
+      "item": "fabledadventure:sorcium_paxel"
     }
   },
   "result": {

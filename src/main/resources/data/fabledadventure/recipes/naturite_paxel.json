@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ABC",
+    " D ",
+    " E "
+  ],
+  "key": {
+    "A": {
+      "item": "fabledadventure:naturite_pickaxe"
+    },
+    "B": {
+      "item": "fabledadventure:naturite_shovel"
+    },
+    "C": {
+      "item": "fabledadventure:naturite_axe"
+    },
+    "D": {
+      "item": "fabledadventure:naturite_hoe"
+    },
+    "E": {
+      "item": "fabledadventure:naturite_block"
+    }
+  },
+  "result": {
+    "item": "fabledadventure:naturite_paxel"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ABC",
+    " D ",
+    " E "
+  ],
+  "key": {
+    "A": {
+      "item": "fabledadventure:dragonite_pickaxe"
+    },
+    "B": {
+      "item": "fabledadventure:dragonite_shovel"
+    },
+    "C": {
+      "item": "fabledadventure:dragonite_axe"
+    },
+    "D": {
+      "item": "fabledadventure:dragonite_hoe"
+    },
+    "E": {
+      "item": "fabledadventure:dragonite_block"
+    }
+  },
+  "result": {
+    "item": "fabledadventure:dragonite_paxel"
+  }
+}

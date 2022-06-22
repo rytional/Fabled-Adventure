@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ABC",
+    " D ",
+    " E "
+  ],
+  "key": {
+    "A": {
+      "item": "fabledadventure:humanite_pickaxe"
+    },
+    "B": {
+      "item": "fabledadventure:humanite_shovel"
+    },
+    "C": {
+      "item": "fabledadventure:humanite_axe"
+    },
+    "D": {
+      "item": "fabledadventure:humanite_hoe"
+    },
+    "E": {
+      "item": "fabledadventure:humanite_block"
+    }
+  },
+  "result": {
+    "item": "fabledadventure:humanite_paxel"
+  }
+}

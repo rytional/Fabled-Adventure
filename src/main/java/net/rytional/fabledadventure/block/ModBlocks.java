@@ -26,12 +26,6 @@ public class ModBlocks {
             new Block(FabricBlockSettings.of(Material.METAL).strength(4.0f).requiresTool().luminance(14)), ModItemGroups.FABLED);
     public static final Block SPEEDY_BLOCK = registerBlock("speedy_block",
             new SpeedyBlock(FabricBlockSettings.of(Material.METAL).strength(4.0f).luminance(14)), ModItemGroups.FABLED);
-    public static final Block ULTIUM_STONE_ORE = registerBlock("ultium_stone_ore",
-            new OreBlock(FabricBlockSettings.of(Material.STONE).strength(1.5f).requiresTool(),
-                    UniformIntProvider.create(3, 7)), ModItemGroups.FABLED);
-    public static final Block ULTIUM_DEEPSLATE_ORE = registerBlock("ultium_deepslate_ore",
-            new OreBlock(FabricBlockSettings.of(Material.STONE).strength(1.5f).requiresTool().sounds(BlockSoundGroup.DEEPSLATE),
-                    UniformIntProvider.create(3, 7)), ModItemGroups.FABLED);
     public static final Block ULTIUM_BEDROCK_ORE = registerBlock("ultium_bedrock_ore",
             new OreBlock(FabricBlockSettings.of(Material.STONE).strength(1.5f).requiresTool().sounds(BlockSoundGroup.LODESTONE),
                     UniformIntProvider.create(3, 7)), ModItemGroups.FABLED);

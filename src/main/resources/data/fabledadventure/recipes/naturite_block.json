@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "fabledadventure:naturite_ingot"
+    }
+  },
+  "result": {
+    "item": "fabledadventure:naturite_block"
+  }
+}

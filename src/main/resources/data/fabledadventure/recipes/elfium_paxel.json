@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ABC",
+    " D ",
+    " E "
+  ],
+  "key": {
+    "A": {
+      "item": "fabledadventure:elfium_pickaxe"
+    },
+    "B": {
+      "item": "fabledadventure:elfium_shovel"
+    },
+    "C": {
+      "item": "fabledadventure:elfium_axe"
+    },
+    "D": {
+      "item": "fabledadventure:elfium_hoe"
+    },
+    "E": {
+      "item": "fabledadventure:elfium_block"
+    }
+  },
+  "result": {
+    "item": "fabledadventure:elfium_paxel"
+  }
+}

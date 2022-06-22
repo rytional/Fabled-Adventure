@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "AAA",
+    " E ",
+    " E "
+  ],
+  "key": {
+    "A": {
+      "item": "fabledadventure:orcanite_ingot"
+    },
+    "E": {
+      "item": "minecraft:blaze_rod"
+    }
+  },
+  "result": {
+    "item": "fabledadventure:orcanite_pickaxe"
+  }
+}

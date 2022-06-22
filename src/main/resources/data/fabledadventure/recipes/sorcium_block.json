@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "fabledadventure:sorcium_ingot"
+    }
+  },
+  "result": {
+    "item": "fabledadventure:sorcium_block"
+  }
+}

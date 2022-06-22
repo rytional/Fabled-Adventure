@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ABC",
+    " D ",
+    " E "
+  ],
+  "key": {
+    "A": {
+      "item": "fabledadventure:dwarfium_pickaxe"
+    },
+    "B": {
+      "item": "fabledadventure:dwarfium_shovel"
+    },
+    "C": {
+      "item": "fabledadventure:dwarfium_axe"
+    },
+    "D": {
+      "item": "fabledadventure:dwarfium_hoe"
+    },
+    "E": {
+      "item": "fabledadventure:dwarfium_block"
+    }
+  },
+  "result": {
+    "item": "fabledadventure:dwarfium_paxel"
+  }
+}

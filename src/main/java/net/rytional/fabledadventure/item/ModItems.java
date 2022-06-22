@@ -15,11 +15,7 @@ public class ModItems {
 
     //ULTIUM
     public static final Item ULTIUM_INGOT = registerItem("ultium_ingot", new Item(new FabricItemSettings().group(ModItemGroups.FABLED)));
-    public static final Item ULTIUM_NUGGET = registerItem("ultium_nugget", new Item(new FabricItemSettings().group(ModItemGroups.FABLED)));
-    public static final Item ULTIUM_AXE = registerItem("ultium_axe", new net.rytional.fabledadventure.item.custom.ModAxeItem(ModToolMaterials.ULTIUM, 2, 1f,
-            new FabricItemSettings().group(ModItemGroups.FABLED)));
-    public static final Item ULTIUM_PICKAXE = registerItem("ultium_pickaxe", new ModPickaxeItem(ModToolMaterials.ULTIUM, 1, 2f,
-            new FabricItemSettings().group(ModItemGroups.FABLED)));
+    public static final Item ULTIUM_ORB_SHARD = registerItem("ultium_orb_shard", new Item(new FabricItemSettings().group(ModItemGroups.FABLED)));
     public static final Item ULTIUM_PAXEL = registerItem("ultium_paxel", new ModPaxelItem(ModToolMaterials.ULTIUM, 10, 3f,
             new FabricItemSettings().group(ModItemGroups.FABLED)));
     public static final Item ULTIUM_HELMET = registerItem("ultium_helmet", new ModArmorItem(ModArmorMaterials.ULTIUM, EquipmentSlot.HEAD,
@@ -56,7 +52,7 @@ public class ModItems {
             new FabricItemSettings().group(ModItemGroups.FABLED)));
     public static final Item SORCIUM_TOME = registerItem("sorcium_tome", new Item(new FabricItemSettings().group(ModItemGroups.FABLED)));
 
-    public static final Item RAW_SORCIUM = registerItem("raw_sorcium", new Item(new FabricItemSettings().group(ModItemGroups.FABLED)));
+    public static final Item SORCIUM_POWDER = registerItem("sorcium_powder", new Item(new FabricItemSettings().group(ModItemGroups.FABLED)));
     public static final Item SORCIUM_AXE = registerItem("sorcium_axe", new ModAxeItem(ModToolMaterials.SORCIUM, 2, 1f,
             new FabricItemSettings().group(ModItemGroups.FABLED)));
     public static final Item SORCIUM_PICKAXE = registerItem("sorcium_pickaxe", new ModPickaxeItem(ModToolMaterials.SORCIUM, 2, 1f,
@@ -143,7 +139,6 @@ public class ModItems {
     //FAENITE
     public static final Item FAENITE_DUST = registerItem("faenite_dust", new ModGlowItem(new FabricItemSettings().group(ModItemGroups.FABLED)));
     public static final Item FAENITE_INGOT = registerItem("faenite_ingot", new Item(new FabricItemSettings().group(ModItemGroups.FABLED)));
-    public static final Item RAW_FAENITE = registerItem("raw_faenite", new Item(new FabricItemSettings().group(ModItemGroups.FABLED)));
     public static final Item FAENITE_AXE = registerItem("faenite_axe", new ModAxeItem(ModToolMaterials.FAENITE, 2, 1f,
             new FabricItemSettings().group(ModItemGroups.FABLED)));
     public static final Item FAENITE_PICKAXE = registerItem("faenite_pickaxe", new ModPickaxeItem(ModToolMaterials.FAENITE, 2, 1f,
@@ -162,7 +157,7 @@ public class ModItems {
 
     //GINORMIUM
     public static final Item GINORMIUM_INGOT = registerItem("ginormium_ingot", new Item(new FabricItemSettings().group(ModItemGroups.FABLED)));
-    public static final Item RAW_GINORMIUM = registerItem("raw_ginormium", new Item(new FabricItemSettings().group(ModItemGroups.FABLED)));
+    public static final Item GINORMIUM_NUGGET = registerItem("ginormium_nugget", new Item(new FabricItemSettings().group(ModItemGroups.FABLED)));
     public static final Item GINORMIUM_AXE = registerItem("ginormium_axe", new ModAxeItem(ModToolMaterials.GINORMIUM, 2, 1f,
             new FabricItemSettings().group(ModItemGroups.FABLED)));
     public static final Item GINORMIUM_PICKAXE = registerItem("ginormium_pickaxe", new ModPickaxeItem(ModToolMaterials.GINORMIUM, 2, 1f,
@@ -181,7 +176,7 @@ public class ModItems {
 
     //HUMANITE
     public static final Item HUMANITE_INGOT = registerItem("humanite_ingot", new Item(new FabricItemSettings().group(ModItemGroups.FABLED)));
-    public static final Item RAW_HUMANITE = registerItem("raw_humanite", new Item(new FabricItemSettings().group(ModItemGroups.FABLED)));
+    public static final Item HUMANITE_SHARD = registerItem("humanite_shard", new Item(new FabricItemSettings().group(ModItemGroups.FABLED)));
     public static final Item HUMANITE_AXE = registerItem("humanite_axe", new ModAxeItem(ModToolMaterials.HUMANITE, 2, 1f,
             new FabricItemSettings().group(ModItemGroups.FABLED)));
     public static final Item HUMANITE_PICKAXE = registerItem("humanite_pickaxe", new ModPickaxeItem(ModToolMaterials.HUMANITE, 2, 1f,
@@ -200,7 +195,7 @@ public class ModItems {
 
     //NATURITE
     public static final Item NATURITE_INGOT = registerItem("naturite_ingot", new Item(new FabricItemSettings().group(ModItemGroups.FABLED)));
-    public static final Item RAW_NATURITE = registerItem("raw_naturite", new Item(new FabricItemSettings().group(ModItemGroups.FABLED)));
+    public static final Item NATURITE_PEBBLE = registerItem("naturite_pebble", new Item(new FabricItemSettings().group(ModItemGroups.FABLED)));
     public static final Item NATURITE_AXE = registerItem("naturite_axe", new ModAxeItem(ModToolMaterials.NATURITE, 2, 1f,
             new FabricItemSettings().group(ModItemGroups.FABLED)));
     public static final Item NATURITE_PICKAXE = registerItem("naturite_pickaxe", new ModPickaxeItem(ModToolMaterials.NATURITE, 2, 1f,
@@ -219,7 +214,7 @@ public class ModItems {
 
     //DRAGONITE
     public static final Item DRAGONITE_INGOT = registerItem("dragonite_ingot", new Item(new FabricItemSettings().group(ModItemGroups.FABLED)));
-    public static final Item RAW_DRAGONITE = registerItem("raw_dragonite", new Item(new FabricItemSettings().group(ModItemGroups.FABLED)));
+    public static final Item DRAGONITE_SCALE = registerItem("dragonite_scale", new Item(new FabricItemSettings().group(ModItemGroups.FABLED)));
     public static final Item DRAGONITE_AXE = registerItem("dragonite_axe", new ModAxeItem(ModToolMaterials.DRAGONITE, 2, 1f,
             new FabricItemSettings().group(ModItemGroups.FABLED)));
     public static final Item DRAGONITE_PICKAXE = registerItem("dragonite_pickaxe", new ModPickaxeItem(ModToolMaterials.DRAGONITE, 2, 1f,

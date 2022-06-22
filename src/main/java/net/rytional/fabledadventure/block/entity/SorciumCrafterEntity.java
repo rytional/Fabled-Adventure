@@ -1,6 +1,7 @@
 package net.rytional.fabledadventure.block.entity;
 
 import net.fabricmc.fabric.api.registry.FuelRegistry;
+import net.minecraft.block.AbstractFurnaceBlock;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.entity.player.PlayerEntity;
@@ -18,6 +19,7 @@ import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.world.World;
+import net.rytional.fabledadventure.block.custom.SorciumCrafterBlock;
 import net.rytional.fabledadventure.item.inventory.ImplementedInventory;
 import net.rytional.fabledadventure.recipe.SorciumCrafterRecipe;
 import net.rytional.fabledadventure.screen.SorciumCrafterScreenHandler;
@@ -102,6 +104,7 @@ public class SorciumCrafterEntity extends BlockEntity implements NamedScreenHand
     }
 
     public static void tick(World world, BlockPos pos, BlockState state, SorciumCrafterEntity entity) {
+
         if(isConsumingFuel(entity)) {
             entity.fuelTime--;
         }
@@ -123,6 +126,10 @@ public class SorciumCrafterEntity extends BlockEntity implements NamedScreenHand
 
     private static boolean hasFuelInFuelSlot(SorciumCrafterEntity entity) {
         return !entity.getStack(11).isEmpty();
+    }
+
+    private static boolean hasTomeInTomeSlot(SorciumCrafterEntity entity) {
+        return !entity.getStack(12).isEmpty();
     }
 
     private static boolean isConsumingFuel(SorciumCrafterEntity entity) {

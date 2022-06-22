@@ -4,12 +4,6 @@
     "#minecraft:mineable/pickaxe",
     "#minecraft:mineable/axe",
     "#minecraft:mineable/shovel",
-    "#minecraft:mineable/hoe",
-    "fabledadventure:ultium_block",
-    "fabledadventure:ultium_ore",
-    "fabledadventure:orcanite_ore_block",
-    "fabledadventure:orcanite_deepslate_ore_block",
-    "fabledadventure:orcanite_block",
-    "fabledadventure:dwarfium_blaster"
+    "#minecraft:mineable/hoe"
   ]
 }

@@ -1,7 +1,14 @@
 {
   "replace": false,
   "values": [
-    "fabledadventure:ultium_pickaxe",
-    "fabledadventure:orcanite_pickaxe"
+    "fabledadventure:orcanite_pickaxe",
+    "fabledadventure:dragonite_pickaxe",
+    "fabledadventure:dwarfium_pickaxe",
+    "fabledadventure:elfium_pickaxe",
+    "fabledadventure:faenite_pickaxe",
+    "fabledadventure:ginormium_pickaxe",
+    "fabledadventure:humanite_pickaxe",
+    "fabledadventure:naturite_pickaxe",
+    "fabledadventure:sorcium_pickaxe"
   ]
 }

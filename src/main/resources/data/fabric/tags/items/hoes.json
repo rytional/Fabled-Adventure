@@ -1,7 +1,14 @@
 {
   "replace": false,
   "values": [
-    "fabledadventure:ultium_hoe",
-    "fabledadventure:orcanite_hoe"
+    "fabledadventure:orcanite_hoe",
+    "fabledadventure:dragonite_hoe",
+    "fabledadventure:dwarfium_hoe",
+    "fabledadventure:elfium_hoe",
+    "fabledadventure:faenite_hoe",
+    "fabledadventure:ginormium_hoe",
+    "fabledadventure:humanite_hoe",
+    "fabledadventure:naturite_hoe",
+    "fabledadventure:sorcium_hoe"
   ]
 }

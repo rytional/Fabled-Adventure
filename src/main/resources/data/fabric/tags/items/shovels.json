@@ -1,7 +1,14 @@
 {
   "replace": false,
   "values": [
-    "fabledadventure:ultium_shovel",
-    "fabledadventure:orcanite_shovel"
+    "fabledadventure:orcanite_shovel",
+    "fabledadventure:dragonite_shovel",
+    "fabledadventure:dwarfium_shovel",
+    "fabledadventure:elfium_shovel",
+    "fabledadventure:faenite_shovel",
+    "fabledadventure:ginormium_shovel",
+    "fabledadventure:humanite_shovel",
+    "fabledadventure:naturite_shovel",
+    "fabledadventure:sorcium_shovel"
   ]
 }

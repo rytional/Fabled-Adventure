@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ABC",
+    " D ",
+    " E "
+  ],
+  "key": {
+    "A": {
+      "item": "fabledadventure:sorcium_pickaxe"
+    },
+    "B": {
+      "item": "fabledadventure:sorcium_shovel"
+    },
+    "C": {
+      "item": "fabledadventure:sorcium_axe"
+    },
+    "D": {
+      "item": "fabledadventure:sorcium_hoe"
+    },
+    "E": {
+      "item": "fabledadventure:sorcium_block"
+    }
+  },
+  "result": {
+    "item": "fabledadventure:sorcium_paxel"
+  }
+}

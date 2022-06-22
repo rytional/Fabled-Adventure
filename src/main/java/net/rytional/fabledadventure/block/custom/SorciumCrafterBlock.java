@@ -7,6 +7,7 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.screen.NamedScreenHandlerFactory;
 import net.minecraft.state.StateManager;
+import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.DirectionProperty;
 import net.minecraft.state.property.Properties;
 import net.minecraft.util.*;
@@ -18,10 +19,12 @@ import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 import net.rytional.fabledadventure.block.entity.ModBlockEntities;
 import net.rytional.fabledadventure.block.entity.SorciumCrafterEntity;
+import net.rytional.fabledadventure.state.property.ModProperties;
 import org.jetbrains.annotations.Nullable;
 
 public class SorciumCrafterBlock extends BlockWithEntity implements BlockEntityProvider {
     public static final DirectionProperty FACING = Properties.HORIZONTAL_FACING;
+    public static final BooleanProperty HASTOME = ModProperties.HASTOME;
 
     public SorciumCrafterBlock(Settings settings) {
         super(settings);
@@ -72,7 +75,7 @@ public class SorciumCrafterBlock extends BlockWithEntity implements BlockEntityP
 
     @Override
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
-        builder.add(FACING);
+        builder.add(FACING, HASTOME);
     }
 
     @Override

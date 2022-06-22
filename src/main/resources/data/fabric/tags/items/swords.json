@@ -1,7 +1,14 @@
 {
   "replace": false,
   "values": [
-    "fabledadventure:ultium_sword",
-    "fabledadventure:orcanite_sword"
+    "fabledadventure:orcanite_sword",
+    "fabledadventure:dragonite_sword",
+    "fabledadventure:dwarfium_sword",
+    "fabledadventure:elfium_sword",
+    "fabledadventure:faenite_sword",
+    "fabledadventure:ginormium_sword",
+    "fabledadventure:humanite_sword",
+    "fabledadventure:naturite_sword",
+    "fabledadventure:sorcium_sword"
   ]
 }
