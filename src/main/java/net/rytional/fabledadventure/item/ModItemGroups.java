@@ -8,5 +8,5 @@ import net.rytional.fabledadventure.FabledAdventure;
 
 public class ModItemGroups {
     public static final ItemGroup FABLED = FabricItemGroupBuilder.build(new Identifier(FabledAdventure.MOD_ID, "fabled"),
-            () -> new ItemStack(net.rytional.fabledadventure.item.ModItems.ULTIUM_INGOT));
+            () -> new ItemStack(ModItems.SORCIUM_TOME));
 }

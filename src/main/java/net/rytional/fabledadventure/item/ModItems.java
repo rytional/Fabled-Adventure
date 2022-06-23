@@ -16,6 +16,8 @@ public class ModItems {
     //ULTIUM
     public static final Item ULTIUM_INGOT = registerItem("ultium_ingot", new Item(new FabricItemSettings().group(ModItemGroups.FABLED)));
     public static final Item ULTIUM_ORB_SHARD = registerItem("ultium_orb_shard", new Item(new FabricItemSettings().group(ModItemGroups.FABLED)));
+    public static final Item ULTIUM_OPAL = registerItem("ultium_opal", new Item(new FabricItemSettings().group(ModItemGroups.FABLED)));
+    public static final Item ULTIUM_ORB = registerItem("ultium_orb", new Item(new FabricItemSettings().group(ModItemGroups.FABLED)));
     public static final Item ULTIUM_PAXEL = registerItem("ultium_paxel", new ModPaxelItem(ModToolMaterials.ULTIUM, 10, 3f,
             new FabricItemSettings().group(ModItemGroups.FABLED)));
     public static final Item ULTIUM_HELMET = registerItem("ultium_helmet", new ModArmorItem(ModArmorMaterials.ULTIUM, EquipmentSlot.HEAD,
@@ -215,6 +217,7 @@ public class ModItems {
     //DRAGONITE
     public static final Item DRAGONITE_INGOT = registerItem("dragonite_ingot", new Item(new FabricItemSettings().group(ModItemGroups.FABLED)));
     public static final Item DRAGONITE_SCALE = registerItem("dragonite_scale", new Item(new FabricItemSettings().group(ModItemGroups.FABLED)));
+    public static final Item INFUSED_DRAGONITE_SCALE = registerItem("infused_dragonite_scale", new Item(new FabricItemSettings().group(ModItemGroups.FABLED)));
     public static final Item DRAGONITE_AXE = registerItem("dragonite_axe", new ModAxeItem(ModToolMaterials.DRAGONITE, 2, 1f,
             new FabricItemSettings().group(ModItemGroups.FABLED)));
     public static final Item DRAGONITE_PICKAXE = registerItem("dragonite_pickaxe", new ModPickaxeItem(ModToolMaterials.DRAGONITE, 2, 1f,
