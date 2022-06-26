@@ -15,6 +15,8 @@ public class ModBlockEntities {
     public static BlockEntityType<FaeniteHomeEntity> FAENITE_HOME;
     public static BlockEntityType<GinormiumTableEntity> GINORMIUM_TABLE;
     public static BlockEntityType<NaturiteStumpEntity> NATURITE_STUMP;
+    public static BlockEntityType<OrcaniteMechanismEntity> ORCANITE_MECHANISM;
+    public static BlockEntityType<UltiumImbuingStationEntity> ULTIUM_IMBUING_STATION;
 
     public static void registerAllEntities() {
         DWARFIUM_BLASTER = Registry.register(Registry.BLOCK_ENTITY_TYPE,
@@ -46,5 +48,15 @@ public class ModBlockEntities {
                 new Identifier(FabledAdventure.MOD_ID, "naturite_stump"),
                 FabricBlockEntityTypeBuilder.create(NaturiteStumpEntity::new,
                         ModBlocks.NATURITE_STUMP).build(null));
+
+        ORCANITE_MECHANISM = Registry.register(Registry.BLOCK_ENTITY_TYPE,
+                new Identifier(FabledAdventure.MOD_ID, "orcanite_mechanism"),
+                FabricBlockEntityTypeBuilder.create(OrcaniteMechanismEntity::new,
+                        ModBlocks.ORCANITE_MECHANISM).build(null));
+
+        ULTIUM_IMBUING_STATION = Registry.register(Registry.BLOCK_ENTITY_TYPE,
+                new Identifier(FabledAdventure.MOD_ID, "ultium_imbuing_station"),
+                FabricBlockEntityTypeBuilder.create(UltiumImbuingStationEntity::new,
+                        ModBlocks.ULTIUM_IMBUING_STATION).build(null));
     }
 }

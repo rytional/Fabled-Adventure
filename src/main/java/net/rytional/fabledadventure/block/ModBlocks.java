@@ -50,9 +50,9 @@ public class ModBlocks {
     public static final Block ORCANITE_BLOCK = registerBlock("orcanite_block",
             new Block(FabricBlockSettings.of(Material.AMETHYST).strength(4.0f).requiresTool().luminance(14)), ModItemGroups.FABLED);
     public static final Block ORCANITE_FLUID_BLOCK = registerBlockWithoutBlockItem("orcanite_fluid_block",
-            new ModFluidBlock(ModFluids.MOLTEN_ORCANITE_STILL, FabricBlockSettings.of(Material.LAVA).noCollision().ticksRandomly().strength(100.0f).luminance(state -> 15).dropsNothing()));
+            new ModFluidBlock(ModFluids.MOLTEN_ORCANITE_STILL, FabricBlockSettings.of(Material.LAVA).noCollision().ticksRandomly().strength(100.0f).luminance(state -> 15).dropsNothing()), ModItemGroups.FABLED);
     public static final Block MOLTEN_ORCANITE_CAULDRON = registerBlockWithoutBlockItem("molten_orcanite_cauldron",
-            new OrcaniteCauldronBlock(FabricBlockSettings.copy(Blocks.CAULDRON)));
+            new OrcaniteCauldronBlock(FabricBlockSettings.copy(Blocks.CAULDRON)), ModItemGroups.FABLED);
 
 
 
@@ -204,8 +204,12 @@ public class ModBlocks {
             new FaeniteHomeBlock(FabricBlockSettings.of(Material.METAL).strength(4.0f).requiresTool().luminance(14)), ModItemGroups.FABLED);
     public static final Block NATURITE_STUMP = registerBlock("naturite_stump",
             new NaturiteStumpBlock(FabricBlockSettings.of(Material.WOOD).strength(4.0f).requiresTool().luminance(14)), ModItemGroups.FABLED);
+    public static final Block ORCANITE_MECHANISM = registerBlockWithoutBlockItem("orcanite_mechanism",
+            new OrcaniteMechanismBlock(FabricBlockSettings.of(Material.METAL).nonOpaque().strength(4.0f).requiresTool().luminance(14)), ModItemGroups.FABLED);
+    public static final Block ULTIUM_IMBUING_STATION = registerBlockWithoutBlockItem("ultium_imbuing_station",
+            new UltiumImbuingStationBlock(FabricBlockSettings.of(Material.METAL).nonOpaque().strength(4.0f).requiresTool().luminance(14)), ModItemGroups.FABLED);
 
-    private static Block registerBlockWithoutBlockItem(String name, Block block) {
+    private static Block registerBlockWithoutBlockItem(String name, Block block, ItemGroup group) {
         return Registry.register(Registry.BLOCK, new Identifier(FabledAdventure.MOD_ID, name), block);
     }
 

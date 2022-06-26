@@ -6,6 +6,7 @@ import net.minecraft.item.*;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import net.rytional.fabledadventure.FabledAdventure;
+import net.rytional.fabledadventure.block.ModBlocks;
 import net.rytional.fabledadventure.entity.ModEntities;
 import net.rytional.fabledadventure.fluid.ModFluids;
 import net.rytional.fabledadventure.item.custom.*;
@@ -27,6 +28,8 @@ public class ModItems {
     public static final Item ULTIUM_LEGGINGS = registerItem("ultium_leggings", new ModArmorItem(ModArmorMaterials.ULTIUM, EquipmentSlot.LEGS,
             new FabricItemSettings().group(ModItemGroups.FABLED)));
     public static final Item ULTIUM_BOOTS = registerItem("ultium_boots", new ModArmorItem(ModArmorMaterials.ULTIUM, EquipmentSlot.FEET,
+            new FabricItemSettings().group(ModItemGroups.FABLED)));
+    public static final Item ULTIUM_IMBUING_STATION_ITEM = registerItem("ultium_imbuing_station", new UltiumImbuingStationItem(ModBlocks.ULTIUM_IMBUING_STATION,
             new FabricItemSettings().group(ModItemGroups.FABLED)));
 
     //ENTITIES
@@ -75,6 +78,7 @@ public class ModItems {
     public static final Item ELFIUM_BOW = registerItem("elfium_bow",
             new ModBowItem(new FabricItemSettings().group(ModItemGroups.FABLED).maxCount(1)));
     public static final Item ELFIUM_INGOT = registerItem("elfium_ingot", new Item(new FabricItemSettings().group(ModItemGroups.FABLED)));
+    public static final Item ELFIUM_AMULET = registerItem("elfium_amulet", new Item(new FabricItemSettings().group(ModItemGroups.FABLED)));
     public static final Item RAW_ELFIUM = registerItem("raw_elfium", new Item(new FabricItemSettings().group(ModItemGroups.FABLED)));
     public static final Item ELFIUM_AXE = registerItem("elfium_axe", new ModAxeItem(ModToolMaterials.ELFIUM, 2, 1f,
             new FabricItemSettings().group(ModItemGroups.FABLED)));
@@ -94,6 +98,7 @@ public class ModItems {
 
     //ORCANITE
     public static final Item ORCANITE_INGOT = registerItem("orcanite_ingot", new ModGlowItem(new FabricItemSettings().group(ModItemGroups.FABLED)));
+    public static final Item ORCANITE_KINGS_SKULL = registerItem("orcanite_kings_skull", new Item(new FabricItemSettings().group(ModItemGroups.FABLED)));
     public static final Item ORCANITE_NUGGET = registerItem("orcanite_nugget", new ModGlowItem(new FabricItemSettings().group(ModItemGroups.FABLED)));
     public static final Item ORCANITE_DUST = registerItem("orcanite_dust", new ModGlowItem(new FabricItemSettings().group(ModItemGroups.FABLED)));
     public static final Item RAW_ORCANITE = registerItem("raw_orcanite", new ModGlowItem(new FabricItemSettings().group(ModItemGroups.FABLED)));
@@ -118,9 +123,12 @@ public class ModItems {
             new FabricItemSettings().group(ModItemGroups.FABLED)));
     public static final Item ORCANITE_HORSE_ARMOR = registerItem("orcanite_horse_armor", new HorseArmorItem(15, "orcanite",
             new FabricItemSettings().group(ModItemGroups.FABLED)));
+    public static final Item ORCANITE_MECHANISM_ITEM = registerItem("orcanite_mechanism", new OrcaniteMechanismItem(ModBlocks.ORCANITE_MECHANISM,
+            new FabricItemSettings().group(ModItemGroups.FABLED)));
 
     //DWARFIUM
     public static final Item DWARFIUM_INGOT = registerItem("dwarfium_ingot", new Item(new FabricItemSettings().group(ModItemGroups.FABLED)));
+    public static final Item DWARFIUM_SMELTING_CUP = registerItem("dwarfium_smelting_cup", new Item(new FabricItemSettings().group(ModItemGroups.FABLED)));
     public static final Item RAW_DWARFIUM = registerItem("raw_dwarfium", new ModGlowItem(new FabricItemSettings().group(ModItemGroups.FABLED)));
     public static final Item DWARFIUM_AXE = registerItem("dwarfium_axe", new ModAxeItem(ModToolMaterials.ORCANITE, 2, 1f,
             new FabricItemSettings().group(ModItemGroups.FABLED)));
@@ -140,6 +148,7 @@ public class ModItems {
 
     //FAENITE
     public static final Item FAENITE_DUST = registerItem("faenite_dust", new ModGlowItem(new FabricItemSettings().group(ModItemGroups.FABLED)));
+    public static final Item FAENITE_DUST_POUCH = registerItem("faenite_dust_pouch", new ModGlowItem(new FabricItemSettings().group(ModItemGroups.FABLED)));
     public static final Item FAENITE_INGOT = registerItem("faenite_ingot", new Item(new FabricItemSettings().group(ModItemGroups.FABLED)));
     public static final Item FAENITE_AXE = registerItem("faenite_axe", new ModAxeItem(ModToolMaterials.FAENITE, 2, 1f,
             new FabricItemSettings().group(ModItemGroups.FABLED)));
@@ -159,6 +168,7 @@ public class ModItems {
 
     //GINORMIUM
     public static final Item GINORMIUM_INGOT = registerItem("ginormium_ingot", new Item(new FabricItemSettings().group(ModItemGroups.FABLED)));
+    public static final Item GINORMIUM_BEAN = registerItem("ginormium_bean", new Item(new FabricItemSettings().group(ModItemGroups.FABLED)));
     public static final Item GINORMIUM_NUGGET = registerItem("ginormium_nugget", new Item(new FabricItemSettings().group(ModItemGroups.FABLED)));
     public static final Item GINORMIUM_AXE = registerItem("ginormium_axe", new ModAxeItem(ModToolMaterials.GINORMIUM, 2, 1f,
             new FabricItemSettings().group(ModItemGroups.FABLED)));
@@ -178,6 +188,7 @@ public class ModItems {
 
     //HUMANITE
     public static final Item HUMANITE_INGOT = registerItem("humanite_ingot", new Item(new FabricItemSettings().group(ModItemGroups.FABLED)));
+    public static final Item HUMANITE_SCROLL = registerItem("humanite_scroll", new Item(new FabricItemSettings().group(ModItemGroups.FABLED)));
     public static final Item HUMANITE_SHARD = registerItem("humanite_shard", new Item(new FabricItemSettings().group(ModItemGroups.FABLED)));
     public static final Item HUMANITE_AXE = registerItem("humanite_axe", new ModAxeItem(ModToolMaterials.HUMANITE, 2, 1f,
             new FabricItemSettings().group(ModItemGroups.FABLED)));
@@ -197,6 +208,7 @@ public class ModItems {
 
     //NATURITE
     public static final Item NATURITE_INGOT = registerItem("naturite_ingot", new Item(new FabricItemSettings().group(ModItemGroups.FABLED)));
+    public static final Item NATURITE_HEART = registerItem("naturite_heart", new Item(new FabricItemSettings().group(ModItemGroups.FABLED)));
     public static final Item NATURITE_PEBBLE = registerItem("naturite_pebble", new Item(new FabricItemSettings().group(ModItemGroups.FABLED)));
     public static final Item NATURITE_AXE = registerItem("naturite_axe", new ModAxeItem(ModToolMaterials.NATURITE, 2, 1f,
             new FabricItemSettings().group(ModItemGroups.FABLED)));
@@ -217,6 +229,7 @@ public class ModItems {
     //DRAGONITE
     public static final Item DRAGONITE_INGOT = registerItem("dragonite_ingot", new Item(new FabricItemSettings().group(ModItemGroups.FABLED)));
     public static final Item DRAGONITE_SCALE = registerItem("dragonite_scale", new Item(new FabricItemSettings().group(ModItemGroups.FABLED)));
+    public static final Item DRAGONITE_SOUL = registerItem("dragonite_soul", new Item(new FabricItemSettings().group(ModItemGroups.FABLED)));
     public static final Item INFUSED_DRAGONITE_SCALE = registerItem("infused_dragonite_scale", new Item(new FabricItemSettings().group(ModItemGroups.FABLED)));
     public static final Item DRAGONITE_AXE = registerItem("dragonite_axe", new ModAxeItem(ModToolMaterials.DRAGONITE, 2, 1f,
             new FabricItemSettings().group(ModItemGroups.FABLED)));

@@ -2,19 +2,26 @@ package net.rytional.fabledadventure;
 
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
+import net.fabricmc.fabric.api.client.rendering.v1.BlockEntityRendererRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.fabricmc.fabric.api.client.screenhandler.v1.ScreenRegistry;
 import net.minecraft.client.render.RenderLayer;
 import net.rytional.fabledadventure.block.ModBlocks;
+import net.rytional.fabledadventure.block.entity.ModBlockEntities;
+import net.rytional.fabledadventure.block.entity.client.OrcaniteMechanismRenderer;
+import net.rytional.fabledadventure.block.entity.client.UltiumImbuingStationRenderer;
 import net.rytional.fabledadventure.entity.ModEntities;
 import net.rytional.fabledadventure.entity.client.RaccoonRenderer;
 import net.rytional.fabledadventure.entity.client.SkyRenderer;
 import net.rytional.fabledadventure.entity.client.armor.SorciumBlueRobeRenderer;
 import net.rytional.fabledadventure.item.ModItems;
+import net.rytional.fabledadventure.item.client.OrcaniteMechanismItemRenderer;
+import net.rytional.fabledadventure.item.client.UltiumImbuingStationItemRenderer;
 import net.rytional.fabledadventure.screen.*;
 import net.rytional.fabledadventure.util.ModFluidHandlerRegistry;
 import net.rytional.fabledadventure.util.ModModelPredicateProvider;
 import software.bernie.geckolib3.renderers.geo.GeoArmorRenderer;
+import software.bernie.geckolib3.renderers.geo.GeoItemRenderer;
 
 public class FabledAdventureClient implements ClientModInitializer {
     @Override
@@ -47,6 +54,11 @@ public class FabledAdventureClient implements ClientModInitializer {
 
         GeoArmorRenderer.registerArmorRenderer(new SorciumBlueRobeRenderer(), ModItems.SORCIUM_BLUE_BOOTS,
                 ModItems.SORCIUM_BLUE_LEGGINGS, ModItems.SORCIUM_BLUE_CHESTPLATE, ModItems.SORCIUM_BLUE_HELMET);
+
+        GeoItemRenderer.registerItemRenderer(ModItems.ORCANITE_MECHANISM_ITEM, new OrcaniteMechanismItemRenderer());
+        BlockEntityRendererRegistry.register(ModBlockEntities.ORCANITE_MECHANISM, OrcaniteMechanismRenderer::new);
+        GeoItemRenderer.registerItemRenderer(ModItems.ULTIUM_IMBUING_STATION_ITEM, new UltiumImbuingStationItemRenderer());
+        BlockEntityRendererRegistry.register(ModBlockEntities.ULTIUM_IMBUING_STATION, UltiumImbuingStationRenderer::new);
 
     }
 }

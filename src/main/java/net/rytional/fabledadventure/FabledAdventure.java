@@ -8,6 +8,7 @@ import net.rytional.fabledadventure.effect.ModEffects;
 import net.rytional.fabledadventure.enchantment.ModEnchantments;
 import net.rytional.fabledadventure.screen.ModScreenHandlers;
 import net.rytional.fabledadventure.util.ModCauldronBehavior;
+import net.rytional.fabledadventure.util.ModLootTableModifiers;
 import net.rytional.fabledadventure.villager.ModVillagers;
 import net.rytional.fabledadventure.world.ModConfiguredFeatures;
 import net.rytional.fabledadventure.world.ModWorldGen;
@@ -38,6 +39,7 @@ public class FabledAdventure implements ModInitializer {
 		ModVillagers.setupPOIs();
 		ModScreenHandlers.registerAllScreenHandlers();
 		ModCauldronBehavior.registerModBehavior();
+		ModLootTableModifiers.modifyLootTables();
 
 		ModRecipes.register();
 
