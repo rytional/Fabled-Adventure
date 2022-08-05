@@ -76,7 +76,7 @@ public class NaturiteStumpEntity extends BlockEntity implements NamedScreenHandl
     @Nullable
     @Override
     public ScreenHandler createMenu(int syncId, PlayerInventory inv, PlayerEntity player) {
-        return new NaturiteStumpScreenHandler(syncId, inv, this, this.propertyDelegate);
+        return new NaturiteStumpScreenHandler(syncId, inv);
     }
 
     @Override

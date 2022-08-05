@@ -2,17 +2,13 @@ package net.rytional.fabledadventure.screen;
 
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
-import net.minecraft.inventory.CraftingInventory;
 import net.minecraft.inventory.Inventory;
 import net.minecraft.inventory.SimpleInventory;
 import net.minecraft.item.ItemStack;
-import net.minecraft.screen.ArrayPropertyDelegate;
-import net.minecraft.screen.PropertyDelegate;
-import net.minecraft.screen.ScreenHandler;
+import net.minecraft.screen.*;
 import net.minecraft.screen.slot.Slot;
 import net.minecraft.world.World;
-import net.rytional.fabledadventure.inventory.ModCraftingInventory;
-import net.rytional.fabledadventure.screen.slot.ModFuelSlot;
+import net.rytional.fabledadventure.item.ModItems;
 import net.rytional.fabledadventure.screen.slot.ModResultSlot;
 import net.rytional.fabledadventure.screen.slot.ModTomeSlot;
 
@@ -22,41 +18,28 @@ public class SorciumCrafterScreenHandler extends ScreenHandler {
     private final PropertyDelegate propertyDelegate;
 
     public SorciumCrafterScreenHandler(int syncId, PlayerInventory playerInventory) {
-        this(syncId, playerInventory, new SimpleInventory(16), new ArrayPropertyDelegate(4));
+        this(syncId, playerInventory, new SimpleInventory(6), new ArrayPropertyDelegate(4));
     }
 
-    public SorciumCrafterScreenHandler(int syncId, PlayerInventory playerInventory, Inventory inventory, PropertyDelegate delegate) {
+    public SorciumCrafterScreenHandler(int syncId, PlayerInventory playerInventory,
+                                       Inventory inventory, PropertyDelegate delegate) {
         super(ModScreenHandlers.SORCIUM_CRAFTER_SCREEN_HANDLER, syncId);
-        checkSize(inventory, 16);
+        checkSize(inventory, 6);
         this.inventory = inventory;
         this.world = playerInventory.player.world;
         inventory.onOpen(playerInventory.player);
         propertyDelegate = delegate;
 
-        int m;
-        int l;
-        //Our inventory
-        for (m = 0; m < 3; ++m) {
-            for (l = 0; l < 3; ++l) {
-                this.addSlot(new Slot(inventory, l + m * 3, 13 + l * 18, 16 + m * 18));
-            }
-        }
-        //The player inventory
-        for (m = 0; m < 3; ++m) {
-            for (l = 0; l < 9; ++l) {
-                this.addSlot(new Slot(playerInventory, l + m * 9 + 9, 8 + l * 18, 84 + m * 18));
-            }
-        }
-        //The player Hotbar
-        for (m = 0; m < 9; ++m) {
-            this.addSlot(new Slot(playerInventory, m, 8 + m * 18, 142));
-        }
-        this.addSlot(new ModResultSlot(inventory, 10, 111, 34));
-        this.addSlot(new ModFuelSlot(inventory, 11, 151, 30));
-        this.addSlot(new ModTomeSlot(inventory, 12, 73, 62));
-        this.addSlot(new ModTomeSlot(inventory, 13, 91, 62));
-        this.addSlot(new ModTomeSlot(inventory, 14, 109, 62));
-        this.addSlot(new ModTomeSlot(inventory, 15, 127, 62));
+        // Our Slots
+        this.addSlot(new SorciumFuelSlot(inventory, 0, 151, 30));
+        this.addSlot(new Slot(inventory, 1, 13, 16));
+        this.addSlot(new Slot(inventory, 2, 31, 16));
+        this.addSlot(new ModResultSlot(inventory, 3, 112, 35));
+        this.addSlot(new ModTomeSlot(inventory, 4, 73, 62));
+        this.addSlot(new ModTomeSlot(inventory, 5, 91, 62));
+
+        addPlayerInventory(playerInventory);
+        addPlayerHotbar(playerInventory);
 
         addProperties(delegate);
     }
@@ -82,7 +65,7 @@ public class SorciumCrafterScreenHandler extends ScreenHandler {
         int maxFuelProgress = this.propertyDelegate.get(3);
         int fuelProgressSize = 14;
 
-        return maxFuelProgress != 0 ? (int) (((float) fuelProgress / (float) maxFuelProgress) * fuelProgressSize) : 0;
+        return maxFuelProgress != 0 ? (int)(((float)fuelProgress / (float)maxFuelProgress) * fuelProgressSize) : 0;
     }
 
     @Override
@@ -113,5 +96,36 @@ public class SorciumCrafterScreenHandler extends ScreenHandler {
         }
 
         return newStack;
+    }
+
+    private void addPlayerInventory(PlayerInventory playerInventory) {
+        for (int i = 0; i < 3; ++i) {
+            for (int l = 0; l < 9; ++l) {
+                this.addSlot(new Slot(playerInventory, l + i * 9 + 9, 8 + l * 18, 84 + i * 18));
+            }
+        }
+    }
+
+    private void addPlayerHotbar(PlayerInventory playerInventory) {
+        for (int i = 0; i < 9; ++i) {
+            this.addSlot(new Slot(playerInventory, i, 8 + i * 18, 142));
+        }
+    }
+    static class SorciumFuelSlot
+            extends Slot {
+        public SorciumFuelSlot(Inventory inventory, int i, int j, int k) {
+            super(inventory, i, j, k);
+        }
+        @Override
+        public boolean canInsert(ItemStack stack) {
+            return SorciumCrafterScreenHandler.SorciumFuelSlot.matches(stack);
+        }
+        public static boolean matches(ItemStack stack) {
+            return stack.isOf(ModItems.SORCIUM_POWDER);
+        }
+        @Override
+        public int getMaxItemCount() {
+            return 64;
+        }
     }
 }

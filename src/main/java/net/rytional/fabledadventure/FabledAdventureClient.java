@@ -11,6 +11,7 @@ import net.rytional.fabledadventure.block.entity.ModBlockEntities;
 import net.rytional.fabledadventure.block.entity.client.OrcaniteMechanismRenderer;
 import net.rytional.fabledadventure.block.entity.client.UltiumImbuingStationRenderer;
 import net.rytional.fabledadventure.entity.ModEntities;
+import net.rytional.fabledadventure.entity.client.OrcRenderer;
 import net.rytional.fabledadventure.entity.client.RaccoonRenderer;
 import net.rytional.fabledadventure.entity.client.SkyRenderer;
 import net.rytional.fabledadventure.entity.client.armor.SorciumBlueRobeRenderer;
@@ -33,6 +34,7 @@ public class FabledAdventureClient implements ClientModInitializer {
 
         EntityRendererRegistry.register(ModEntities.RACCOON, RaccoonRenderer::new);
         EntityRendererRegistry.register(ModEntities.SKY, SkyRenderer::new);
+        EntityRendererRegistry.register(ModEntities.ORC, OrcRenderer::new);
 
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.DWARFIUM_BLASTER, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.SORCIUM_CRAFTER, RenderLayer.getCutout());

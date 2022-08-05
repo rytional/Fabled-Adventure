@@ -1,0 +1,12 @@
+{
+  "type": "fabledadventure:dragonite_infuser",
+  "base": {
+    "item": "minecraft:diamond_sword"
+  },
+  "addition": {
+    "item": "fabledadventure:dragonite_soul"
+  },
+  "result": {
+    "item": "fabledadventure:dragonite_sword"
+  }
+}

@@ -2,10 +2,10 @@
   "type": "fabledadventure:dwarfium_blaster",
   "ingredients": [
     {
-      "item": "minecraft:bucket"
+      "item": "fabledadventure:raw_orcanite"
     },
     {
-      "item": "fabledadventure:raw_orcanite"
+      "item": "minecraft:bucket"
     }
   ],
   "output": {

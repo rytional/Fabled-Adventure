@@ -1,0 +1,21 @@
+{
+  "type": "fabledadventure:sorcium_crafter",
+  "ingredients": [
+    {
+      "item": "minecraft:bucket"
+    },
+    {
+      "item": "fabledadventure:raw_orcanite"
+    },
+    {
+      "item": "fabledadventure:sorcium_tome"
+    },
+    {
+      "item": "fabledadventure:sorcium_tome"
+    }
+  ],
+  "output": {
+    "item": "fabledadventure:sorcium_block",
+    "count": 3
+  }
+}

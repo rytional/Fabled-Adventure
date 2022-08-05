@@ -262,9 +262,4 @@ public class DragoniteInfuserBlock extends BlockWithEntity implements BlockEntit
         return new DragoniteInfuserEntity(pos, state);
     }
 
-    @Nullable
-    @Override
-    public <T extends BlockEntity> BlockEntityTicker<T> getTicker(World world, BlockState state, BlockEntityType<T> type) {
-        return checkType(type, ModBlockEntities.DRAGONITE_INFUSER, DragoniteInfuserEntity::tick);
-    }
 }

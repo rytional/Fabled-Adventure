@@ -20,6 +20,7 @@ import net.minecraft.util.math.Direction;
 import net.minecraft.world.World;
 import net.rytional.fabledadventure.item.inventory.ImplementedInventory;
 import net.rytional.fabledadventure.recipe.NaturiteStumpRecipe;
+import net.rytional.fabledadventure.screen.DwarfiumBlasterScreenHandler;
 import net.rytional.fabledadventure.screen.NaturiteStumpScreenHandler;
 import org.jetbrains.annotations.Nullable;
 import software.bernie.geckolib3.core.IAnimatable;
@@ -103,7 +104,7 @@ public class UltiumImbuingStationEntity extends BlockEntity implements IAnimatab
     @Nullable
     @Override
     public ScreenHandler createMenu(int syncId, PlayerInventory inv, PlayerEntity player) {
-        return new NaturiteStumpScreenHandler(syncId, inv, this, this.propertyDelegate);
+        return new DwarfiumBlasterScreenHandler(syncId, inv, this, this.propertyDelegate);
     }
 
     @Override

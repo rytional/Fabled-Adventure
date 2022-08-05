@@ -21,6 +21,7 @@ import net.rytional.fabledadventure.item.ModItemGroups;
 
 public class ModBlocks {
 
+
     //ULTIUM
     public static final Block ULTIUM_BLOCK = registerBlock("ultium_block",
             new Block(FabricBlockSettings.of(Material.METAL).strength(4.0f).requiresTool().luminance(14)), ModItemGroups.FABLED);
@@ -168,7 +169,7 @@ public class ModBlocks {
             new OreBlock(FabricBlockSettings.of(Material.STONE).strength(1.5f).requiresTool(),
                     UniformIntProvider.create(3, 7)), ModItemGroups.FABLED);
     public static final Block SORCIUM_BLOCK = registerBlock("sorcium_block",
-            new SorciumBlock(FabricBlockSettings.of(Material.METAL).strength(4.0f).requiresTool().luminance(14)), ModItemGroups.FABLED);
+            new Block(FabricBlockSettings.of(Material.METAL).strength(4.0f).requiresTool().luminance(14)), ModItemGroups.FABLED);
     public static final Block SORCIUM_TOME_BLOCK = registerBlock("sorcium_tome_block",
             new Block(FabricBlockSettings.of(Material.DECORATION).strength(4.0f).requiresTool().luminance(14)), ModItemGroups.FABLED);
 

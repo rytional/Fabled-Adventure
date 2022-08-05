@@ -76,7 +76,7 @@ public class FaeniteHomeEntity extends BlockEntity implements NamedScreenHandler
     @Nullable
     @Override
     public ScreenHandler createMenu(int syncId, PlayerInventory inv, PlayerEntity player) {
-        return new FaeniteHomeScreenHandler(syncId, inv, this, this.propertyDelegate);
+        return new FaeniteHomeScreenHandler(syncId, inv);
     }
 
     @Override

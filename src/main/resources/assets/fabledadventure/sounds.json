@@ -12,5 +12,56 @@
         "stream": true
       }
     ]
+  },
+  "orc_idle": {
+    "subtitle": "fabledadventure.orc_idle",
+    "sounds": [
+      "fabledadventure:orc/orc_idle1",
+      "fabledadventure:orc/orc_idle2",
+      "fabledadventure:orc/orc_idle3",
+      "fabledadventure:orc/orc_idle4",
+      "fabledadventure:orc/orc_idle5",
+      "fabledadventure:orc/orc_idle6",
+      "fabledadventure:orc/orc_idle7",
+      "fabledadventure:orc/orc_idle8",
+      "fabledadventure:orc/orc_idle9"
+    ]
+  },
+  "orc_angry": {
+    "subtitle": "fabledadventure.orc_angry",
+    "sounds": [
+      "fabledadventure:orc/orc_angry1",
+      "fabledadventure:orc/orc_angry2",
+      "fabledadventure:orc/orc_angry3",
+      "fabledadventure:orc/orc_angry4",
+      "fabledadventure:orc/orc_angry5"
+    ]
+  },
+  "orc_hurt": {
+    "subtitle": "fabledadventure.orc_hurt",
+    "sounds": [
+      "fabledadventure:orc/orc_hurt1",
+      "fabledadventure:orc/orc_hurt2",
+      "fabledadventure:orc/orc_hurt3",
+      "fabledadventure:orc/orc_hurt4"
+    ]
+  },
+  "orc_step": {
+    "subtitle": "fabledadventure.orc_step",
+    "sounds": [
+      "fabledadventure:orc/orc_step1",
+      "fabledadventure:orc/orc_step2",
+      "fabledadventure:orc/orc_step3",
+      "fabledadventure:orc/orc_step4",
+      "fabledadventure:orc/orc_step5"
+    ]
+  },
+  "orc_death": {
+    "subtitle": "fabledadventure.orc_death",
+    "sounds": [
+      "fabledadventure:orc/orc_death1",
+      "fabledadventure:orc/orc_death2",
+      "fabledadventure:orc/orc_death3"
+    ]
   }
 }

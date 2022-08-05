@@ -9,7 +9,7 @@ import java.util.function.Supplier;
 
 public enum ModToolMaterials implements ToolMaterial {
 
-    ULTIUM(3, 3200, 12.0F, 5.0F, 32, () -> Ingredient.ofItems(ModItems.ULTIUM_INGOT)),
+    ULTIUM(3, 4800, 12.0F, 5.0F, 32, () -> Ingredient.ofItems(ModItems.ULTIUM_INGOT)),
 
     SORCIUM(3, 1600, 8.0F, 3.5F, 24, () -> Ingredient.ofItems(ModItems.SORCIUM_INGOT)),
 
@@ -27,7 +27,9 @@ public enum ModToolMaterials implements ToolMaterial {
 
     NATURITE(3, 1600, 8.0F, 3.5F, 24, () -> Ingredient.ofItems(ModItems.NATURITE_INGOT)),
 
-    HUMANITE(3, 1600, 8.0F, 3.5F, 24, () -> Ingredient.ofItems(ModItems.HUMANITE_INGOT))
+    HUMANITE(3, 1600, 8.0F, 3.5F, 24, () -> Ingredient.ofItems(ModItems.HUMANITE_INGOT)),
+
+    CRAFTING(0, 32, 0F, 0F, 0, () -> Ingredient.ofItems(ModItems.ULTIUM_ORB))
     ;
 
     private final int miningLevel;

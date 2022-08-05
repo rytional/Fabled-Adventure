@@ -1,0 +1,17 @@
+{
+  "type": "fabledadventure:sorcium_crafter",
+  "ingredients": [
+    {
+      "item": "minecraft:dirt"
+    },
+    {
+      "item": "fabledadventure:raw_orcanite"
+    },
+    {
+      "item": "fabledadventure:sorcium_tome"
+    }
+  ],
+  "output": {
+    "item": "fabledadventure:faenite_dust"
+  }
+}

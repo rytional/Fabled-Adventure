@@ -9,6 +9,8 @@ import net.minecraft.inventory.Inventories;
 import net.minecraft.inventory.SimpleInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NbtCompound;
+import net.minecraft.particle.ParticleType;
+import net.minecraft.particle.ParticleTypes;
 import net.minecraft.screen.NamedScreenHandlerFactory;
 import net.minecraft.screen.PropertyDelegate;
 import net.minecraft.screen.ScreenHandler;
@@ -35,8 +37,10 @@ public class DwarfiumBlasterEntity extends BlockEntity implements NamedScreenHan
     private int fuelTime = 0;
     private int maxFuelTime = 0;
 
+
     public DwarfiumBlasterEntity(BlockPos pos, BlockState state) {
         super(ModBlockEntities.DWARFIUM_BLASTER, pos, state);
+
         this.propertyDelegate = new PropertyDelegate() {
             public int get(int index) {
                 switch (index) {
@@ -106,6 +110,8 @@ public class DwarfiumBlasterEntity extends BlockEntity implements NamedScreenHan
 
     public static void tick(World world, BlockPos pos, BlockState state, DwarfiumBlasterEntity entity) {
         if(isConsumingFuel(entity)) {
+            world.addParticle(ParticleTypes.SMOKE, pos.getX(),pos.getY() + 2D, pos.getZ(),
+                    0.5d, 0.5d,.05d);
             entity.fuelTime--;
         }
 
@@ -129,6 +135,7 @@ public class DwarfiumBlasterEntity extends BlockEntity implements NamedScreenHan
     }
 
     private static boolean isConsumingFuel(DwarfiumBlasterEntity entity) {
+
         return entity.fuelTime > 0;
     }
 

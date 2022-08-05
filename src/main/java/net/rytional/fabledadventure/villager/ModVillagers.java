@@ -13,8 +13,8 @@ import net.rytional.fabledadventure.FabledAdventure;
 import net.rytional.fabledadventure.block.ModBlocks;
 
 public class ModVillagers {
-    public static final PointOfInterestType FBLASTER_POI = registerPOI("fblasterpoi", ModBlocks.DWARFIUM_BLASTER);
-    public static final VillagerProfession FABLED_MASTER = registerProfession("fabledmaster", FBLASTER_POI);
+    public static final PointOfInterestType DWARFIUMBLASTER_POI = registerPOI("dwarfiumblasterpoi", ModBlocks.DWARFIUM_BLASTER);
+    public static final VillagerProfession DWARFIUM_MASTER = registerProfession("dwarfiummaster", DWARFIUMBLASTER_POI);
 
     public static VillagerProfession registerProfession(String name, PointOfInterestType type) {
         return Registry.register(Registry.VILLAGER_PROFESSION, new Identifier(FabledAdventure.MOD_ID, name),
@@ -30,6 +30,6 @@ public class ModVillagers {
     }
 
     public static void setupPOIs() {
-        PointOfInterestTypeAccessor.callSetup(FBLASTER_POI);
+        PointOfInterestTypeAccessor.callSetup(DWARFIUMBLASTER_POI);
     }
 }

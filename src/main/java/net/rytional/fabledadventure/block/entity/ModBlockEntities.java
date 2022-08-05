@@ -29,6 +29,7 @@ public class ModBlockEntities {
                 FabricBlockEntityTypeBuilder.create(SorciumCrafterEntity::new,
                         ModBlocks.SORCIUM_CRAFTER).build(null));
 
+
         DRAGONITE_INFUSER = Registry.register(Registry.BLOCK_ENTITY_TYPE,
                 new Identifier(FabledAdventure.MOD_ID, "dragonite_infuser"),
                 FabricBlockEntityTypeBuilder.create(DragoniteInfuserEntity::new,

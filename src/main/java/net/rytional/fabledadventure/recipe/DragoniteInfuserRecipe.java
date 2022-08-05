@@ -1,60 +1,69 @@
 package net.rytional.fabledadventure.recipe;
 
-import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
-import com.google.gson.JsonParseException;
-import net.minecraft.inventory.SimpleInventory;
+import net.minecraft.inventory.Inventory;
+import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.ItemStack;
+import net.minecraft.nbt.NbtCompound;
 import net.minecraft.network.PacketByteBuf;
 import net.minecraft.recipe.*;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.JsonHelper;
-import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.world.World;
+import net.rytional.fabledadventure.block.entity.ModBlockEntities;
 
-public class DragoniteInfuserRecipe implements Recipe<SimpleInventory> {
+import java.util.stream.Stream;
+
+public class DragoniteInfuserRecipe implements Recipe<Inventory> {
+    final Ingredient base;
+    final Ingredient addition;
+    final ItemStack result;
     private final Identifier id;
-    final String group;
-    private final ItemStack output;
-    private final DefaultedList<Ingredient> recipeItems;
 
-    public DragoniteInfuserRecipe(Identifier id, String group, ItemStack output, DefaultedList<Ingredient> recipeItems) {
+    public DragoniteInfuserRecipe(Identifier id, Ingredient base, Ingredient addition, ItemStack result) {
         this.id = id;
-        this.group = group;
-        this.output = output;
-        this.recipeItems = recipeItems;
+        this.base = base;
+        this.addition = addition;
+        this.result = result;
     }
 
     @Override
-    public boolean matches(SimpleInventory simpleInventory, World world) {
-        RecipeMatcher recipeMatcher = new RecipeMatcher();
-        int i = 0;
-        for (int j = 0; j < simpleInventory.size(); ++j) {
-            ItemStack itemStack = simpleInventory.getStack(j);
-            if (itemStack.isEmpty()) continue;
-            ++i;
-            recipeMatcher.addInput(itemStack, 1);
+    public boolean matches(Inventory inventory, World world) {
+        return this.base.test(inventory.getStack(0)) && this.addition.test(inventory.getStack(1));
+    }
+
+    @Override
+    public ItemStack craft(Inventory inventory) {
+        ItemStack itemStack = this.result.copy();
+        NbtCompound nbtCompound = inventory.getStack(0).getNbt();
+        if (nbtCompound != null) {
+            itemStack.setNbt(nbtCompound.copy());
         }
-        return i == this.recipeItems.size() && recipeMatcher.match(this, null);
-    }
-
-    @Override
-    public ItemStack craft(SimpleInventory inventory) {
-        return this.output.copy();
+        return itemStack;
     }
 
     @Override
     public boolean fits(int width, int height) {
-        return width * height >= this.recipeItems.size();
+        return width * height >= 2;
     }
 
     @Override
-    public ItemStack getOutput() {return output.copy();
+    public ItemStack getOutput() {
+        return this.result;
+    }
+
+    public boolean testAddition(ItemStack stack) {
+        return this.addition.test(stack);
+    }
+
+    @Override
+    public ItemStack createIcon() {
+        return new ItemStack((ItemConvertible) ModBlockEntities.DRAGONITE_INFUSER);
     }
 
     @Override
     public Identifier getId() {
-        return id;
+        return this.id;
     }
 
     @Override
@@ -64,64 +73,47 @@ public class DragoniteInfuserRecipe implements Recipe<SimpleInventory> {
 
     @Override
     public RecipeType<?> getType() {
-        return Type.INSTANCE;
+        return DragoniteInfuserRecipe.Type.INSTANCE;
+    }
+
+    @Override
+    public boolean isEmpty() {
+        return Stream.of(this.base, this.addition).anyMatch(ingredient -> ingredient.getMatchingStacks().length == 0);
     }
 
     public static class Type implements RecipeType<DragoniteInfuserRecipe> {
         private Type() { }
-        public static final Type INSTANCE = new Type();
+        public static final DragoniteInfuserRecipe.Type INSTANCE = new DragoniteInfuserRecipe.Type();
         public static final String ID = "dragonite_infuser";
     }
 
     public static class Serializer implements RecipeSerializer<DragoniteInfuserRecipe> {
-        public static final Serializer INSTANCE = new Serializer();
+        public static final DragoniteInfuserRecipe.Serializer INSTANCE = new DragoniteInfuserRecipe.Serializer();
         public static final String ID = "dragonite_infuser";
         // this is the name given in the json file
 
+
         @Override
         public DragoniteInfuserRecipe read(Identifier id, JsonObject json) {
-            String string = JsonHelper.getString(json, "group", "");
-            DefaultedList<Ingredient> defaultedList = DragoniteInfuserRecipe.Serializer.getIngredients(JsonHelper.getArray(json, "ingredients"));
-            if (defaultedList.isEmpty()) {
-                throw new JsonParseException("No ingredients for shapeless recipe");
-            }
-            if (defaultedList.size() > 9) {
-                throw new JsonParseException("Too many ingredients for shapeless recipe");
-            }
-            ItemStack itemStack = ShapedRecipe.outputFromJson(JsonHelper.getObject(json, "output"));
-            return new DragoniteInfuserRecipe(id, string, itemStack, defaultedList);
-        }
-
-        private static DefaultedList<Ingredient> getIngredients(JsonArray json) {
-            DefaultedList<Ingredient> defaultedList = DefaultedList.of();
-            for (int i = 0; i < json.size(); ++i) {
-                Ingredient ingredient = Ingredient.fromJson(json.get(i));
-                if (ingredient.isEmpty()) continue;
-                defaultedList.add(ingredient);
-            }
-            return defaultedList;
+            Ingredient ingredient = Ingredient.fromJson(JsonHelper.getObject(json, "base"));
+            Ingredient ingredient2 = Ingredient.fromJson(JsonHelper.getObject(json, "addition"));
+            ItemStack itemStack = ShapedRecipe.outputFromJson(JsonHelper.getObject(json, "result"));
+            return new DragoniteInfuserRecipe(id, ingredient, ingredient2, itemStack);
         }
 
         @Override
         public DragoniteInfuserRecipe read(Identifier id, PacketByteBuf buf) {
-            String string = buf.readString();
-            int i = buf.readVarInt();
-            DefaultedList<Ingredient> defaultedList = DefaultedList.ofSize(i, Ingredient.EMPTY);
-            for (int j = 0; j < defaultedList.size(); ++j) {
-                defaultedList.set(j, Ingredient.fromPacket(buf));
-            }
+            Ingredient ingredient = Ingredient.fromPacket(buf);
+            Ingredient ingredient2 = Ingredient.fromPacket(buf);
             ItemStack itemStack = buf.readItemStack();
-            return new DragoniteInfuserRecipe(id, string, itemStack, defaultedList);
+            return new DragoniteInfuserRecipe(id, ingredient, ingredient2, itemStack);
         }
 
         @Override
-        public void write(PacketByteBuf buf, DragoniteInfuserRecipe dragoniteInfuserRecipe) {
-            buf.writeString(dragoniteInfuserRecipe.group);
-            buf.writeVarInt(dragoniteInfuserRecipe.recipeItems.size());
-            for (Ingredient ingredient : dragoniteInfuserRecipe.recipeItems) {
-                ingredient.write(buf);
-            }
-            buf.writeItemStack(dragoniteInfuserRecipe.output);
+        public void write(PacketByteBuf buf, DragoniteInfuserRecipe recipe) {
+            recipe.base.write(buf);
+            recipe.addition.write(buf);
+            buf.writeItemStack(recipe.result);
         }
     }
 }

@@ -11,6 +11,7 @@ import net.minecraft.village.VillagerProfession;
 import net.rytional.fabledadventure.FabledAdventure;
 import net.rytional.fabledadventure.block.ModBlocks;
 import net.rytional.fabledadventure.entity.ModEntities;
+import net.rytional.fabledadventure.entity.custom.OrcEntity;
 import net.rytional.fabledadventure.entity.custom.RaccoonEntity;
 import net.rytional.fabledadventure.entity.custom.SkyEntity;
 import net.rytional.fabledadventure.item.ModItems;
@@ -29,6 +30,7 @@ public class ModRegistries {
     private static void registerAttributes() {
         FabricDefaultAttributeRegistry.register(ModEntities.RACCOON, RaccoonEntity.setAttributes());
         FabricDefaultAttributeRegistry.register(ModEntities.SKY, SkyEntity.setAttributes());
+        FabricDefaultAttributeRegistry.register(ModEntities.ORC, OrcEntity.setAttributes());
     }
     private static void registerStrippables() {
         StrippableBlockRegistry.register(ModBlocks.NATURITE_LOG, ModBlocks.STRIPPED_NATURITE_LOG);
@@ -37,9 +39,8 @@ public class ModRegistries {
     private static void registerFuels() {
         System.out.println("Registering Fuels for + " + FabledAdventure.MOD_ID);
         FuelRegistry registry = FuelRegistry.INSTANCE;
-
         // 400 / 20 = 20 Seconds
-        registry.add(ModItems.ORCANITE_CREAM, 400);
+        registry.add(ModItems.SORCIUM_POWDER, 400);
     }
     private static void registerCustomTrades() {
         TradeOfferHelper.registerVillagerOffers(VillagerProfession.FARMER, 5,
@@ -57,7 +58,7 @@ public class ModRegistries {
                             new ItemStack(ModItems.ORCANITE_PAXEL, 1),
                             12,3,0.08f));
                 });
-        TradeOfferHelper.registerVillagerOffers(ModVillagers.FABLED_MASTER, 1,
+        TradeOfferHelper.registerVillagerOffers(ModVillagers.DWARFIUM_MASTER, 1,
                 factories -> {
                     factories.add((entity, random) -> new TradeOffer(
                             new ItemStack(Items.EMERALD, 18),
@@ -65,7 +66,7 @@ public class ModRegistries {
                             12,2,0.08f));
                 });
 
-        TradeOfferHelper.registerVillagerOffers(ModVillagers.FABLED_MASTER, 1,
+        TradeOfferHelper.registerVillagerOffers(ModVillagers.DWARFIUM_MASTER, 1,
                 factories -> {
                     factories.add((entity, random) -> new TradeOffer(
                             new ItemStack(Items.EMERALD, 22),
@@ -73,7 +74,7 @@ public class ModRegistries {
                             12,3,0.08f));
                 });
 
-        TradeOfferHelper.registerVillagerOffers(ModVillagers.FABLED_MASTER, 2,
+        TradeOfferHelper.registerVillagerOffers(ModVillagers.DWARFIUM_MASTER, 2,
                 factories -> {
                     factories.add((entity, random) -> new TradeOffer(
                             new ItemStack(Items.EMERALD, 32),

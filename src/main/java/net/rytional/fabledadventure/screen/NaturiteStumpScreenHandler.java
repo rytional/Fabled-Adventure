@@ -16,55 +16,26 @@ import net.rytional.fabledadventure.screen.slot.ModResultSlot;
 public class NaturiteStumpScreenHandler extends ScreenHandler {
     private final Inventory inventory;
     private final World world;
-    private final PropertyDelegate propertyDelegate;
 
     public NaturiteStumpScreenHandler(int syncId, PlayerInventory playerInventory) {
-        this(syncId, playerInventory, new SimpleInventory(4), new ArrayPropertyDelegate(4));
+        this(syncId, playerInventory, new SimpleInventory(4));
     }
 
     public NaturiteStumpScreenHandler(int syncId, PlayerInventory playerInventory,
-                                      Inventory inventory, PropertyDelegate delegate) {
+                                      Inventory inventory) {
         super(ModScreenHandlers.NATURITE_STUMP_SCREEN_HANDLER, syncId);
-        checkSize(inventory, 4);
+        checkSize(inventory, 3);
         this.inventory = inventory;
         this.world = playerInventory.player.world;
         inventory.onOpen(playerInventory.player);
-        propertyDelegate = delegate;
 
         // Our Slots
-        this.addSlot(new ModFuelSlot(inventory, 0, 18, 50));
-        this.addSlot(new Slot(inventory, 1, 66, 16));
-        this.addSlot(new Slot(inventory, 2, 66, 50));
-        this.addSlot(new ModResultSlot(inventory, 3, 114, 33));
+        this.addSlot(new Slot(inventory, 0, 49, 19));
+        this.addSlot(new Slot(inventory, 1, 49, 40));
+        this.addSlot(new ModResultSlot(inventory, 2, 129, 34));
 
         addPlayerInventory(playerInventory);
         addPlayerHotbar(playerInventory);
-
-        addProperties(delegate);
-    }
-
-    public boolean isCrafting() {
-        return propertyDelegate.get(0) > 0;
-    }
-
-    public boolean hasFuel() {
-        return propertyDelegate.get(2) > 0;
-    }
-
-    public int getScaledProgress() {
-        int progress = this.propertyDelegate.get(0);
-        int maxProgress = this.propertyDelegate.get(1);  // Max Progress
-        int progressArrowSize = 26; // This is the width in pixels of your arrow
-
-        return maxProgress != 0 && progress != 0 ? progress * progressArrowSize / maxProgress : 0;
-    }
-
-    public int getScaledFuelProgress() {
-        int fuelProgress = this.propertyDelegate.get(2);
-        int maxFuelProgress = this.propertyDelegate.get(3);
-        int fuelProgressSize = 14;
-
-        return maxFuelProgress != 0 ? (int)(((float)fuelProgress / (float)maxFuelProgress) * fuelProgressSize) : 0;
     }
 
     @Override
@@ -100,14 +71,14 @@ public class NaturiteStumpScreenHandler extends ScreenHandler {
     private void addPlayerInventory(PlayerInventory playerInventory) {
         for (int i = 0; i < 3; ++i) {
             for (int l = 0; l < 9; ++l) {
-                this.addSlot(new Slot(playerInventory, l + i * 9 + 9, 8 + l * 18, 86 + i * 18));
+                this.addSlot(new Slot(playerInventory, l + i * 9 + 9, 8 + l * 18, 84 + i * 18));
             }
         }
     }
 
     private void addPlayerHotbar(PlayerInventory playerInventory) {
         for (int i = 0; i < 9; ++i) {
-            this.addSlot(new Slot(playerInventory, i, 8 + i * 18, 144));
+            this.addSlot(new Slot(playerInventory, i, 8 + i * 18, 142));
         }
     }
 }

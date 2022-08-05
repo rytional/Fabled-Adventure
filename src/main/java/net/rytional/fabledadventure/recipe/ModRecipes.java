@@ -10,14 +10,24 @@ public class ModRecipes {
                 DwarfiumBlasterRecipe.Serializer.INSTANCE);
         Registry.register(Registry.RECIPE_TYPE, new Identifier(FabledAdventure.MOD_ID, DwarfiumBlasterRecipe.Type.ID),
                 DwarfiumBlasterRecipe.Type.INSTANCE);
+        Registry.register(Registry.RECIPE_SERIALIZER, new Identifier(FabledAdventure.MOD_ID, DragoniteInfuserRecipe.Serializer.ID),
+                DragoniteInfuserRecipe.Serializer.INSTANCE);
+        Registry.register(Registry.RECIPE_TYPE, new Identifier(FabledAdventure.MOD_ID, DragoniteInfuserRecipe.Type.ID),
+                DragoniteInfuserRecipe.Type.INSTANCE);
         Registry.register(Registry.RECIPE_SERIALIZER, new Identifier(FabledAdventure.MOD_ID, SorciumCrafterRecipe.Serializer.ID),
                 SorciumCrafterRecipe.Serializer.INSTANCE);
         Registry.register(Registry.RECIPE_TYPE, new Identifier(FabledAdventure.MOD_ID, SorciumCrafterRecipe.Type.ID),
                 SorciumCrafterRecipe.Type.INSTANCE);
+        Registry.register(Registry.RECIPE_SERIALIZER, new Identifier(FabledAdventure.MOD_ID, FaeniteHomeRecipe.Serializer.ID),
+                FaeniteHomeRecipe.Serializer.INSTANCE);
         Registry.register(Registry.RECIPE_TYPE, new Identifier(FabledAdventure.MOD_ID, FaeniteHomeRecipe.Type.ID),
                 FaeniteHomeRecipe.Type.INSTANCE);
+        Registry.register(Registry.RECIPE_SERIALIZER, new Identifier(FabledAdventure.MOD_ID, GinormiumTableRecipe.Serializer.ID),
+                GinormiumTableRecipe.Serializer.INSTANCE);
         Registry.register(Registry.RECIPE_TYPE, new Identifier(FabledAdventure.MOD_ID, GinormiumTableRecipe.Type.ID),
                 GinormiumTableRecipe.Type.INSTANCE);
+        Registry.register(Registry.RECIPE_SERIALIZER, new Identifier(FabledAdventure.MOD_ID, NaturiteStumpRecipe.Serializer.ID),
+                NaturiteStumpRecipe.Serializer.INSTANCE);
         Registry.register(Registry.RECIPE_TYPE, new Identifier(FabledAdventure.MOD_ID, NaturiteStumpRecipe.Type.ID),
                 NaturiteStumpRecipe.Type.INSTANCE);
     }

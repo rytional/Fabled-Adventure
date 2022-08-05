@@ -6,7 +6,10 @@ import net.minecraft.block.entity.BlockEntityTicker;
 import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemPlacementContext;
+import net.minecraft.particle.ParticleTypes;
 import net.minecraft.screen.NamedScreenHandlerFactory;
+import net.minecraft.sound.SoundCategory;
+import net.minecraft.sound.SoundEvents;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.DirectionProperty;
@@ -22,6 +25,8 @@ import net.minecraft.world.World;
 import net.rytional.fabledadventure.block.entity.DwarfiumBlasterEntity;
 import net.rytional.fabledadventure.block.entity.ModBlockEntities;
 import org.jetbrains.annotations.Nullable;
+
+import java.util.Random;
 import java.util.stream.Stream;
 
 public class DwarfiumBlasterBlock extends BlockWithEntity implements BlockEntityProvider {
@@ -110,6 +115,35 @@ public class DwarfiumBlasterBlock extends BlockWithEntity implements BlockEntity
     @Override
     public BlockState getPlacementState(ItemPlacementContext ctx) {
         return this.getDefaultState().with(FACING, ctx.getPlayerFacing().getOpposite());
+    }
+
+    @Override
+    public void randomDisplayTick(BlockState state, World world, BlockPos pos, Random random) {
+        float chance = 0.35f;
+
+        if(chance < random.nextFloat()) {
+            world.addParticle(ParticleTypes.SMOKE, pos.getX() + random.nextDouble(),
+                    pos.getY() + 2D, pos.getZ() + random.nextDouble(),
+                    0d, 0.015d + random.nextDouble(0.075d), 0d);
+        }
+
+        if(chance < random.nextFloat()) {
+            world.addParticle(ParticleTypes.SMOKE, pos.getX() + random.nextDouble(),
+                    pos.getY() + 2D, pos.getZ() + random.nextDouble(),
+                    0d, 0.015d + random.nextDouble(0.075d), 0d);
+        }
+
+        if(chance < random.nextFloat()) {
+            world.addParticle(ParticleTypes.SMOKE, pos.getX() + random.nextDouble(),
+                    pos.getY() + 2D, pos.getZ() + random.nextDouble(),
+                    0d, 0.015d + random.nextDouble(0.075d), 0d);
+        }
+
+        if(chance < random.nextFloat()) {
+            world.addParticle(ParticleTypes.SMOKE, pos.getX() + random.nextDouble(),
+                    pos.getY() + 2D, pos.getZ() + random.nextDouble(),
+                    0d, 0.015d + random.nextDouble(0.075d), 0d);
+        }
     }
 
     @Override
